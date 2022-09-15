@@ -6,11 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:58:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/14 17:58:20 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/15 14:02:10 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "minunit.h"
+
 int main(void)
 {
-	
+	mu
 }
