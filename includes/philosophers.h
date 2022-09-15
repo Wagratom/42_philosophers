@@ -1,17 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   philosophers.h                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:58:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/15 14:53:05 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/15 14:52:48 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <philosophers.h>
+#ifndef PHILOSOPHERS_H
+# define PHILOSOPHERS_H
 
-int main(void)
-{
-}
+# include "../libft/libft.h"
+# include <stdio.h>
+# include <stdlib.h>
+
+#endif
