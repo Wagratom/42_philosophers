@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/15 14:53:42 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/16 14:29:35 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,18 +14,19 @@ NAME	=	philosophers
 
 INCLUDE	=	-I./includes
 
+RM		=	rm -rf
 CC		=	gcc
 CFLAGS	+=	-Wall -Wextra -Werror
-RM		=	rm -rf
+CFLAGS	+=	-pthread
 
-SOURCS		=	main.c
+SOURCS		=	main.c new_thread.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
 
 VPATH		=	. ./sourcs
 
 $(OBJS_DIR)/%.o:	%.c
-				$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)
+				$(CC) $(CFLAGS) -c  $< -o $@ $(INCLUDE)
 
 ################################################################################
 # MANDATORY
@@ -35,13 +36,14 @@ all:				$(NAME)
 
 $(NAME):			$(OBJS_DIR) $(OBJS)
 					make libft
-					ar -rcs $@ $(OBJS)
+					ar -rcs lib $(OBJS)
+#					$(CC) $(CFLAGS) $(OBJS) -o $@
 
 $(OBJS_DIR):
 					mkdir -p $@
 
 ################################################################################
-# MANDATORY	RULES
+# MANDATORY	LIBFT
 ################################################################################
 
 libft		=	./libft/libft.a
@@ -52,6 +54,7 @@ libft:
 ################################################################################
 # MANDATORY	RULES
 ################################################################################
+
 clean:
 					$(MAKE) -C ./libft clean
 					$(RM) $(OBJS_DIR)
@@ -62,4 +65,19 @@ fclean:				clean
 
 re:					fclean all
 
-.PHONY: 			all libft clean fclean re
+################################################################################
+# TEST
+################################################################################
+
+TST	=	exec_tst
+
+
+run_tst:
+					gcc  -pthread ./test/thereads_tst.c lib -o $(TST)
+					./$(TST)
+clear_tst:
+					$(RM) $(TST)
+
+test:				$(NAME) run_tst clear_tst
+
+.PHONY: 			all libft clean fclean re test

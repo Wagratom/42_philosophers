@@ -1,19 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   new_thread.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/14 17:58:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/16 14:29:06 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/15 14:55:01 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/16 14:15:51 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include <philosophers.h>
 
-void	*routinee(void	*print_me)
+t_bool		new_thread(pthread_t *thread, void *(*add_me)(void *))
 {
-	printf("%s\n", (char *)print_me);
-	return ((void*)NULL);
+	if (add_me == NULL || *add_me == NULL)
+		return (FALSE);
+	if (thread == NULL)
+		return (FALSE);
+	if (pthread_create(thread, NULL, add_me, "running") != 0)
+	{
+		printf("%s\n", "Erro creating thread\n");
+		//die()
+		return (FALSE);
+	}
+	return(TRUE);
 }

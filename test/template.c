@@ -6,11 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:17:18 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/15 14:18:25 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/16 14:06:09 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minunit.h"
+#include <philosophers>
+
 
 int	foo;
 
