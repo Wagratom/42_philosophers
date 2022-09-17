@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:17:18 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/16 22:48:24 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 17:42:21 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,17 @@ void	test_teardown(void)
 
 MU_TEST(new_thereds)
 {
-	mu_assert_int_eq(1, new_thread(&t1, &routinee));
-	mu_assert_int_eq(1, new_thread(&t2, &routinee));
+	mu_assert_int_eq(TRUE, new_thread(&t1, &routinee));
+	mu_assert_int_eq(TRUE, new_thread(&t2, &routinee));
 	pthread_join(t1, NULL);
 	pthread_join(t2, NULL);
 
 
-	mu_assert_int_eq(0, new_thread(&t1, NULL));
-	mu_assert_int_eq(0, new_thread(&t2, NULL));
+	mu_assert_int_eq(FALSE, new_thread(&t1, NULL));
+	mu_assert_int_eq(FALSE, new_thread(&t2, NULL));
 
-	mu_assert_int_eq(0, new_thread(NULL, NULL));
-	mu_assert_int_eq(0, new_thread(NULL, NULL));
+	mu_assert_int_eq(FALSE, new_thread(NULL, NULL));
+	mu_assert_int_eq(FALSE, new_thread(NULL, NULL));
 }
 
 MU_TEST_SUITE(theread_tst)

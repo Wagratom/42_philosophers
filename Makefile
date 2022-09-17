@@ -6,12 +6,14 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/16 22:34:50 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/17 18:36:26 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+
 NAME	=	philosophers
 
+LIBFT	=	./libft/libft.a
 INCLUDE	=	-I./includes
 
 RM		=	rm -rf
@@ -19,7 +21,7 @@ CC		=	gcc
 CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	+=	-pthread
 
-SOURCS		=	routine.c new_thread.c
+SOURCS		=	routine.c new_thread.c ft_is_array_int.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
 
@@ -70,15 +72,24 @@ re:					fclean all
 # TEST
 ################################################################################
 
-TST	=	exec_tst
+LIBS			=	lib $(LIBFT)
+TST	=			exec_tst
 
+THREADS	=		./test/thereads_tst.c
+IS_ARRAY	= 	./test/new_func_lib.c
 
-run_tst:
-					$(CC) $(CFLAGS)  -pthread ./test/thereads_tst.c lib -o $(TST)
-					./$(TST)
 clear_tst:
 					@$(RM) $(TST)
 
-test:				$(NAME) run_tst clear_tst
+
+thereads:			$(NAME)
+						$(CC) $(CFLAGS) $(THREADS) $(LIBS) -o $(TST)
+						./$(TST)
+						MAKE clear_tst
+
+new_func_lib:	$(NAME)
+					$(CC) $(CFLAGS) $(IS_ARRAY) $(LIBS) -o $(TST)
+						./$(TST)
+						MAKE clear_tst
 
 .PHONY: 			all libft clean fclean re test
