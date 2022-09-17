@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/16 14:29:35 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/16 22:34:50 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CC		=	gcc
 CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	+=	-pthread
 
-SOURCS		=	main.c new_thread.c
+SOURCS		=	routine.c new_thread.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
 
@@ -62,6 +62,7 @@ clean:
 fclean:				clean
 					$(RM) $(libft)
 					$(RM) $(NAME)
+					$(RM) lib
 
 re:					fclean all
 
@@ -73,10 +74,10 @@ TST	=	exec_tst
 
 
 run_tst:
-					gcc  -pthread ./test/thereads_tst.c lib -o $(TST)
+					$(CC) $(CFLAGS)  -pthread ./test/thereads_tst.c lib -o $(TST)
 					./$(TST)
 clear_tst:
-					$(RM) $(TST)
+					@$(RM) $(TST)
 
 test:				$(NAME) run_tst clear_tst
 
