@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 17:42:40 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 18:38:14 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 19:05:44 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,17 @@ MU_TEST(array_int_tst)
 
 MU_TEST(str_ep_tst)
 {
-	mu_assert_int_eq(TRUE, ft_is);
+	mu_assert_int_eq(TRUE, ft_str_eq("teste", "teste"));
+	mu_assert_int_eq(TRUE, ft_str_eq(NULL, NULL));
+	mu_assert_int_eq(TRUE, ft_str_eq("", ""));
+	mu_assert_int_eq(TRUE, ft_str_eq("a", "a"));
+	mu_assert_int_eq(TRUE, ft_str_eq("ç", "ç"));
+	mu_assert_int_eq(TRUE, ft_str_eq("@#$@!", "@#$@!"));
+
+	mu_assert_int_eq(FALSE, ft_str_eq("", "b"));
+	mu_assert_int_eq(FALSE, ft_str_eq("a", "b"));
+	mu_assert_int_eq(FALSE, ft_str_eq(NULL, "teste"));
+	mu_assert_int_eq(FALSE, ft_str_eq("teste-10", "teste10"));
 
 }
 

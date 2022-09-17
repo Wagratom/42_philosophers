@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/17 18:36:26 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/17 19:00:20 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,8 @@ INCLUDE	=	-I./includes
 
 RM		=	rm -rf
 CC		=	gcc
-CFLAGS	+=	-Wall -Wextra -Werror
-CFLAGS	+=	-pthread
+#CFLAGS	+=	-Wall -Wextra -Werror
+CFLAGS	=	-pthread
 
 SOURCS		=	routine.c new_thread.c ft_is_array_int.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
