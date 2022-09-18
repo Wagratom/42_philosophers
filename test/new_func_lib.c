@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 17:42:40 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/17 22:46:42 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/17 22:57:38 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	test_teardown(void)
 
 MU_TEST(array_int_tst)
 {
+	char	*teste = NULL;
 	mu_assert_int_eq(TRUE, ft_is_array_int((char *[]){"10", "0", "-10", NULL}));
  	mu_assert_int_eq(TRUE , ft_is_array_int((char *[]){"-2147483648","2147483647", NULL}));
  	mu_assert_int_eq(TRUE , ft_is_array_int((char *[]){"-1","-1","-1","-1","-1", NULL}));
@@ -47,7 +48,8 @@ MU_TEST(array_int_tst)
 	mu_assert_int_eq(FALSE , ft_is_array_int((char *[]){"-2147483648","a", NULL}));
 	mu_assert_int_eq(FALSE , ft_is_array_int((char *[]){"0","-60", "a", NULL}));
 	mu_assert_int_eq(FALSE , ft_is_array_int((char *[]){"","-60", "50", NULL}));
-
+	mu_assert_int_eq(FALSE , ft_is_array_int(NULL));
+	mu_assert_int_eq(FALSE , ft_is_array_int(&teste));
 }
 
 MU_TEST(str_ep_tst)

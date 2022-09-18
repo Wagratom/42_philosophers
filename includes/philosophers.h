@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/15 23:05:38 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/18 01:03:03 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,14 @@
 # include <stdlib.h>
 # include <pthread.h>
 
+typedef struct s_philo
+{
+	int number_philo;
+	int	time_die;
+	int	time_eat;
+	int	time_sleep;
+	int	times;
+}	t_philo;
 
 t_bool		new_thread(pthread_t *thread, void *(*add_me)(void *));
 

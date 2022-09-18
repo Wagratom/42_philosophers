@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:43:41 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/16 22:30:12 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/18 18:06:09 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int main()
 {
-	pthread_t	t1;
-
-	t1 = NULL;
-	new_thread(&t1, &routinee);
-	pthread_join(t1, NULL);
+	valid_argv(argc, argv);
+	creat_philo(argv);
 	return (0);
 }
