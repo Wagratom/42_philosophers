@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/17 19:00:20 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/17 22:51:55 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,11 +85,11 @@ clear_tst:
 thereads:			$(NAME)
 						$(CC) $(CFLAGS) $(THREADS) $(LIBS) -o $(TST)
 						./$(TST)
-						MAKE clear_tst
+						make clear_tst
 
 new_func_lib:	$(NAME)
-					$(CC) $(CFLAGS) $(IS_ARRAY) $(LIBS) -o $(TST)
+						$(CC) $(CFLAGS) $(IS_ARRAY) $(LIBS) -o $(TST)
 						./$(TST)
-						MAKE clear_tst
+						make clear_tst
 
 .PHONY: 			all libft clean fclean re test
