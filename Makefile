@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/17 23:00:43 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/18 18:42:41 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,12 +75,12 @@ re:					fclean all
 LIBS			=	lib $(LIBFT)
 TST	=			exec_tst
 
-THREADS	=		./test/thereads_tst.c
+THREADS		=	./test/thereads_tst.c
 IS_ARRAY	= 	./test/new_func_lib.c
+VAL_ARGV	=	./test/valid_argv.c
 
 clear_tst:
 					@$(RM) $(TST)
-
 
 thereads:			$(NAME)
 						$(CC) $(CFLAGS) $(THREADS) $(LIBS) -o $(TST)
@@ -91,5 +91,12 @@ new_func_lib:	$(NAME)
 						$(CC) $(CFLAGS) $(IS_ARRAY) $(LIBS) -o $(TST)
 						./$(TST)
 						make clear_tst
+
+valid_argv:		$(NAME)
+						$(CC) $(CFLAGS) $(VAL_ARGV) $(LIBS) -o $(TST)
+						./$(TST)
+						make clear_tst
+
+
 
 .PHONY: 			all libft clean fclean re test
