@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/19 12:33:37 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/19 15:48:53 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,30 +72,17 @@ re:					fclean all
 # TEST
 ################################################################################
 
-LIBS			=	lib $(LIBFT)
-TST	=			exec_tst
+LIBS		=	lib $(LIBFT)
+FILE		=	./test/$(t).c
 
-THREADS		=	./test/thereads_tst.c
-IS_ARRAY	= 	./test/new_func_lib.c
-VAL_ARGV	=	./test/valid_argv.c
+EXEC		=	$(patsubst %.c, %.out, $(FILE))
 
-clear_tst:
-					@$(RM) $(TST)
+%.out:		%.c
+				$(CC) $(CFLAGS) $< $(LIBS) -o $@
 
-thereads:		$(NAME)
-						$(CC) $(CFLAGS) $(THREADS) $(LIBS) -o $(TST)
-						./$(TST)
-						make clear_tst
-
-new_func_lib:	$(NAME)
-						$(CC) $(CFLAGS) $(IS_ARRAY) $(LIBS) -o $(TST)
-						./$(TST)
-						make clear_tst
-
-valid_argv:		$(NAME)
-						$(CC) $(CFLAGS) $(VAL_ARGV) $(LIBS) -o $(TST)
-						./$(TST)
-						make clear_tst
+test:		$(NAME) $(EXEC)
+				@$(EXEC)
+				@$(RM) $(EXEC)
 
 tests:	thereads new_func_lib valid_argv
 
