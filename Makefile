@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/18 18:42:41 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/19 10:24:54 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -82,7 +82,7 @@ VAL_ARGV	=	./test/valid_argv.c
 clear_tst:
 					@$(RM) $(TST)
 
-thereads:			$(NAME)
+thereads:		$(NAME)
 						$(CC) $(CFLAGS) $(THREADS) $(LIBS) -o $(TST)
 						./$(TST)
 						make clear_tst
@@ -96,6 +96,8 @@ valid_argv:		$(NAME)
 						$(CC) $(CFLAGS) $(VAL_ARGV) $(LIBS) -o $(TST)
 						./$(TST)
 						make clear_tst
+
+tests:	thereads new_func_lib valid_argv
 
 
 
