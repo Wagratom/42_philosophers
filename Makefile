@@ -6,12 +6,12 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/19 10:46:20 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/19 12:33:37 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-NAME	=	philosophers
+NAME	=	philo
 
 LIBFT	=	./libft/libft.a
 INCLUDE	=	-I./includes
@@ -37,12 +37,12 @@ $(OBJS_DIR)/%.o:	%.c
 all:				$(NAME)
 
 $(NAME):			$(OBJS_DIR) $(OBJS)
-					make libft
-					ar -rcs lib $(OBJS)
-#					$(CC) $(CFLAGS) $(OBJS) -o $@
+						make libft
+						ar -rcs lib $(OBJS)
+#						$(CC) $(CFLAGS) $(OBJS) -o $@
 
 $(OBJS_DIR):
-					mkdir -p $@
+						mkdir -p $@
 
 ################################################################################
 # MANDATORY	LIBFT
@@ -51,7 +51,7 @@ $(OBJS_DIR):
 libft		=	./libft/libft.a
 
 libft:
-					$(MAKE) -C ./libft
+						$(MAKE) -C ./libft
 
 ################################################################################
 # MANDATORY	RULES
@@ -62,9 +62,9 @@ clean:
 					$(RM) $(OBJS_DIR)
 
 fclean:				clean
-					$(RM) $(libft)
-					$(RM) $(NAME)
-					$(RM) lib
+						$(RM) $(libft)
+						$(RM) $(NAME)
+						$(RM) lib
 
 re:					fclean all
 

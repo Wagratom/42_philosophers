@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 11:30:42 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/19 11:18:14 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/19 13:09:59 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static t_bool	is_positive(char **array)
 {
-	while(*array)
+	while (*array)
 	{
 		if (*array[0] == '-')
 			return (FALSE);
