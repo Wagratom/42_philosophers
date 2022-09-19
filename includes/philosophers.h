@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/18 01:03:03 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/19 10:46:12 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ typedef struct s_philo
 t_bool		new_thread(pthread_t *thread, void *(*add_me)(void *));
 
 void		*routinee(void	*print_me);
+
+t_bool		valid_argv(int argc, char **argv);
 
 #endif
