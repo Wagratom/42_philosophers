@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/20 13:28:19 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/20 15:54:11 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_table
 	int				time_eat;
 	int				time_sleep;
 	int				times;
+	int				*forks;
 
 	struct	s_philo	*next;
 	struct	s_philo	*prev;
