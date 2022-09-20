@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/17 11:30:42 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/19 15:26:35 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/19 20:51:44 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static t_bool	is_positive(char **array)
 
 t_bool	valid_argv(int argc, char **argv)
 {
-	if (argc != 5)
+	if (argc != 6)
 		return (FALSE);
 		//printf("Invalid number of arguments\n");
 	else if (ft_is_array_int(argv) == FALSE)

@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:17:18 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/19 11:22:20 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/19 20:51:58 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,12 @@ MU_TEST(false_argv_tst)
 
 MU_TEST(true_argv_tst)
 {
-	mu_assert_int_eq(TRUE, valid_argv(5, (char *[]){"0", NULL}));
-	mu_assert_int_eq(TRUE, valid_argv(5, (char *[]){"0", "1", "3", "4", NULL}));
-	mu_assert_int_eq(TRUE, valid_argv(5, (char *[]){"0", "10", "20", "30", NULL}));
-	mu_assert_int_eq(TRUE, valid_argv(5, (char *[]){"+1", "+1", "+1", "+1", NULL}));
-	mu_assert_int_eq(TRUE, valid_argv(5, (char *[]){"2147483647", "0", "2147483647", "20", NULL}));
-	mu_assert_int_eq(TRUE, valid_argv(5, (char *[]){"100", "100", "100", "100", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"0", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"0", "1", "3", "4", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"0", "10", "20", "30", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"+1", "+1", "+1", "+1", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"2147483647", "0", "2147483647", "20", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"100", "100", "100", "100", NULL}));
 }
 
 MU_TEST_SUITE(valid_tst)

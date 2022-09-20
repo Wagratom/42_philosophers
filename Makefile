@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/19 15:48:53 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/19 21:17:56 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,18 +74,19 @@ re:					fclean all
 
 LIBS		=	lib $(LIBFT)
 FILE		=	./test/$(t).c
+FILES		=	$(wildcard ./test/*.c)
 
 EXEC		=	$(patsubst %.c, %.out, $(FILE))
+EXECS		=	$(patsubst %.c, %.out, $(FILES))
+
 
 %.out:		%.c
-				$(CC) $(CFLAGS) $< $(LIBS) -o $@
+				$(CC) $(CFLAGS) $< $(LIBS) -o $@ $(INCLUDE)
+				@$@
+				@$(RM) $@
 
 test:		$(NAME) $(EXEC)
-				@$(EXEC)
-				@$(RM) $(EXEC)
 
-tests:	thereads new_func_lib valid_argv
-
-
+tests:		$(NAME)	$(EXECS)
 
 .PHONY: 			all libft clean fclean re test
