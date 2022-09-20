@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/19 13:06:45 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/20 13:28:19 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <pthread.h>
 
-typedef struct s_philo
+typedef struct s_table
 {
 	int				number_philo;
 	int				time_die;
@@ -28,12 +28,14 @@ typedef struct s_philo
 
 	struct	s_philo	*next;
 	struct	s_philo	*prev;
-}	t_philo;
+}	t_table;
 
 t_bool		new_thread(pthread_t *thread, void *(*add_me)(void *));
 
 void		*routinee(void	*print_me);
 
 t_bool		valid_argv(int argc, char **argv);
+
+t_table		*creat_table(char *argv[]);
 
 #endif
