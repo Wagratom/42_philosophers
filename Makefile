@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/20 12:50:31 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/20 16:10:55 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,5 +88,29 @@ EXECS		=	$(patsubst %.c, %.out, $(FILES))
 test:		$(NAME) $(EXEC)
 
 tests:		$(NAME)	$(EXECS)
+
+.PHONY: 			all libft clean fclean re test
+
+
+################################################################################
+# VG TEST
+################################################################################
+
+LIBS		=	lib $(LIBFT)
+VGFILE		=	./test/$(t).c
+VGFILES		=	$(wildcard ./test/*.c)
+
+VGEXEC		=	$(patsubst %.c, %.out, $(VGFILE))
+VGEXECS		=	$(patsubst %.c, %.out, $(VGFILES))
+
+
+%.out:		%.c
+				$(CC) $(CFLAGS) $< $(LIBS) -o $@ $(INCLUDE)
+				@$@
+				@$(RM) $@
+
+vgtest:		$(NAME) $(VGEXEC)
+
+vgtests:	$(NAME)	$(VGEXECS)
 
 .PHONY: 			all libft clean fclean re test

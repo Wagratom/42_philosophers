@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:44:32 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/20 13:19:55 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:29:54 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ MU_TEST(true_argv_tst)
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"100", "100", "100", "100", NULL}));
 }
 
-MU_TEST_SUITE(valid_tst)
+MU_TEST_SUITE(valid_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
@@ -76,7 +76,7 @@ MU_TEST_SUITE(valid_tst)
 MU_MAIN
 {
 	MU_DIVIDER;
-	MU_RUN_SUITE(valid_tst);
+	MU_RUN_SUITE(valid_suite);
 	MU_REPORT();
 	argc = argc;
 	envp = envp;

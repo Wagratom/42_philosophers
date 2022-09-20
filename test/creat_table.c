@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:43:57 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/20 16:01:51 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/20 17:29:28 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ MU_TEST(creat_table_null_tst)
 	mu_assert_int_eq(-1, table->times);
 }
 
-MU_TEST_SUITE(table_tst)
+MU_TEST_SUITE(table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
@@ -69,7 +69,7 @@ MU_TEST_SUITE(table_tst)
 MU_MAIN
 {
 	MU_DIVIDER;
-	MU_RUN_SUITE(table_tst);
+	MU_RUN_SUITE(table_suite);
 	MU_REPORT();
 	argc = argc;
 	envp = envp;
