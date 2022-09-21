@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/20 16:10:55 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/21 19:20:51 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CC		=	gcc
 #CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	=	-pthread
 
-SOURCS		=	routine.c new_thread.c valid_argv.c creat_table.c
+SOURCS		=	routine.c new_thread.c valid_argv.c creat_table.c philo_eat.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
 
@@ -79,18 +79,9 @@ FILES		=	$(wildcard ./test/*.c)
 EXEC		=	$(patsubst %.c, %.out, $(FILE))
 EXECS		=	$(patsubst %.c, %.out, $(FILES))
 
-
-%.out:		%.c
-				$(CC) $(CFLAGS) $< $(LIBS) -o $@ $(INCLUDE)
-				@$@
-				@$(RM) $@
-
 test:		$(NAME) $(EXEC)
 
 tests:		$(NAME)	$(EXECS)
-
-.PHONY: 			all libft clean fclean re test
-
 
 ################################################################################
 # VG TEST
@@ -103,14 +94,19 @@ VGFILES		=	$(wildcard ./test/*.c)
 VGEXEC		=	$(patsubst %.c, %.out, $(VGFILE))
 VGEXECS		=	$(patsubst %.c, %.out, $(VGFILES))
 
+vgtest:		$(NAME) $(VGEXEC)
+
+vgtests:	$(NAME)	$(VGEXECS)
+
+.PHONY: 			all libft clean fclean re test
+
+################################################################################
+# .OUT
+################################################################################
 
 %.out:		%.c
 				$(CC) $(CFLAGS) $< $(LIBS) -o $@ $(INCLUDE)
 				@$@
 				@$(RM) $@
-
-vgtest:		$(NAME) $(VGEXEC)
-
-vgtests:	$(NAME)	$(VGEXECS)
 
 .PHONY: 			all libft clean fclean re test

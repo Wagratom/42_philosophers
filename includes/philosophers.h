@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/20 15:54:11 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/21 18:47:33 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ void		*routinee(void	*print_me);
 t_bool		valid_argv(int argc, char **argv);
 
 t_table		*creat_table(char *argv[]);
+
+t_bool		philo_eat(t_table *table, pthread_mutex_t *mutex);
 
 #endif

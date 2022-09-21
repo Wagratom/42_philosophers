@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   start_philo.c                                      :+:      :+:    :+:   */
+/*   philo_eat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 17:28:36 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/20 17:30:26 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/21 17:14:25 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/21 19:26:56 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minunit.h"
 # include "../includes/philosophers.h"
+
 
 void	test_setup(void)
 {
@@ -20,22 +21,28 @@ void	test_teardown(void)
 {
 }
 
-MU_TEST(start_filo_tst)
+MU_TEST(template_tst)
 {
-	mu_assert_int_eq(42, 42);
+	pthread_mutex_t		mutex;
+	t_table				*table;
+
+	if (pthread_mutex_init(&mutex, NULL) != 0)
+		printf("return error\n");
+	table = creat_table((char *[]){"10","10", "10", "10", "10", "10", NULL});gi 
+	mu_assert_int_eq(TRUE, philo_eat(table, &mutex));
 }
 
-MU_TEST_SUITE(philo_suite)
+MU_TEST_SUITE(test_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	MU_RUN_TEST(start_filo_tst);
+	MU_RUN_TEST(template_tst);
 }
 
 MU_MAIN
 {
 	MU_DIVIDER;
-	MU_RUN_SUITE(philo_suite);
+	MU_RUN_SUITE(test_suite);
 	MU_REPORT();
 	return (MU_EXIT_CODE);
 }
