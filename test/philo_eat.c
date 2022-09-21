@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 17:14:25 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/21 19:26:56 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/21 19:54:41 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ MU_TEST(template_tst)
 
 	if (pthread_mutex_init(&mutex, NULL) != 0)
 		printf("return error\n");
-	table = creat_table((char *[]){"10","10", "10", "10", "10", "10", NULL});gi 
+	table = creat_table((char *[]){"10","10", "10", "10", "10", "10", NULL});
 	mu_assert_int_eq(TRUE, philo_eat(table, &mutex));
 }
 
