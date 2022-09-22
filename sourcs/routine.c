@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:58:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/22 16:38:22 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:33:22 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ void	*routinee(void	*print_me)
 
 void	*start_thread(void *table)
 {
-	table = (t_table *)table;
-		printf("return\n");
+	t_table	*tmp;
+
+	tmp = (t_table *)table;
 	philo_eat(table);
+	printf("%d\n", tmp->posi_table);
+	tmp->posi_table++;
 }

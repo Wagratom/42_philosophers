@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   philo_eat.c                                        :+:      :+:    :+:   */
+/*   start_thread.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 17:14:25 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/22 17:45:14 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/22 17:35:54 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/22 17:39:13 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,26 +20,27 @@ void	test_teardown(void)
 {
 }
 
-MU_TEST(philo_eat_tst)
+MU_TEST(wait_philo_eat_tst)
 {
-	pthread_mutex_t		mutex;
 	t_table				*table;
+	pthread_t			p1, p2;
+	pthread_mutex_t		mutex;
 
-	table = creat_table((char *[]){"10","10", "10", "1000", "10", "10", NULL});
+
 	pthread_mutex_init(&mutex, NULL);
+	table = creat_table((char *[]){"10","10", "10", "1000", "10", "10", NULL});
 	table->mutex = &mutex;
-
-	mu_assert_int_eq(TRUE, philo_eat(table));
-
-	table = creat_table((char *[]){"10","10", "10", "-1000", "10", "10", NULL});
-	mu_assert_int_eq(FALSE, philo_eat(table));
+	new_thread(&p1, &start_thread, table);
+	new_thread(&p2, &start_thread, table);
+	pthread_join(p1, NULL);
+	pthread_join(p2, NULL);
 }
 
 MU_TEST_SUITE(test_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	MU_RUN_TEST(philo_eat_tst);
+	MU_RUN_TEST(wait_philo_eat_tst);
 }
 
 MU_MAIN

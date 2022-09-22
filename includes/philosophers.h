@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/22 16:40:47 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:07:12 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_table
 	int				time_sleep;
 	int				times;
 	int				*forks;
+	int				posi_table;
 	pthread_mutex_t		*mutex;
 }	t_table;
 
