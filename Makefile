@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/21 19:20:51 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/23 09:27:57 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ CC		=	gcc
 #CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	=	-pthread
 
-SOURCS		=	routine.c new_thread.c valid_argv.c creat_table.c philo_eat.c
+SOURCS		=	routine.c new_thread.c valid_argv.c creat_table.c philo_eat.c \
+				start_thread.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
 
@@ -88,17 +89,16 @@ tests:		$(NAME)	$(EXECS)
 ################################################################################
 
 LIBS		=	lib $(LIBFT)
-VGFILE		=	./test/$(t).c
+VGFILE		=	./test/$(t).vg.out
 VGFILES		=	$(wildcard ./test/*.c)
 
-VGEXEC		=	$(patsubst %.c, %.out, $(VGFILE))
-VGEXECS		=	$(patsubst %.c, %.out, $(VGFILES))
+VGEXEC		=	$(patsubst %.c, %.vg.out, $(VGFILE))
+VGEXECS		=	$(patsubst %.c, %.vg.out, $(VGFILES))
 
 vgtest:		$(NAME) $(VGEXEC)
 
 vgtests:	$(NAME)	$(VGEXECS)
 
-.PHONY: 			all libft clean fclean re test
 
 ################################################################################
 # .OUT
@@ -107,6 +107,11 @@ vgtests:	$(NAME)	$(VGEXECS)
 %.out:		%.c
 				$(CC) $(CFLAGS) $< $(LIBS) -o $@ $(INCLUDE)
 				@$@
+				@$(RM) $@
+
+%.vg.out: 	%.c
+				$(CC) $(CFLAGS) $< $(LIBS) -o $@ $(INCLUDE)
+				@valgrind $@
 				@$(RM) $@
 
 .PHONY: 			all libft clean fclean re test

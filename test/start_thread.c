@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 17:35:54 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/22 17:39:13 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:45:48 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ MU_TEST(wait_philo_eat_tst)
 	t_table				*table;
 	pthread_t			p1, p2;
 	pthread_mutex_t		mutex;
-
 
 	pthread_mutex_init(&mutex, NULL);
 	table = creat_table((char *[]){"10","10", "10", "1000", "10", "10", NULL});
