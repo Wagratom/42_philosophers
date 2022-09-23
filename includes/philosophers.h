@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/22 17:07:12 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/23 10:23:52 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,8 @@ typedef struct s_table
 }	t_table;
 
 typedef	void *(*start_th)(void *);
-t_bool	new_thread(pthread_t *thread, start_th func, t_table *argument);
+
+pthread_t	new_thread(start_th func, void *argument);
 
 t_bool		valid_argv(int argc, char **argv);
 
