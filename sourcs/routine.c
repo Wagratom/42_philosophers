@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:58:14 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/23 09:26:47 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/23 12:52:18 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 void	*routinee(void	*print_me)
 {
 	printf("\nn%s\n", (char *)print_me);
+	usleep(500000);
 	return (NULL);
 }

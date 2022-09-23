@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/23 09:27:57 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/23 12:51:05 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,11 @@ CC		=	gcc
 CFLAGS	=	-pthread
 
 SOURCS		=	routine.c new_thread.c valid_argv.c creat_table.c philo_eat.c \
-				start_thread.c
+				start_thread.c routine.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
 
-VPATH		=	. ./sourcs
+VPATH		=	. ./sourcs  ./test
 
 $(OBJS_DIR)/%.o:	%.c
 				$(CC) $(CFLAGS) -c  $< -o $@ $(INCLUDE)
