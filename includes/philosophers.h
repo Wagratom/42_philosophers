@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/23 10:23:52 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:30:02 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ t_bool		philo_eat(t_table *table);
 void		*routinee(void	*print_me);
 void		*start_thread(void	*table);
 
+# define MAX_THREAD 32768
 #endif

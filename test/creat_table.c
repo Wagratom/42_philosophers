@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:43:57 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/21 16:49:48 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/23 11:43:31 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ MU_TEST_SUITE(table_suite)
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
 	MU_RUN_TEST(creat_table_tst);
-	//MU_RUN_TEST(creat_table_null_tst);
+	MU_RUN_TEST(creat_table_null_tst);
 }
 
 MU_MAIN
