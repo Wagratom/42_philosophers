@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/23 11:30:02 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/24 11:11:29 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ t_bool		philo_eat(t_table *table);
 
 void		*routinee(void	*print_me);
 void		*start_thread(void	*table);
+
+pthread_t	*creat_thread(t_table *table);
+int			creat_thread_aux_tst(t_table *table);
+
 
 # define MAX_THREAD 32768
 #endif

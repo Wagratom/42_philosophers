@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/23 12:51:05 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/24 11:14:53 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ CC		=	gcc
 #CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	=	-pthread
 
-SOURCS		=	routine.c new_thread.c valid_argv.c creat_table.c philo_eat.c \
+SOURCS		=	routine.c creat_threads.c valid_argv.c creat_table.c philo_eat.c \
 				start_thread.c routine.c
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
@@ -69,6 +69,11 @@ fclean:				clean
 
 re:					fclean all
 
+ree:
+				$(RM) $(OBJS_DIR)
+				$(RM) $(NAME)
+				make
+
 ################################################################################
 # TEST
 ################################################################################
@@ -80,9 +85,9 @@ FILES		=	$(wildcard ./test/*.c)
 EXEC		=	$(patsubst %.c, %.out, $(FILE))
 EXECS		=	$(patsubst %.c, %.out, $(FILES))
 
-test:		$(NAME) $(EXEC)
+test:		ree $(EXEC)
 
-tests:		$(NAME)	$(EXECS)
+tests:		ree	$(EXECS)
 
 ################################################################################
 # VG TEST
@@ -95,9 +100,9 @@ VGFILES		=	$(wildcard ./test/*.c)
 VGEXEC		=	$(patsubst %.c, %.vg.out, $(VGFILE))
 VGEXECS		=	$(patsubst %.c, %.vg.out, $(VGFILES))
 
-vgtest:		$(NAME) $(VGEXEC)
+vgtest:		ree $(VGEXEC)
 
-vgtests:	$(NAME)	$(VGEXECS)
+vgtests:	ree	$(VGEXECS)
 
 
 ################################################################################
