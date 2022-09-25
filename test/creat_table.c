@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:43:57 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/25 12:22:40 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/25 17:00:45 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,28 +25,31 @@ void	test_teardown(void)
 {
 }
 
-MU_TEST(creat_table_tst)
+MU_TEST(trivial_tst)
 {
 	pthread_mutex_t mutex;
-	int	i;
+	t_philo			philo;
 
-	table = creat_table((char	*[]){"a.out", "3", "10", "10", "10", "10", NULL});
+	table = creat_table((char	*[]){"a.out", "3", "5", "3", "10", "10", NULL});
 	mu_check(NULL != table);
-	i = -1;
-	while(++i < table->number_philo)
-		mu_assert_int_eq(0, pthread_mutex_lock(&table->forks[i]));
+	mu_check(NULL != table->forks);
+	mu_check(NULL != table->philo);
+	philo = table->philo[0];
 	mu_assert_int_eq(3, table->number_philo);
-	//mu_assert_int_eq(50, table->time_die);
-	// mu_assert_int_eq(8, table->time_eat);
-	// mu_assert_int_eq(7, table->time_sleep);
-	// mu_assert_int_eq(9, table->times);
+	mu_assert_int_eq(5, philo.time_die);
+	mu_assert_int_eq(3, philo.time_eat);
+	mu_assert_int_eq(10, philo.time_sleep);
+	mu_assert_int_eq(10, philo.times);
+	destroy_table(table);
 }
 
 MU_TEST(creat_table_null_tst)
 {
+	t_philo			philo;
 	table = creat_table((char	*[]){"a.out", "10", NULL, "8", NULL, "9", NULL});
 	mu_check(NULL != table);
 	mu_assert_int_eq(10, table->number_philo);
+	philo = table->philo[0];
 	// mu_assert_int_eq(-1, table->time_die);
 	// mu_assert_int_eq(8, table->time_eat);
 	// mu_assert_int_eq(-1, table->time_sleep);
@@ -65,7 +68,7 @@ MU_TEST_SUITE(table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	MU_RUN_TEST(creat_table_tst);
+	MU_RUN_TEST(trivial_tst);
 	//MU_RUN_TEST(creat_table_null_tst);
 }
 

@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:44:32 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/20 17:29:54 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/25 14:22:24 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ MU_TEST(true_argv_tst)
 {
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"0", NULL}));
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"0", "1", "3", "4", NULL}));
-	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"0", "10", "20", "30", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"0", "10", "60", "30", NULL}));
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"+1", "+1", "+1", "+1", NULL}));
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"2147483647", "0", "2147483647", "20", NULL}));
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"100", "100", "100", "100", NULL}));

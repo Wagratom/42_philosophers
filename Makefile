@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/24 11:14:53 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/25 16:40:14 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,8 @@ CC		=	gcc
 #CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	=	-pthread
 
-SOURCS		=	routine.c creat_threads.c valid_argv.c creat_table.c philo_eat.c \
-				start_thread.c routine.c
+SOURCS		=	 valid_argv.c creat_table.c routine.c creat_forks.c creat_philos.c \
+
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
 
@@ -97,8 +97,8 @@ LIBS		=	lib $(LIBFT)
 VGFILE		=	./test/$(t).vg.out
 VGFILES		=	$(wildcard ./test/*.c)
 
-VGEXEC		=	$(patsubst %.c, %.vg.out, $(VGFILE))
-VGEXECS		=	$(patsubst %.c, %.vg.out, $(VGFILES))
+VGEXEC		=	$(patsubst %.c, %.vy.out, $(VGFILE))
+VGEXECS		=	$(patsubst %.c, %.vy.out, $(VGFILES))
 
 vgtest:		ree $(VGEXEC)
 
