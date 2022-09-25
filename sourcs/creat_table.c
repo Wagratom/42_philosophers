@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:39:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/22 17:44:20 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/25 12:39:58 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,20 +22,35 @@ int	convert_int(char *number)
 
 }
 
-int	*creat_forks(int nbr)
+creat_philos(int nbr_philos)
 {
-	int	*forks;
+	t_philo	*philos;
+	int		i;
 
-	forks	=	(int *)malloc(sizeof(int) * nbr);
-	if (forks == NULL)
+	philos = (t_philo *)ft_calloc(sizeof(t_philo), nbr_philos);
+	while()
+}
+
+pthread_mutex_t	creat_mutex(void)
+{
+	pthread_mutex_t mutex;
+
+	return (mutex);
+}
+
+pthread_mutex_t	*creat_forks(int nbr_forks)
+{
+	pthread_mutex_t		*mutex;
+	int					i;
+
+	mutex = (pthread_mutex_t *)ft_calloc(sizeof(pthread_mutex_t ), nbr_forks);
+	i = -1;
+	while(++i < nbr_forks)
 	{
-		printf("Error: Unallocated memory\n");
-		return (NULL); //die();
+		mutex[i] = creat_mutex();
+		pthread_mutex_init(&mutex[i], NULL);
 	}
-	while(nbr--)
-		forks[nbr] = 1;
-	return (forks);
-
+	return (mutex);
 }
 
 t_table	*creat_table(char *argv[])
@@ -46,12 +61,7 @@ t_table	*creat_table(char *argv[])
 		return (NULL);
 	table = (t_table *)ft_calloc(sizeof(t_table), 1);
 	table->number_philo = convert_int(argv[1]);
-	table->time_die = convert_int(argv[2]);
-	table->time_eat = convert_int(argv[3]);
-	table->time_sleep = convert_int(argv[4]);
-	table->times = convert_int(argv[5]);
 	table->forks = creat_forks(table->number_philo);
-	table->posi_table = 0;
-
+	//table->philo = creat_philos(&table);
 	return (table);
 }
