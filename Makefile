@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/25 16:40:14 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/25 17:48:10 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ LIBFT	=	./libft/libft.a
 INCLUDE	=	-I./includes
 
 RM		=	rm -rf
-CC		=	gcc
+CC		=	gcc -g3
 #CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	=	-pthread
 

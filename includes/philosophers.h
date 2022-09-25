@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/25 17:00:19 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/25 17:41:20 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_philo 		*creat_philos(int nbr_philos, char	*argv[]);
 
 pthread_mutex_t	*creat_forks(int nbr_forks);
 
-void			destroy_table(t_table *table);
+void			destroy_table(t_table **table);
 
 pthread_t		new_thread(start_th func, void *argument);
 
