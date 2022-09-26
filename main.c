@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:43:41 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/26 09:06:57 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/26 15:29:21 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ int main(int argc, char *argv[])
 
 	valid_argv(argc, argv);
 	table = creat_table(argv);
-	creat_threads(table, table->number_philo);
-	start_philo(&table);
+	init_philosophers(&table);
 	return (0);
 }

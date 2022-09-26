@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:00:43 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/25 17:19:07 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/26 18:00:01 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,18 @@ t_philo creat_philo(char	*argv[])
 	philo.time_sleep = ft_atoi(argv[4]);
 	philo.times = ft_atoi(argv[5]);
 	philo.posi_table = position;
+	philo.forks[0];
+	philo.forks[0];
 	position++;
 	return (philo);
 }
 
-t_philo *creat_philos(int nbr_philos, char	*argv[])
+t_philo *creat_philos(t_table **table, char	*argv[])
 {
 	t_philo	*philos;
-	int		i;
+	int			nbr_philos
 
-	philos = (t_philo *)ft_calloc(sizeof(t_philo), nbr_philos);
+	(*table)->philo = (t_philo *)ft_calloc(sizeof(t_philo), nbr_philos);
 	i = -1;
 	while(++i < nbr_philos)
 		philos[i] = creat_philo(argv);

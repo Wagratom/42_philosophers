@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 12:43:57 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/26 11:16:47 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:06:49 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ MU_TEST(thread_10_tst)
 	t_table				*table;
 	int 				i;
 
-	table = creat_table((char *[]){"0", "10", "10", "1000", "10", "10", NULL});
+	table = creat_table((char *[]){"0", "2", "10", "1000", "10", "5", NULL});
 	creat_threads(&table, table->number_philo);
 	i = -1;
 	while(++i < table->number_philo)

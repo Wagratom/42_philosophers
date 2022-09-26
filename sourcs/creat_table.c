@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:39:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/25 17:54:44 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/26 17:55:31 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ t_table	*creat_table(char *argv[])
 	table = (t_table *)ft_calloc(sizeof(t_table), 1);
 	table->number_philo = ft_atoi(argv[1]);
 	table->forks = creat_forks(table->number_philo);
-	table->philo = creat_philos(table->number_philo, argv);
+	table->philo = creat_philos(&table, argv);
 	philo = table->philo;
 	return (table);
 }
