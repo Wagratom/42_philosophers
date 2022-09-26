@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:55:01 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/24 12:02:34 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/26 11:04:44 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,14 @@ pthread_t	new_thread(start_th func, void *argument)
 	return (_new_thread);
 }
 
-pthread_t	*creat_thread(t_table *table)
+void	creat_threads(t_table **table, int nbr_th)
 {
-	pthread_t	*threads;
-	int			index;
+	int			i;
+	void		*argument;
 
-	threads = (pthread_t *)malloc(sizeof(pthread_t) * (table->number_philo + 1));
-	index = -1;
-	while(index++ < table->number_philo)
-		threads[index] = new_thread(&routinee, "running");
-	return (threads);
+	(*table)->threads = (pthread_t *)malloc(sizeof(pthread_t) * nbr_th);
+	i = -1;
+	while(++i < nbr_th)
+		(*table)->threads[i] = new_thread(&start_philo, &(*table)->philo[i]);
 }
 

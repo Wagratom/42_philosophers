@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:46:30 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/25 17:41:20 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/26 11:03:52 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ typedef	struct s_philo
 typedef struct s_table
 {
 	pthread_mutex_t		*forks;
+	pthread_t			*threads;
 	t_philo				*philo;
 	int					number_philo;
 }	t_table;
@@ -40,23 +41,20 @@ t_bool			valid_argv(int argc, char **argv);
 
 t_table			*creat_table(char *argv[]);
 
-int				convert_int(char *number);
-
 t_philo 		*creat_philos(int nbr_philos, char	*argv[]);
 
 pthread_mutex_t	*creat_forks(int nbr_forks);
 
-void			destroy_table(t_table **table);
+void			*start_philo(void *philo);
 
-pthread_t		new_thread(start_th func, void *argument);
+void			creat_threads(t_table **table, int nbr_th);
 
 t_bool			philo_eat(t_table *table);
 
-pthread_t		*creat_thread(t_table *table);
+void			destroy_table(t_table **table);
 
 void			*routinee(void	*print_me);
 void			*start_thread(void	*table);
-
 
 # define MAX_THREAD 32768
 #endif

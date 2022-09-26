@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/14 17:42:21 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/25 17:48:10 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/26 09:01:44 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ CC		=	gcc -g3
 #CFLAGS	+=	-Wall -Wextra -Werror
 CFLAGS	=	-pthread
 
-SOURCS		=	 valid_argv.c creat_table.c routine.c creat_forks.c creat_philos.c \
+SOURCS		=	valid_argv.c creat_table.c routine.c creat_forks.c creat_philos.c \
+				start_philo.c creat_threads.c
 
 OBJS		=	$(patsubst %.c, $(OBJS_DIR)/%.o, $(SOURCS))
 OBJS_DIR	=	objects
