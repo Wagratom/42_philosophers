@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/29 16:59:16 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:49:26 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ MU_TEST(table_tst)
 	mu_assert_int_eq(5, table->nbr_philo);
 	mu_check(NULL != table->forks);
 	mu_check(NULL != table->philos);
+	mu_check(NULL != table->threads);
 }
 
 MU_TEST_SUITE(creat_table_suite)

@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   creat_table.c                                      :+:      :+:    :+:   */
+/*   creat_thread.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 13:34:09 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/29 18:49:08 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/29 17:13:45 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/29 18:46:40 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-t_table	*creat_table(char *argv[])
+pthread_t	creat_th(void)
 {
-	t_table	*table;
+	pthread_t	new_thread;
 
-	table = (t_table *)ft_calloc(sizeof(t_table), 1);
-	table->nbr_philo = ft_atoi(argv[1]);
-	creat_forks(&table);
-	creat_thread(&table);
-	creat_philos(&table, argv);
-	return (table);
+	return (new_thread);
+}
+
+void	creat_thread(t_table **table)
+{
+	int		n;
+	int		index;
+
+	n = (*table)->nbr_philo;
+	(*table)->threads = (pthread_t *)ft_calloc(sizeof(pthread_t), n);
+	index = -1;
+	while(++index < n)
+		(*table)->threads[index] = creat_th();
 }
