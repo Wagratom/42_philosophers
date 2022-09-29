@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/29 11:30:51 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/29 14:17:19 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	=	philo
 LIBFT	=	libft/libft.a
 
 INCLUDE	=	-I./include
-SOURCE	=	valid_argv.c
+SOURCE	=	valid_argv.c creat_table.c
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
