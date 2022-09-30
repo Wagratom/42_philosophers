@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 16:32:44 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/29 16:33:12 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:25:49 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	creat_forks(t_table	**table)
 	while (++index < n)
 	{
 		(*table)->forks[index] = creat_fork();
+		//printf("%p\n", &(*table)->forks[index]);
 		if (pthread_mutex_init(&(*table)->forks[index], NULL) != 0)
 			printf("Error: initializing mutex\n");
 	}

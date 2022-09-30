@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 13:51:18 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:19:42 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ typedef struct s_philo
 	int	eat;
 	int	sleep;
 	int	times;
-	pthread_mutex_t		forks[2];
+	pthread_mutex_t		*fork1;
+	pthread_mutex_t		*fork2;
 	int position;
 }	t_philo;
 
