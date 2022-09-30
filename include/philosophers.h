@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/29 18:47:22 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/30 13:51:18 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "../libft/libft.h"
 # include <pthread.h>
 
-typedef void *(*t_thread)(void *);
+typedef void *(*t_start)(void *);
 
 typedef struct s_philo
 {
@@ -45,6 +45,8 @@ void	creat_forks(t_table	**table);
 
 void	creat_philos(t_table **table, char *argv[]);
 
-void	creat_thread(t_table **table);
+void	creat_threads(t_table **table);
+
+void	init_ths(t_table **table);
 
 #endif

@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   creat_thread.c                                     :+:      :+:    :+:   */
+/*   init_thread.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 17:13:45 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 13:51:11 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/09/30 13:52:21 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-pthread_t	creat_th(void)
+void	*start_philo(void *teste)
 {
-	pthread_t	new_thread;
+	t_philo		*philo;
 
-	return (new_thread);
+	philo = (t_philo *)teste;
+	printf("posi = %d\n", philo->position);
 }
 
-void	creat_threads(t_table **table)
+void	init_th(pthread_t *thread, t_start func, void *argument)
 {
-	int		n;
+	if (pthread_create(thread, NULL, func, argument) != 0)
+		printf("Error creating thread\n");
+}
+
+void	init_ths(t_table **table)
+{
 	int		index;
 
-	n = (*table)->nbr_philo;
-	(*table)->threads = (pthread_t *)ft_calloc(sizeof(pthread_t), n);
 	index = -1;
-	while(++index < n)
-		(*table)->threads[index] = creat_th();
+	while(++index < (*table)->nbr_philo)
+		init_th(&(*table)->threads[index], &start_philo, &(*table)->philos[index]);
 }

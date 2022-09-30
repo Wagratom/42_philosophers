@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/29 18:48:31 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/09/30 13:49:38 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ LIBFT	=	libft/libft.a
 INCLUDE	=	-I./include
 
 SOURCE	=	valid_argv.c creat_table.c creat_forks.c creat_philo.c             \
-			creat_thread.c 
+			creat_thread.c init_thread.c
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
