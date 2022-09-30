@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 16:22:17 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:55:37 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ void	*start_philo(void *teste)
 	t_philo		*philo;
 
 	philo = (t_philo *)teste;
-	// printf("******************address*****************\n");
-	// printf("posi = %d\n", philo->position);
-	// printf("%p\n", philo->forks[0]);
-	// printf("%p\n", philo->forks[1]);
-	// printf("******************address*****************\n");
-	// printf("\n");
-	// sleep(3);
+	pthread_mutex_lock(philo->fork1);
+	pthread_mutex_lock(philo->fork2);
+	printf("posi = %d\n", philo->position);
+	printf("\n");
+	sleep(2);
+	pthread_mutex_unlock(philo->fork1);
+	pthread_mutex_unlock(philo->fork2);
 }
 
 void	init_th(pthread_t *thread, t_start func, void *argument)
@@ -39,10 +39,7 @@ void	init_ths(t_table **table)
 	index = -1;
 	while(++index < (*table)->nbr_philo)
 	{
-		printf("%p\n", (*table)->philos[index].fork1);
-		printf("%p\n", (*table)->philos[index].fork2);
-		printf("\n");
-		//init_th(&(*table)->threads[index], &start_philo, &(*table)->philos[index]);
+		init_th(&(*table)->threads[index], &start_philo, &(*table)->philos[index]);
 	}
 }
 

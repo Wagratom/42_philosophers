@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 16:43:13 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:48:02 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ MU_TEST(philo_tst)
 	mu_assert_int_eq(1, table->philos[0].position);
 
 }
+
 MU_TEST(philo_all_tst)
 {
 	int		index = -1;
