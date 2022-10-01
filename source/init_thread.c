@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/01 12:30:33 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/01 12:37:23 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ void	*start_philo(void *_philo)
 	philo = (t_philo *)_philo;
 	while(philo->times--)
 	{
-		printf("%ld %d is thinking\n", current_time.tv_sec, philo->position);
+		printf("%ld %d is thinking\n", (current_time.tv_usec), philo->position);
 		gettimeofday(&current_time,NULL);
 		pthread_mutex_lock(philo->fork1);
 		pthread_mutex_lock(philo->fork2);
 		//printf("philosophers %d  eating\n", philo->position);
-		printf("%ld %d is eating\n", current_time.tv_sec, philo->position);
+		printf("%ld %d is eating\n", (current_time.tv_usec), philo->position);
 		usleep((philo->eat * 1000));
 		pthread_mutex_unlock(philo->fork1);
 		pthread_mutex_unlock(philo->fork2);
-		printf("%ld %d is sleeping\n", current_time.tv_sec, philo->position);
+		printf("%ld %d is sleeping\n", (current_time.tv_usec), philo->position);
 		usleep(philo->sleep);
 	}
 }

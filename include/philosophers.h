@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/01 11:43:45 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:28:48 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,7 @@ void	creat_philos(t_table **table, char *argv[]);
 void	creat_threads(t_table **table);
 
 void	init_ths(t_table **table);
+
+void	destroy_table(t_table **table);
 
 #endif

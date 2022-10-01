@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/09/30 22:41:44 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/01 16:29:13 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ LIBFT	=	libft/libft.a
 INCLUDE	=	-I./include
 
 SOURCE	=	valid_argv.c creat_table.c creat_forks.c creat_philo.c             \
-			creat_thread.c init_thread.c
+			creat_thread.c init_thread.c destroy_table.c
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
@@ -26,7 +26,7 @@ CFLAGS	=	#-Wall -Wextra -Werror
 
 RM		=	rm -rf
 
-VPATH	=	. ./source ./source/creat_struct
+VPATH	=	. ./source ./source/struct
 
 $(OBJECTS_DIR)/%.o:	%.c
 			$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)
@@ -71,6 +71,26 @@ test: re_mandatory $(OJBS_TST)
 
 tests: re_mandatory $(OJBS_TSTS)
 
+################################################################################
+#									TESTVG
+################################################################################
+
+TST_PATH		=	./test
+
+VG_FILE_TST		=	$(TST_PATH)/$(t).c
+VG_OJBS_TST		=	$(patsubst %.c, %.vg.out, $(VG_FILE_TST))
+
+VG_FILE_TSTS		=	$(wildcard $(TST_PATH)/*.c);
+VG_OJBS_TSTS		=	$(patsubst %.c, %.vg.out, $(VG_FILE_TSTS))
+
+%.vg.out:	%.c
+		@$(CC) $< $(NAME) $(LIBFT) -o $@
+		valgrind ./$@
+		@$(RM) $@
+
+vgtest: re_mandatory $(VG_OJBS_TST)
+
+vgtests: re_mandatory $(VG_OJBS_TSTS)
 
 re_mandatory:
 		$(RM) $(OBJECTS_DIR)

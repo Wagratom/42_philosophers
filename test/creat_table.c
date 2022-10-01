@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 16:48:02 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:28:36 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ MU_TEST(table_tst)
 	mu_check(NULL != table->forks);
 	mu_check(NULL != table->philos);
 	mu_check(NULL != table->threads);
+	destroy_table(&table);
 }
 
 MU_TEST(philo_tst)
@@ -89,11 +90,11 @@ MU_TEST_SUITE(creat_table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	//MU_RUN_TEST(table_tst);
+	MU_RUN_TEST(table_tst);
 	//MU_RUN_TEST(philo_tst);
 	//MU_RUN_TEST(philo_all_tst);
 	//MU_RUN_TEST(forks_address_basic_tst);
-	MU_RUN_TEST(forks_address_full_tst);
+	//MU_RUN_TEST(forks_address_full_tst);
 }
 
 MU_MAIN
