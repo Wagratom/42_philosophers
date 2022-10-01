@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 22:38:18 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:35:09 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ MU_TEST(template_tst)
 	index = -1;
 	while(++index < 5)
 		mu_assert_int_eq(0, pthread_mutex_lock(&table->forks[index]));
+	destroy_table(&table);
 }
 
 MU_TEST_SUITE(test_suite)

@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/01 16:29:13 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/01 16:37:15 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SOURCE	=	valid_argv.c creat_table.c creat_forks.c creat_philo.c             \
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
 
-CC 		=	gcc
+CC 		=	gcc -g3
 CFLAGS	=	#-Wall -Wextra -Werror
 
 RM		=	rm -rf
@@ -85,7 +85,7 @@ VG_OJBS_TSTS		=	$(patsubst %.c, %.vg.out, $(VG_FILE_TSTS))
 
 %.vg.out:	%.c
 		@$(CC) $< $(NAME) $(LIBFT) -o $@
-		valgrind ./$@
+		valgrind --leak-check=full ./$@
 		@$(RM) $@
 
 vgtest: re_mandatory $(VG_OJBS_TST)

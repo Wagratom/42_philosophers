@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 22:39:09 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/01 17:45:01 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ MU_TEST(basic_tst)
 
 	table = creat_table((char *[]){"a.out", "2", "3", "1", "2", "5", NULL});
 	init_ths(&table);
-	index = -1;
-	while(++index < table->nbr_philo)
-		pthread_join(table->threads[index], NULL);
+	destroy_table(&table);
 }
 
 MU_TEST(medio_tst)
@@ -41,17 +39,15 @@ MU_TEST(medio_tst)
 
 	table = creat_table((char *[]){"a.out", "4", "500", "300", "2", "5", NULL});
 	init_ths(&table);
-	index = -1;
-	while(++index < table->nbr_philo)
-		pthread_join(table->threads[index], NULL);
+	destroy_table(&table);
 }
 
 MU_TEST_SUITE(test_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	//MU_RUN_TEST(basic_tst);
-	MU_RUN_TEST(medio_tst);
+	MU_RUN_TEST(basic_tst);
+	//MU_RUN_TEST(medio_tst);
 }
 
 MU_MAIN
