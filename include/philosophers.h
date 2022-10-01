@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 22:37:17 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/01 11:43:45 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <pthread.h>
 # include <unistd.h>
+# include <sys/time.h>
 
 typedef void *(*t_start)(void *);
 
