@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 17:13:45 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 13:51:11 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/30 21:53:34 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ void	creat_threads(t_table **table)
 	n = (*table)->nbr_philo;
 	(*table)->threads = (pthread_t *)ft_calloc(sizeof(pthread_t), n);
 	index = -1;
-	while(++index < n)
+	while (++index < n)
 		(*table)->threads[index] = creat_th();
 }

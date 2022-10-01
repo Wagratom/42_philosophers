@@ -6,16 +6,17 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/09/30 16:19:42 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/30 21:25:24 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILOSOPHERS_H
 #define PHILOSOPHERS_H
 
-# include <stdio.h>
 # include "../libft/libft.h"
+# include <stdio.h>
 # include <pthread.h>
+# include <unistd.h>
 
 typedef void *(*t_start)(void *);
 
