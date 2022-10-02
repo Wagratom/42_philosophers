@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/01 16:28:48 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/02 12:59:00 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,12 @@ void	creat_forks(t_table	**table);
 void	creat_philos(t_table **table, char *argv[]);
 
 void	creat_threads(t_table **table);
+
+void	set_time_init(int time);
+
+int		time_init(void);
+
+int		time_start(void);
 
 void	init_ths(t_table **table);
 

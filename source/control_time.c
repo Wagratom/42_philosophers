@@ -1,26 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   creat_table.c                                      :+:      :+:    :+:   */
+/*   control_time.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 13:34:09 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/02 13:01:33 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/10/02 12:37:42 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/02 13:00:41 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-t_table	*creat_table(char *argv[])
+int	time_start(void)
 {
-	t_table	*table;
+	struct timeval	time;
 
-	table = (t_table *)ft_calloc(sizeof(t_table), 1);
-	table->nbr_philo = ft_atoi(argv[1]);
-	creat_forks(&table);
-	creat_threads(&table);
-	creat_philos(&table, argv);
-	set_time_init(time_start());
-	return (table);
+	gettimeofday(&time, NULL);
+	return (time.tv_sec * 1000 + time.tv_usec / 1000);
 }
+
+int	*control_time(void)
+{
+	static int _time;
+
+	return (&_time);
+}
+
+void	set_time_init(int time)
+{
+	int		*tmp;
+
+	*(control_time()) = time;
+}
+
+int	time_init(void)
+{
+	return (*(control_time()));
+}
+
+
+
