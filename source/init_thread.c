@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/03 12:31:21 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/03 13:49:22 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ int	settime(void)
 	return ((time.tv_sec * 1000 + time.tv_usec / 1000) - time_init());
 }
 
-void	status_death(int time, int time_die)
+void	status_death(t_philo *philo, int time, int time_die)
 {
-	if (time > time_die)
-		printf("philophers die\n");
+	if (time < time_die)
+		return ;
+	printf("philosophers %d die\n", philo->position);
+	destroy_table(philo->table, 0);
 }
 
 void	*start_philo(void *_philo)
@@ -38,15 +40,15 @@ void	*start_philo(void *_philo)
 		printf("%d %d is thinking\n", settime(), philo->position);
 		pthread_mutex_lock(philo->fork1);
 		pthread_mutex_lock(philo->fork2);
-		status_death(settime(), time);
+		status_death(philo, settime(), time);
 		printf("%d %d is eating\n", settime(), philo->position);
 		usleep((philo->eat * 1000));
 		pthread_mutex_unlock(philo->fork1);
 		pthread_mutex_unlock(philo->fork2);
-		status_death(settime(), time);
+		status_death(philo, settime(), time);
 		printf("%d %d is sleeping\n", settime(), philo->position);
 		usleep(philo->sleep);
-		status_death(settime(), time);
+		status_death(philo, settime(), time);
 		time = settime() + philo->die;
 	}
 }
