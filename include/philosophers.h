@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/02 12:59:00 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/03 10:16:55 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,5 +59,9 @@ int		time_start(void);
 void	init_ths(t_table **table);
 
 void	destroy_table(t_table **table);
+
+
+int		time_start(void);
+
 
 #endif
