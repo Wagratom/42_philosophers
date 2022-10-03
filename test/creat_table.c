@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/02 13:01:23 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:21:45 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ MU_TEST(table_tst)
 	mu_check(NULL != table->forks);
 	mu_check(NULL != table->philos);
 	mu_check(NULL != table->threads);
-	destroy_table(&table);
+	destroy_table(&table, 0);
 	mu_check(NULL == table);
 
 }
@@ -42,7 +42,8 @@ MU_TEST(philo_tst)
 	mu_assert_int_eq(2, table->philos[0].sleep);
 	mu_assert_int_eq(5, table->philos[0].times);
 	mu_assert_int_eq(1, table->philos[0].position);
-	destroy_table(&table);
+	destroy_table(&table, 0);
+
 
 }
 
@@ -59,7 +60,8 @@ MU_TEST(philo_all_tst)
 		mu_assert_int_eq(5, table->philos[index].times);
 		mu_assert_int_eq(index + 1, table->philos[index].position);
 	}
-	destroy_table(&table);
+	destroy_table(&table, 0);
+
 }
 
 MU_TEST(forks_address_basic_tst)
@@ -71,7 +73,8 @@ MU_TEST(forks_address_basic_tst)
 	table = creat_table((char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
 	next = table->philos[1].fork1;
 	mu_check(table->philos[0].fork2 == next);
-	destroy_table(&table);
+	destroy_table(&table, 0);
+
 }
 
 
@@ -89,7 +92,8 @@ MU_TEST(forks_address_full_tst)
 	}
 	next = table->philos[0].fork1;
 	mu_check(table->philos[index].fork2 == next);
-	destroy_table(&table);
+	destroy_table(&table, 0);
+
 }
 
 MU_TEST_SUITE(creat_table_suite)

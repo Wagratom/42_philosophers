@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 16:07:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/03 13:37:09 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:34:33 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 void	destroy_table(t_table **table, int status)
 {
+	int index;
+
+	index = -1;
+	while(++index < (*table)->nbr_philo)
+		pthread_mutex_destroy(&(*table)->forks[index]);
 	free((*table)->forks);
 	free((*table)->philos);
 	free((*table)->threads);
 	free(*table);
 	(*table) = NULL;
+	exit(status);
 }
