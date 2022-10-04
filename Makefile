@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/03 15:26:10 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/03 16:55:37 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ INCLUDE	=	-I./include
 
 SOURCE	=	valid_argv.c creat_table.c creat_forks.c creat_philo.c             \
 			creat_thread.c control_time.c init_thread.c destroy_table.c        \
-			start_philo.c
+			init_philo.c
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
@@ -27,7 +27,7 @@ CFLAGS	=	#-Wall -Wextra -Werror
 
 RM		=	rm -rf
 
-VPATH	=	. ./source ./source/struct
+VPATH	=	. ./source ./source/struct ./source/start_program
 
 $(OBJECTS_DIR)/%.o:	%.c
 			$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)

@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/03 15:18:19 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:33:36 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ MU_TEST(death_basic_tft)
 	int		index;
 
 
-	table = creat_table((char *[]){"a.out", "2", "400", "200", "200", "5", NULL});
+	table = creat_table((char *[]){"a.out", "4", "400", "500", "200", "4", NULL});
 	init_ths(&table);
-	//destroy_table(&table, 1);
+	destroy_table(&table, 1);
 }
 
 
@@ -59,8 +59,8 @@ MU_TEST_SUITE(test_suite)
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
 	//MU_RUN_TEST(basic_tst);
-	MU_RUN_TEST(medio_tst);
-	//MU_RUN_TEST(death_basic_tft);
+	//MU_RUN_TEST(medio_tst);
+	MU_RUN_TEST(death_basic_tft);
 }
 
 MU_MAIN
