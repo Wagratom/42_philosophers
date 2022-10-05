@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/03 16:55:37 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/05 12:57:07 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ LIBFT	=	libft/libft.a
 
 INCLUDE	=	-I./include
 
-SOURCE	=	valid_argv.c creat_table.c creat_forks.c creat_philo.c             \
+SOURCE	=	main.c valid_argv.c creat_table.c creat_forks.c creat_philo.c             \
 			creat_thread.c control_time.c init_thread.c destroy_table.c        \
 			init_philo.c
 
@@ -36,7 +36,8 @@ all:	$(NAME)
 
 $(NAME):	$(OBJECTS_DIR) $(OBJECTS)
 				$(MAKE) -C ./libft
-				ar -rcs $@ $(OBJECTS)
+				$(CC) $(OBJECTS) $(LIBFT) -o $@ $(INCLUDE)
+#ar -rcs
 
 $(OBJECTS_DIR):
 				mkdir -p $@

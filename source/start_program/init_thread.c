@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/03 15:42:56 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/05 13:26:36 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,17 @@ void	init_th(pthread_t *thread, t_start func, void *argument)
 		printf("Error creating thread\n");
 }
 
-void	init_ths(t_table **table)
+void	init_ths(void)
 {
 	int		index;
+	int		nbr_philo;
 
 	index = -1;
-	while(++index < (*table)->nbr_philo)
-		init_th(&(*table)->threads[index], &init_philo, &(*table)->philos[index]);
+	nbr_philo = table()->nbr_philo;
+	while(++index < nbr_philo)
+		init_th(&table()->threads[index], &init_philo, &table()->philos[index]);
 	index = -1;
-	while(++index < (*table)->nbr_philo)
-		pthread_join((*table)->threads[index], NULL);
-	destroy_table(table, 0);
-
+	while(++index < nbr_philo)
+		pthread_join(table()->threads[index], NULL);
+	destroy_table(0);
 }

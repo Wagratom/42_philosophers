@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/03 15:42:56 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/05 11:31:50 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ typedef struct s_philo
 	int			sleep;
 	int			times;
 	int 		position;
-	t_table		**table;
+	t_table		*table;
 	pthread_mutex_t		*fork1;
 	pthread_mutex_t		*fork2;
 
@@ -47,11 +47,11 @@ t_bool	valid_argv(int argc, char	*argv[]);
 
 t_table	*creat_table(char *argv[]);
 
-void	creat_forks(t_table	**table);
+void	creat_forks(void);
 
-void	creat_philos(t_table **table, char *argv[]);
+void	creat_philos(char *argv[]);
 
-void	creat_threads(t_table **table);
+void	creat_threads(void);
 
 
 void	set_time_init(int time);
@@ -60,14 +60,14 @@ int		time_init(void);
 
 int		time_start(void);
 
-void	init_ths(t_table **table);
+void	init_ths(void);
 
 void	*init_philo(void *_philo);
 
-void	destroy_table(t_table **table, int status);
-
+void	destroy_table(int status);
 
 int		time_start(void);
 
+t_table	*table(void);
 
 #endif
