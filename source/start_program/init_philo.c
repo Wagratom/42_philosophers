@@ -6,19 +6,11 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 15:24:32 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/05 14:19:28 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/05 14:44:01 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
-
-int	settime(void)
-{
-	struct timeval	time;
-
-	gettimeofday(&time, NULL);
-	return ((time.tv_sec * 1000 + time.tv_usec / 1000) - time_init());
-}
 
 int	status_death(t_philo *philo, int time, int time_die, int variavel)
 {
