@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/05 14:35:23 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/06 08:02:46 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ typedef struct s_table
 	pthread_mutex_t		*forks;
 	t_philo				*philos;
 	pthread_t			*threads;
+	t_bool				die;
+	pthread_mutex_t		mutex_die;
 }	t_table;
 
 t_bool	valid_argv(int argc, char	*argv[]);

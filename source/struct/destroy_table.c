@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 16:07:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/05 14:05:20 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:57:23 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ void	destroy_table(int status)
 	free(table()->forks);
 	free(table()->threads);
 	free(table()->philos);
-	exit(status);
 }

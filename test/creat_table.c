@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/05 11:26:00 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/05 18:40:56 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,6 @@ MU_TEST(forks_address_full_tst)
 {
 	pthread_mutex_t		*next;
 	int		index = -1;
-
 
 	creat_table((char *[]){"a.out", "5", "3", "1", "2", "5", NULL});
 	while(++index < table()->nbr_philo - 1)
