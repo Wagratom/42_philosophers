@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/10 09:20:52 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/10 14:50:26 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,18 @@ void	test_setup(void)
 }
 void	test_teardown(void)
 {
+}
+
+MU_TEST(fork_not_erro_tst)
+{
+	t_table	table;
+	int		index;
+
+	creat_table(&table, (char *[]){"a.out", "5", "3", "1", "2", "5", NULL});
+	index = -1;
+	while(++index < 5)
+		mu_assert_int_eq(0, pthread_mutex_lock(&table.forks[index]));
+	//destroy_table(0);
 }
 
 MU_TEST(address_basic_tst)
@@ -51,8 +63,9 @@ MU_TEST_SUITE(creat_table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
+	MU_RUN_TEST(fork_not_erro_tst);
 	//MU_RUN_TEST(address_basic_tst);
-	MU_RUN_TEST(address_full_tst);
+	//MU_RUN_TEST(address_full_tst);
 }
 
 MU_MAIN
