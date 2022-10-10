@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_thread.c                                      :+:      :+:    :+:   */
+/*   creat.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/10 13:33:57 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/10 09:20:46 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "minunit.h"
-# include "../include/philosophers.h"
+# include "../minunit.h"
+# include "../../include/philosophers.h"
 
 void	test_setup(void)
 {
@@ -20,44 +20,28 @@ void	test_teardown(void)
 {
 }
 
-MU_TEST(basic_tst)
+MU_TEST(table_tst)
 {
 	t_table table;
 
-	creat_table(&table, (char *[]){"a.out", "2", "3", "1", "2", "5", NULL});
-	init_ths(&table);
+	creat_table(&table, (char *[]){"a.out", "5", "3", "1", "2", "5", NULL});
+	mu_assert_int_eq(5, table.nbr_philo);
+	mu_check(NULL != table.forks);
+	mu_check(NULL != table.philos);
+	mu_check(NULL != table.threads);
 }
 
-MU_TEST(medio_tst)
-{
-	t_table table;
-
-	creat_table(&table, (char *[]){"a.out", "4", "500", "200", "200", "5", NULL});
-	init_ths(&table);
-}
-
-MU_TEST(death_basic_tft)
-{
-	t_table table;
-
-	creat_table(&table, (char *[]){"a.out", "4", "400", "500", "200", "4", NULL});
-	init_ths(&table);
-}
-
-
-MU_TEST_SUITE(test_suite)
+MU_TEST_SUITE(creat_table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	MU_RUN_TEST(basic_tst);
-	//MU_RUN_TEST(medio_tst);
-	//MU_RUN_TEST(death_basic_tft);
+	MU_RUN_TEST(table_tst);
 }
 
 MU_MAIN
 {
 	MU_DIVIDER;
-	MU_RUN_SUITE(test_suite);
+	MU_RUN_SUITE(creat_table_suite);
 	MU_REPORT();
 	return (MU_EXIT_CODE);
 }

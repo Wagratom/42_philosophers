@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/05 12:57:07 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/10 13:14:16 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ LIBFT	=	libft/libft.a
 
 INCLUDE	=	-I./include
 
-SOURCE	=	main.c valid_argv.c creat_table.c creat_forks.c creat_philo.c             \
-			creat_thread.c control_time.c init_thread.c destroy_table.c        \
-			init_philo.c
+SOURCE	=	main.c valid_argv.c creat_table.c creat_philo.c control_time.c     \
+			init_thread.c destroy_table.c init_philo.c                         \
+
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
@@ -36,8 +36,8 @@ all:	$(NAME)
 
 $(NAME):	$(OBJECTS_DIR) $(OBJECTS)
 				$(MAKE) -C ./libft
-				$(CC) $(OBJECTS) $(LIBFT) -o $@ $(INCLUDE)
-#ar -rcs
+				ar -rcs $@ $(OBJECTS)
+#coloque < ar -rcs $@ $(OBJECTS) > para modar os test
 
 $(OBJECTS_DIR):
 				mkdir -p $@

@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   creat_thread.c                                     :+:      :+:    :+:   */
+/*   guardian.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 17:13:45 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/05 11:45:10 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/10/08 11:55:35 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/10 14:37:10 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-void	creat_threads(void)
+void	*guardian(void *argument)
 {
-	int		n;
+	t_guardian	*guardian;
+	int			index;
 
-	n = table()->nbr_philo;
-	table()->threads = (pthread_t *)ft_calloc(sizeof(pthread_t), n);
+	printf("guardion size = %d\n", )
+	exit(0);
+	guardian = (t_guardian *)argument;
+	while (1)
+	{
+		index = -1;
+		while (++index < guardian->size)
+		{
+			printf("to na função infinita %d\n", *guardian->die_philos[index]);
+		}
+	}
 }

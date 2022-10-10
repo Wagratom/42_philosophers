@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/06 08:02:46 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/10 14:30:16 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,17 +22,22 @@
 typedef void *(*t_start)(void *);
 typedef struct s_table t_table;
 
+typedef struct s_guardian
+{
+	int		**die_philos;
+	int		*die;
+	int 	size;
+}	t_guardian;
+
 typedef struct s_philo
 {
-	int			die;
-	int			eat;
-	int			sleep;
-	int			times;
-	int 		position;
-	t_table		*table;
+	int					die;
+	int					eat;
+	int					sleep;
+	int					times;
+	int 				position;
 	pthread_mutex_t		*fork1;
 	pthread_mutex_t		*fork2;
-
 }	t_philo;
 
 typedef struct s_table
@@ -41,20 +46,14 @@ typedef struct s_table
 	pthread_mutex_t		*forks;
 	t_philo				*philos;
 	pthread_t			*threads;
-	t_bool				die;
-	pthread_mutex_t		mutex_die;
+	t_guardian 			guardion;
+	int					die;
 }	t_table;
 
+
 t_bool	valid_argv(int argc, char	*argv[]);
-
-t_table	*creat_table(char *argv[]);
-
-void	creat_forks(void);
-
-void	creat_philos(char *argv[]);
-
-void	creat_threads(void);
-
+void	*creat_table(t_table *table, char *argv[]);
+void	creat_philos(t_table *table, char *argv[]);
 
 void	set_time_init(int time);
 
@@ -62,16 +61,20 @@ int		time_init(void);
 
 int		time_start(void);
 
-void	init_ths(void);
+void	init_ths(t_table *table);
 
 void	*init_philo(void *_philo);
 
-void	destroy_table(int status);
+void	destroy_table(t_table *table, int status);
 
 int		time_start(void);
 
 t_table	*table(void);
 
 int		settime(void);
+
+
+void	*guardian(void *argument);
+
 
 #endif

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init_thread.c                                      :+:      :+:    :+:   */
+/*   forks.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/10 13:33:57 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/10 09:20:52 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "minunit.h"
-# include "../include/philosophers.h"
+# include "../minunit.h"
+# include "../../include/philosophers.h"
 
 void	test_setup(void)
 {
@@ -20,44 +20,45 @@ void	test_teardown(void)
 {
 }
 
-MU_TEST(basic_tst)
+MU_TEST(address_basic_tst)
 {
+	pthread_mutex_t		*next;
+	int		index = -1;
 	t_table table;
 
 	creat_table(&table, (char *[]){"a.out", "2", "3", "1", "2", "5", NULL});
-	init_ths(&table);
+	next = table.philos[1].fork1;
+	mu_check(table.philos[0].fork2 == next);
 }
 
-MU_TEST(medio_tst)
+MU_TEST(address_full_tst)
 {
+	pthread_mutex_t		*next;
+	int		index = -1;
 	t_table table;
 
-	creat_table(&table, (char *[]){"a.out", "4", "500", "200", "200", "5", NULL});
-	init_ths(&table);
+	creat_table(&table, (char *[]){"a.out", "5", "3", "1", "2", "5", NULL});
+	while(++index < table.nbr_philo - 1)
+	{
+		next = table.philos[index + 1].fork1;
+		mu_check(table.philos[index].fork2 == next);
+	}
+	next = table.philos[0].fork1;
+	mu_check(table.philos[index].fork2 == next);
 }
 
-MU_TEST(death_basic_tft)
-{
-	t_table table;
-
-	creat_table(&table, (char *[]){"a.out", "4", "400", "500", "200", "4", NULL});
-	init_ths(&table);
-}
-
-
-MU_TEST_SUITE(test_suite)
+MU_TEST_SUITE(creat_table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	MU_RUN_TEST(basic_tst);
-	//MU_RUN_TEST(medio_tst);
-	//MU_RUN_TEST(death_basic_tft);
+	//MU_RUN_TEST(address_basic_tst);
+	MU_RUN_TEST(address_full_tst);
 }
 
 MU_MAIN
 {
 	MU_DIVIDER;
-	MU_RUN_SUITE(test_suite);
+	MU_RUN_SUITE(creat_table_suite);
 	MU_REPORT();
 	return (MU_EXIT_CODE);
 }
