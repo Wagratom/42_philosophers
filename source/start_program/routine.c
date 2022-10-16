@@ -1,35 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   guardian.c                                         :+:      :+:    :+:   */
+/*   routine.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/08 11:55:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/16 08:06:36 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/15 12:16:52 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-static void	verify_die(t_guardian *guardian)
+t_bool sleeping_or_die(t_philo *philo)
 {
-	int	index;
-
-	index = -1;
-	while (++index < guardian->size)
-	{
-		if (settime() > *guardian->die_philos[index])
-			*guardian->die = TRUE;
-	}
+	if (philo->die == TRUE)
+		return (FALSE);
+	usleep((philo->sleep * 1000));
+	return (FALSE);
 }
 
-void	*guardian(void *argument)
+void	*routine(void *argument)
 {
-	t_guardian	*guardian;
-	int			index;
+	t_philo	*philo;
 
-	guardian = (t_guardian *)argument;
-	while (*guardian->die == FALSE)
-		verify_die(guardian);
+	philo = (t_philo *)argument;
+	while(philo->die == FALSE)
+	{
+		printf("%d %d is thinking\n", settime(), philo->position);
+		if (philo_eating_or_die(philo) == FALSE);
+			return (NULL);
+		if (sleeping_or_die(philo) == FALSE);
+			return (NULL);
+	}
+	return (NULL);
 }

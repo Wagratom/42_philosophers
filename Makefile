@@ -6,17 +6,21 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/10 13:14:16 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/16 08:04:23 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	philo
-LIBFT	=	libft/libft.a
+NAME		=	philo
+LIB_FILO	=	philo.a
+LIBFT		=	libft/libft.a
+
+MAIN		=	./source/main.c
+
 
 INCLUDE	=	-I./include
 
-SOURCE	=	main.c valid_argv.c creat_table.c creat_philo.c control_time.c     \
-			init_thread.c destroy_table.c init_philo.c                         \
+SOURCE	=	valid_argv.c creat_table.c creat_philo.c control_time.c            \
+			init_thread.c routine.c eating.c guardian.c destroy_table.c                 \
 
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
@@ -36,7 +40,8 @@ all:	$(NAME)
 
 $(NAME):	$(OBJECTS_DIR) $(OBJECTS)
 				$(MAKE) -C ./libft
-				ar -rcs $@ $(OBJECTS)
+				ar -rcs $(LIB_FILO) $(OBJECTS)
+				$(CC) $(CFLAGS) $(MAIN) $(LIB_FILO) $(LIBFT) -o $@ $(INCLUDE)
 #coloque < ar -rcs $@ $(OBJECTS) > para modar os test
 
 $(OBJECTS_DIR):
@@ -46,8 +51,9 @@ clean:
 				$(MAKE) -C ./libft clean
 				$(RM) $(OBJECTS_DIR)
 
-fclean:
+fclean:		clean
 				$(RM) $(NAME)
+				$(RM) $(LIB_FILO)
 				$(MAKE) -C ./libft fclean
 
 re: fclean all
@@ -65,7 +71,7 @@ FILE_TSTS		=	$(wildcard $(TST_PATH)/*.c);
 OJBS_TSTS		=	$(patsubst %.c, %.out, $(FILE_TSTS))
 
 %.out:	%.c
-		@$(CC) $< $(NAME) $(LIBFT) -o $@
+		@$(CC) $< $(LIB_FILO) $(LIBFT) -o $@
 		@./$@
 		@$(RM) $@
 
@@ -86,7 +92,7 @@ VG_FILE_TSTS		=	$(wildcard $(TST_PATH)/*.c);
 VG_OJBS_TSTS		=	$(patsubst %.c, %.vg.out, $(VG_FILE_TSTS))
 
 %.vg.out:	%.c
-		@$(CC) $< $(NAME) $(LIBFT) -o $@
+		@$(CC) $< $(LIB_FILO) $(LIBFT) -o $@
 		valgrind --leak-check=full ./$@
 		@$(RM) $@
 
