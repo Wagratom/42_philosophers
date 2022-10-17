@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/15 11:13:37 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/16 21:12:34 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	start_routine(t_table *table, int nbr_philo)
 	int		index;
 
 	index = -1;
+	init_th(&table->threads[nbr_philo], &guardian, &table->guardion);
 	while(++index < nbr_philo)
 		init_th(&table->threads[index], &routine, &table->philos[index]);
-	init_th(&table->threads[index], &guardian, &table->guardion);
 }
 
 void	wait_routine(t_table *table, int size)

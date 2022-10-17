@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:55:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/16 08:06:36 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/16 21:09:04 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ static void	verify_die(t_guardian *guardian)
 	while (++index < guardian->size)
 	{
 		if (settime() > *guardian->die_philos[index])
+		{
+			printf("philosophers %d die %d\n", index, settime());
 			*guardian->die = TRUE;
+		}
 	}
 }
 
