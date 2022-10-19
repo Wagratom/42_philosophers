@@ -4,6 +4,11 @@
 		"minunit.h": "c",
 		"libft.h": "c",
 		"time.h": "c",
-		"system_error": "c"
+		"system_error": "c",
+		"numbers": "c",
+		"array": "c",
+		"string_view": "c",
+		"initializer_list": "c",
+		"utility": "c"
 	}
 }

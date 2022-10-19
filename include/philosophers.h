@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/16 08:05:43 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/19 12:48:15 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ typedef struct s_table
 	pthread_mutex_t		*forks;
 	t_philo				*philos;
 	pthread_t			*threads;
-	t_guardian 			guardion;
+	t_guardian 			guardian;
 	t_bool					die;
 }	t_table;
 
@@ -56,9 +56,9 @@ t_bool	valid_argv(int argc, char	*argv[]);
 void	*creat_table(t_table *table, char *argv[]);
 void	creat_philos(t_table *table, int size, char *argv[]);
 
-void	set_time_init(int time);
+int		get_time(void);
 
-int		time_init(void);
+void	set_time_init(int time)
 
 int		time_start(void);
 

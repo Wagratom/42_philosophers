@@ -6,13 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:39:42 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/16 08:28:05 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/19 12:04:36 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-static void msg_and_die(char	*messege)
+static void	msg_and_die(char	*messege)
 {
 	ft_putstr_fd("Error: ", 2);
 	ft_putstr_fd(messege, 2);
@@ -32,7 +32,7 @@ t_bool	is_negative(char *argv[])
 
 t_bool	valid_argv(int argc, char	*argv[])
 {
-	if (argc != 6)
+	if (argc < 5 || argc > 6)
 		msg_and_die("Invalid number of arguments\n");
 	if (argv == NULL || *argv == NULL)
 		msg_and_die("NULL argument list\n");

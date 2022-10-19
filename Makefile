@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/16 08:04:23 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/18 14:06:57 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,6 @@ $(NAME):	$(OBJECTS_DIR) $(OBJECTS)
 				$(MAKE) -C ./libft
 				ar -rcs $(LIB_FILO) $(OBJECTS)
 				$(CC) $(CFLAGS) $(MAIN) $(LIB_FILO) $(LIBFT) -o $@ $(INCLUDE)
-#coloque < ar -rcs $@ $(OBJECTS) > para modar os test
 
 $(OBJECTS_DIR):
 				mkdir -p $@
