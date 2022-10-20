@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/19 12:48:15 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 17:59:41 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ typedef struct s_table t_table;
 
 typedef struct s_guardian
 {
-	t_bool	*die;
-	int		**die_philos;
-	int 	size;
+	pthread_mutex_t		*protection;
+	t_bool				*die_table;
+
+	int					**die_philos;
+	int 				size;
 }	t_guardian;
 
 typedef struct s_philo
@@ -36,48 +38,50 @@ typedef struct s_philo
 	int					sleep;
 	int					times;
 	int 				position;
+
 	pthread_mutex_t		*fork1;
 	pthread_mutex_t		*fork2;
-	t_bool				*lock_die;
+
+	pthread_mutex_t		*print_protection;
+	t_bool				*die_table;
 }	t_philo;
 
 typedef struct s_table
 {
 	int					nbr_philo;
+
 	pthread_mutex_t		*forks;
-	t_philo				*philos;
 	pthread_t			*threads;
+	t_philo				*philos;
+
 	t_guardian 			guardian;
 	t_bool					die;
+	pthread_mutex_t		protection;
 }	t_table;
 
 
-t_bool	valid_argv(int argc, char	*argv[]);
-void	*creat_table(t_table *table, char *argv[]);
-void	creat_philos(t_table *table, int size, char *argv[]);
+t_bool		valid_argv(int argc, char	*argv[]);
 
-int		get_time(void);
+void		*creat_table(t_table *table, char *argv[]);
+void		creat_philos(t_table *table, int size, char *argv[]);
+int			*creat_philo(char *argv[], t_table *table, int index);
 
-void	set_time_init(int time)
 
-int		time_start(void);
+void		init_threads(t_table *table, int size);
+void		*guardian(void *argument);
+void		*routine(void *argument);
+t_bool		philo_eating_or_die(t_philo *philo);
 
-void	init_threads(t_table *table, int size);
+int			*control_time(void);
+int			time_start(void);
+void		set_time_init(int time);
+int			get_time(void);
+int			time_init(void);
 
-void	*init_philo(void *_philo);
+void		destroy_table(t_table *table, int size);
 
-void	destroy_table(t_table *table, int status);
 
-int		time_start(void);
 
-t_table	*table(void);
-
-int		settime(void);
-
-void	*guardian(void *argument);
-
-void	*routine(void *argument);
-
-t_bool	philo_eating_or_die(t_philo *philo);
+void		restore_static(void);
 
 #endif

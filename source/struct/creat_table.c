@@ -6,13 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 13:34:09 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/19 12:29:07 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 18:09:38 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-void	creat_forks(t_table *table, int size)
+void	creat_mutex(t_table *table, int size)
 {
 	int	index;
 
@@ -23,6 +23,8 @@ void	creat_forks(t_table *table, int size)
 		if (pthread_mutex_init(&table->forks[index], NULL) != 0)
 			printf("Error: initializing mutex\n");
 	}
+	if (pthread_mutex_init(&table->protection, NULL) != 0)
+		printf("Error: initializing mutex\n");
 }
 
 void	creat_threads(t_table *table, int size)
@@ -38,7 +40,7 @@ void	creat_guardion(t_table *table, int size)
 	index = -1;
 	while(++index < size)
 		table->guardian.die_philos[index] = &table->philos[index].die;
-	table->guardian.die = &table->die;
+	table->guardian.die_table = &table->die;
 	table->guardian.size = size;
 }
 
@@ -48,7 +50,7 @@ void	*creat_table(t_table *table, char *argv[])
 		argv[5] = "-1";
 	table->nbr_philo = ft_atoi(argv[1]);
 	table->die = FALSE;
-	creat_forks(table, table->nbr_philo);
+	creat_mutex(table, table->nbr_philo);
 	creat_threads(table, table->nbr_philo);
 	creat_philos(table, table->nbr_philo, argv);
 	creat_guardion(table, table->nbr_philo);

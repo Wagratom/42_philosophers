@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:18:47 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/06 09:32:43 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 13:34:24 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,9 +63,9 @@ MU_TEST_SUITE(valid_argv_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	//MU_RUN_TEST(invalid_argc);
+	MU_RUN_TEST(invalid_argc);
 	MU_RUN_TEST(invalid_argv);
-	//MU_RUN_TEST(true_argv);
+	MU_RUN_TEST(true_argv);
 }
 
 MU_MAIN

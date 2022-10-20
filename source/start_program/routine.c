@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/19 12:22:57 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 09:59:48 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_bool	sleeping_or_die(t_philo *philo)
 {
-	if (*philo->lock_die)
+	if (*philo->die_table)
 		return (FALSE);
 	printf("%d %d is sleeping\n", get_time(), philo->position);
 	usleep((philo->sleep * 1000));
@@ -26,7 +26,7 @@ void	*routine(void *argument)
 	t_philo	*philo;
 
 	philo = (t_philo *)argument;
-	while (*philo->lock_die == FALSE && philo->times--)
+	while (*philo->die_table == FALSE && philo->times--)
 	{
 		printf("%d %d is thinking\n", get_time(), philo->position);
 		if (philo_eating_or_die(philo) == FALSE)
@@ -34,6 +34,5 @@ void	*routine(void *argument)
 		if (sleeping_or_die(philo) == FALSE)
 			return (NULL);
 	}
-	*philo->lock_die = TRUE;
 	return (NULL);
 }

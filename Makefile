@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/18 14:06:57 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/20 13:34:46 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,14 +63,16 @@ re: fclean all
 
 TST_PATH		=	./test
 
+AUXILIARES		=	$(wildcard ./test/ults/*.c)
+
 FILE_TST		=	$(TST_PATH)/$(t).c
 OJBS_TST		=	$(patsubst %.c, %.out, $(FILE_TST))
 
-FILE_TSTS		=	$(wildcard $(TST_PATH)/*.c);
+FILE_TSTS		=	$(wildcard $(TST_PATH)/**/*.c);
 OJBS_TSTS		=	$(patsubst %.c, %.out, $(FILE_TSTS))
 
 %.out:	%.c
-		@$(CC) $< $(LIB_FILO) $(LIBFT) -o $@
+		@$(CC) $< $(AUXILIARES) $(LIB_FILO) $(LIBFT) -o $@
 		@./$@
 		@$(RM) $@
 
@@ -87,11 +89,11 @@ TST_PATH		=	./test
 VG_FILE_TST		=	$(TST_PATH)/$(t).c
 VG_OJBS_TST		=	$(patsubst %.c, %.vg.out, $(VG_FILE_TST))
 
-VG_FILE_TSTS		=	$(wildcard $(TST_PATH)/*.c);
+VG_FILE_TSTS		=	$(wildcard $(TST_PATH)/**/*.c)
 VG_OJBS_TSTS		=	$(patsubst %.c, %.vg.out, $(VG_FILE_TSTS))
 
 %.vg.out:	%.c
-		@$(CC) $< $(LIB_FILO) $(LIBFT) -o $@
+		@$(CC) $< $(AUXILIARES) $(LIB_FILO) $(LIBFT) -o $@
 		valgrind --leak-check=full ./$@
 		@$(RM) $@
 

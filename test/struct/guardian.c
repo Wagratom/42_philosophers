@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/18 14:04:12 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 13:37:03 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ MU_TEST(link_die_table)
 	creat_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
 
 	mu_assert_int_eq(table.die, FALSE);
-	*table.guardian.die = 1;
+	*table.guardian.die_table = TRUE;
 	mu_assert_int_eq(table.die, TRUE);
 }
 
@@ -55,8 +55,8 @@ MU_TEST(link_die_philo)
 
 	creat_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
 
-	mu_assert_int_eq(*table.guardian.die = 1, FALSE);
-	table.philos[0].lock_die = TRUE;
+	mu_assert_int_eq(*table.guardian.die_table = 1, FALSE);
+	*table.philos[0].die_table = TRUE;
 	mu_assert_int_eq(table.die, TRUE);
 }
 
@@ -74,10 +74,10 @@ MU_TEST_SUITE(creat_table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
-	//MU_RUN_TEST(die_philos);
-	//MU_RUN_TEST(link_die_table);
-MU_RUN_TEST(link_die_table);
-	//MU_RUN_TEST(size);
+	MU_RUN_TEST(die_philos);
+	MU_RUN_TEST(link_die_table);
+	MU_RUN_TEST(link_die_table);
+	MU_RUN_TEST(size);
 }
 
 MU_MAIN
