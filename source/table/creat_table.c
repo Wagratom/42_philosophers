@@ -6,12 +6,17 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 13:34:09 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/21 00:03:01 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:37:29 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
+void	check_mutex_err(int status)
+{
+	if (status != 0)
+		ft_puterr("Error: initializing mutex\n");
+}
 void	creat_mutex(t_table *table, int size)
 {
 	int	index;
@@ -19,12 +24,9 @@ void	creat_mutex(t_table *table, int size)
 	table->forks = (pthread_mutex_t *)ft_calloc(sizeof(pthread_mutex_t), size);
 	index = -1;
 	while (++index < size)
-	{
-		if (pthread_mutex_init(&table->forks[index], NULL) != 0)
-			ft_puterr("Error: initializing mutex\n");
-	}
-	if (pthread_mutex_init(&table->protection, NULL) != 0)
-		ft_puterr("Error: initializing mutex\n");
+		check_mutex_err(pthread_mutex_init(&table->forks[index], NULL));
+	check_mutex_err(pthread_mutex_init(&table->print_protection, NULL));
+	check_mutex_err(pthread_mutex_init(&table->die_protection, NULL));
 }
 
 void	creat_threads(t_table *table, int size)
@@ -42,7 +44,7 @@ void	creat_guardion(t_table *table, int size)
 		table->guardian.die_philos[index] = &table->philos[index].die;
 	table->guardian.die_table = &table->die;
 	table->guardian.size = size;
-	table->guardian.protection = &table->protection;
+	table->guardian.die_protection = &table->die_protection;
 }
 
 void	*creat_table(t_table *table, char *argv[])

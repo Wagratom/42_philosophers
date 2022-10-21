@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/21 13:42:50 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/21 17:36:07 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct s_table t_table;
 
 typedef struct s_guardian
 {
-	pthread_mutex_t		*protection;
+	pthread_mutex_t		*die_protection;
 	t_bool				*die_table;
 
 	int					**die_philos;
@@ -34,7 +34,7 @@ typedef struct s_guardian
 
 typedef struct s_philo
 {
-	atomic_int			die;
+	int					die;
 	int					eat;
 	int					sleep;
 	int					times;
@@ -44,20 +44,22 @@ typedef struct s_philo
 	pthread_mutex_t		*fork2;
 
 	pthread_mutex_t		*print_protection;
+	pthread_mutex_t		*die_protection;
 	t_bool				*die_table;
 }	t_philo;
 
 typedef struct s_table
 {
 	int					nbr_philo;
+	t_bool				die;
 
 	pthread_mutex_t		*forks;
 	pthread_t			*threads;
 	t_philo				*philos;
 
 	t_guardian 			guardian;
-	t_bool					die;
-	pthread_mutex_t		protection;
+	pthread_mutex_t		print_protection;
+	pthread_mutex_t		die_protection;
 }	t_table;
 
 

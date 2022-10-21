@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/21 11:00:00 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/21 15:53:36 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
 
 CC 		=	gcc -g3
+# -fsanitize=thread
 CFLAGS	=	#-Wall -Wextra -Werror
 
 RM		=	rm -rf
