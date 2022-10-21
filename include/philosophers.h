@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 23:29:00 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/21 10:53:43 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void		*creat_table(t_table *table, char *argv[]);
 void		creat_philos(t_table *table, int size, char *argv[]);
 int			*creat_philo(char *argv[], t_table *table, int index);
 
+void		handle_one_philo(t_table *table, int size);
 
 void		init_threads(t_table *table, int size);
 void		*guardian(void *argument);

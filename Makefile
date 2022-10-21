@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/20 23:32:33 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/21 11:00:00 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ INCLUDE	=	-I./include
 
 SOURCE	=	valid_argv.c creat_table.c creat_philo.c control_time.c            \
 			init_thread.c routine.c eating.c guardian.c destroy_table.c        \
-			print_protect.c
+			print_protect.c one_philo.c
 
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
@@ -32,7 +32,7 @@ CFLAGS	=	#-Wall -Wextra -Werror
 
 RM		=	rm -rf
 
-VPATH	=  ./source ./source/struct ./source/start_program
+VPATH	=	./source ./source/table ./source/start_program
 
 $(OBJECTS_DIR)/%.o:	%.c
 			$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)

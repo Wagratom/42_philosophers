@@ -6,11 +6,18 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:55:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 23:44:06 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/21 10:38:58 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
+
+void	print_protect_guardian(t_guardian *guardian, int index)
+{
+	pthread_mutex_lock(guardian->protection);
+	printf("%d %d died\n", index, get_time());
+	pthread_mutex_lock(guardian->protection);
+}
 
 static void	verify_die(t_guardian *guardian)
 {
@@ -21,7 +28,7 @@ static void	verify_die(t_guardian *guardian)
 	{
 		if (get_time() > *guardian->die_philos[index])
 		{
-			printf("philosophers %d die %d\n", (index + 1), get_time());
+			print_protect_guardian(guardian, (index + 1));
 			*guardian->die_table = TRUE;
 		}
 	}
@@ -36,6 +43,6 @@ void	*guardian(void *argument)
 	while (*guardian->die_table == FALSE)
 	{
 		verify_die(guardian);
-		usleep(500);
+		usleep(5000);
 	}
 }
