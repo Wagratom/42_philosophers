@@ -6,13 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:39:42 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 18:12:32 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 18:15:50 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
- void	ft_puterr(char	*messege)
+void	ft_puterr(char	*messege)
 {
 	ft_putstr_fd("Error: ", 2);
 	ft_putstr_fd(messege, 2);

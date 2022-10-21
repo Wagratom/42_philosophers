@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 17:59:41 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 23:29:00 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,8 +80,10 @@ int			time_init(void);
 
 void		destroy_table(t_table *table, int size);
 
-
+void		print_protect(t_philo *philo, char *msg);
 
 void		restore_static(void);
+
+void		ft_puterr(char	*messege);
 
 #endif

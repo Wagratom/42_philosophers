@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   forks.c                                            :+:      :+:    :+:   */
+/*   mutex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 10:15:15 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/20 18:26:13 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ MU_TEST(fork_not_erro_tst)
 	index = -1;
 	while(++index < 5)
 		mu_assert_int_eq(0, pthread_mutex_lock(&table.forks[index]));
+	mu_assert_int_eq(0, pthread_mutex_lock(&table.protection));
 	destroy_table(&table, table.nbr_philo);
 }
 
@@ -58,6 +59,19 @@ MU_TEST(address_full_tst)
 	}
 	next = table.philos[0].fork1;
 	mu_check(table.philos[index].fork2 == next);
+	destroy_table(&table, table.nbr_philo);
+}
+
+MU_TEST(protection)
+{
+	pthread_mutex_t		*next;
+	int		index = -1;
+	t_table table;
+
+	creat_table(&table, (char *[]){"a.out", "5", "3", "1", "2", "5", NULL});
+	mu_check(&table.protection == table.philos->print_protection);
+	mu_check(&table.protection == table.guardian.protection);
+	mu_check(table.philos->print_protection == table.guardian.protection);
 	destroy_table(&table, table.nbr_philo);
 }
 
