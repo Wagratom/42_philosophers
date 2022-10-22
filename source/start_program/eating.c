@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 10:53:16 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:04:34 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,17 @@ t_bool	unlock_forks(t_philo *philo, t_bool status)
 t_bool	get_fork(t_philo *philo)
 {
 	pthread_mutex_lock(philo->fork1);
-	print_protect(philo, " has taken a fork");
+	if (*philo->die_table)
+		return (pthread_mutex_unlock(philo->fork1), FALSE);
+	print_protect(philo, "has taken a fork");
 	pthread_mutex_lock(philo->fork2);
-	print_protect(philo, " has taken a fork");
+	print_protect(philo, "has taken a fork");
 	return (TRUE);
 }
 
 t_bool	eating(t_philo *philo)
 {
-	if (!get_fork)
+	if (!get_fork(philo))
 		return (FALSE);
 	if (*philo->die_table)
 		return (unlock_forks(philo, FALSE));
@@ -53,6 +55,5 @@ t_bool	philo_eating_or_die(t_philo *philo)
 	if (!check_is_drop_fork(philo))
 		return (FALSE);
 	philo->die = get_time() + philo->die;
-	printf("atualizei %d\n", philo->die);
 	return (TRUE);
 }

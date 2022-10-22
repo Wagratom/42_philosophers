@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 10:15:33 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:00:37 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ MU_TEST(table_tst)
 {
 	t_table table;
 
-	creat_table(&table, (char *[]){"a.out", "5", "3", "1", "2", "5", NULL});
+	create_table(&table, (char *[]){"a.out", "5", "3", "1", "2", "5", NULL});
 	mu_assert_int_eq(5, table.nbr_philo);
 	mu_check(NULL != table.forks);
 	mu_check(NULL != table.philos);
@@ -32,7 +32,7 @@ MU_TEST(table_tst)
 	destroy_table(&table, table.nbr_philo);
 }
 
-MU_TEST_SUITE(creat_table_suite)
+MU_TEST_SUITE(create_table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
@@ -42,7 +42,7 @@ MU_TEST_SUITE(creat_table_suite)
 MU_MAIN
 {
 	MU_DIVIDER;
-	MU_RUN_SUITE(creat_table_suite);
+	MU_RUN_SUITE(create_table_suite);
 	MU_REPORT();
 	return (MU_EXIT_CODE);
 }

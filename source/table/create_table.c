@@ -5,47 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 13:34:09 by wwallas-          #+#    #+#             */
-<<<<<<<< HEAD:source/table/create_table.c
-/*   Updated: 2022/10/22 10:50:38 by wwallas-         ###   ########.fr       */
-========
-/*   Updated: 2022/10/21 17:37:29 by wwallas-         ###   ########.fr       */
->>>>>>>> 0d76db7a2eba22cda84b78f5691954ff165b85aa:source/table/creat_table.c
+/*   Created: 2022/10/22 10:57:29 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/22 14:24:17 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-<<<<<<<< HEAD:source/table/create_table.c
-static void	check_creat_mutex(int status)
+static void	check_err_mutex(int status)
 {
 	if (status != 0)
 		ft_putstr_err("Not creat mutex\n");
 }
 
 void	create_mutex(t_table *table, int size)
-========
-void	check_mutex_err(int status)
-{
-	if (status != 0)
-		ft_puterr("Error: initializing mutex\n");
-}
-void	creat_mutex(t_table *table, int size)
->>>>>>>> 0d76db7a2eba22cda84b78f5691954ff165b85aa:source/table/creat_table.c
 {
 	int	index;
 
 	table->forks = (pthread_mutex_t *)ft_calloc(sizeof(pthread_mutex_t), size);
 	index = -1;
 	while (++index < size)
-<<<<<<<< HEAD:source/table/create_table.c
-		check_creat_mutex(pthread_mutex_init(&table->forks[index], NULL));
-	check_creat_mutex(pthread_mutex_init(&table->protection, NULL));
-========
-		check_mutex_err(pthread_mutex_init(&table->forks[index], NULL));
-	check_mutex_err(pthread_mutex_init(&table->print_protection, NULL));
-	check_mutex_err(pthread_mutex_init(&table->die_protection, NULL));
->>>>>>>> 0d76db7a2eba22cda84b78f5691954ff165b85aa:source/table/creat_table.c
+		check_err_mutex(pthread_mutex_init(&table->forks[index], NULL));
+	check_err_mutex(pthread_mutex_init(&table->print_protection, NULL));
+	check_err_mutex(pthread_mutex_init(&table->die_protection, NULL));
 }
 
 void	create_threads(t_table *table, int size)
@@ -63,6 +45,7 @@ void	create_guardion(t_table *table, int size)
 		table->guardian.die_philos[index] = &table->philos[index].die;
 	table->guardian.die_table = &table->die;
 	table->guardian.size = size;
+	table->guardian.print_protection = &table->print_protection;
 	table->guardian.die_protection = &table->die_protection;
 }
 

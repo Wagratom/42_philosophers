@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 13:37:03 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 14:58:24 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ MU_TEST(die_philos)
 	int					index = -1;
 	t_table 			 table;
 
-	creat_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
+	create_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
 
 	while(++index < table.nbr_philo)
 	{
@@ -42,48 +42,44 @@ MU_TEST(link_die_table)
 {
 	t_table table;
 
-	creat_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
-
+	create_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
 	mu_assert_int_eq(table.die, FALSE);
 	*table.guardian.die_table = TRUE;
 	mu_assert_int_eq(table.die, TRUE);
 }
 
-MU_TEST(link_die_philo)
+MU_TEST(die_protection)
 {
 	t_table table;
 
-	creat_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
-
-	mu_assert_int_eq(*table.guardian.die_table = 1, FALSE);
-	*table.philos[0].die_table = TRUE;
-	mu_assert_int_eq(table.die, TRUE);
+	create_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
+	mu_check(&table.die_protection == table.guardian.die_protection);
+	mu_check(&table.die_protection == table.philos[0].die_protection);
 }
 
 MU_TEST(size)
 {
 	t_table table;
 
-	creat_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
-
+	create_table(&table, (char *[]){"a.out", "3", "3", "1", "2", "5", NULL});
 	mu_assert_int_eq(table.guardian.size, 3);
 }
 
 
-MU_TEST_SUITE(creat_table_suite)
+MU_TEST_SUITE(create_table_suite)
 {
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
 	MU_RUN_TEST(die_philos);
 	MU_RUN_TEST(link_die_table);
-	MU_RUN_TEST(link_die_table);
+	MU_RUN_TEST(die_protection);
 	MU_RUN_TEST(size);
 }
 
 MU_MAIN
 {
 	MU_DIVIDER;
-	MU_RUN_SUITE(creat_table_suite);
+	MU_RUN_SUITE(create_table_suite);
 	MU_REPORT();
 	return (MU_EXIT_CODE);
 }

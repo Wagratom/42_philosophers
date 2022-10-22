@@ -5,12 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 16:32:44 by wwallas-          #+#    #+#             */
-<<<<<<<< HEAD:source/table/create_philo.c
-/*   Updated: 2022/10/22 10:41:59 by wwallas-         ###   ########.fr       */
-========
-/*   Updated: 2022/10/21 14:43:29 by wwallas-         ###   ########.fr       */
->>>>>>>> 0d76db7a2eba22cda84b78f5691954ff165b85aa:source/table/creat_philo.c
+/*   Created: 2022/10/22 11:00:07 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/22 14:59:18 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

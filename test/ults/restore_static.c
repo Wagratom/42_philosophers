@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 10:17:43 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 10:21:55 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 14:25:52 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void restore_static(void)
 {
-	*creat_philo(NULL, NULL, -1) = 0;
+	*create_philo(NULL, NULL, -1) = 0;
 }
