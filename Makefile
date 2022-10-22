@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/22 10:38:52 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/22 10:53:34 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,11 +28,12 @@ OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
 
 CC 		=	gcc -g3
+# -fsanitize=thread
 CFLAGS	=	#-Wall -Wextra -Werror
 
 RM		=	rm -rf
 
-VPATH	=	. ./source ./source/struct ./source/start_program
+VPATH	=	./source ./source/table ./source/start_program
 
 $(OBJECTS_DIR)/%.o:	%.c
 			$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)
