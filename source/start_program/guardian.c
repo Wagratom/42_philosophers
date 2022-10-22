@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:55:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 10:00:10 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 10:23:27 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static void	verify_die(t_guardian *guardian)
 		{
 			printf("philosophers %d die %d\n", (index + 1), get_time());
 			*guardian->die_table = TRUE;
+			break ;
 		}
 	}
 }

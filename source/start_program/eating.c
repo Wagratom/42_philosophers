@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 18:05:34 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 10:22:19 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,19 @@ t_bool	unlock_forks(t_philo *philo, t_bool status)
 	return (status);
 }
 
-t_bool	eating(t_philo *philo)
+t_bool	get_fork(t_philo *philo)
 {
 	pthread_mutex_lock(philo->fork1);
-	//printf("%d %d has taken a fork\n", get_time(), philo->position);
 	print_protect(philo, " has taken a fork");
-
 	pthread_mutex_lock(philo->fork2);
-	//printf("%d %d has taken a fork\n", get_time(), philo->position);
 	print_protect(philo, " has taken a fork");
+	return (TRUE);
+}
 
+t_bool	eating(t_philo *philo)
+{
+	if (!get_fork)
+		return (FALSE);
 	if (*philo->die_table)
 		return (unlock_forks(philo, FALSE));
 	printf("%d %d is eating\n", get_time(), philo->position);
@@ -57,5 +60,6 @@ t_bool	philo_eating_or_die(t_philo *philo)
 	if (!check_is_drop_fork(philo))
 		return (FALSE);
 	philo->die = get_time() + philo->die;
+	printf("atualizei %d\n", philo->die);
 	return (TRUE);
 }

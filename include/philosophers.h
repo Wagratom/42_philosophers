@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 17:59:41 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 10:45:55 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_table t_table;
 
 typedef struct s_guardian
 {
-	pthread_mutex_t		*protection;
+	pthread_mutex_t		*die_protection;
 	t_bool				*die_table;
 
 	int					**die_philos;
@@ -62,9 +62,9 @@ typedef struct s_table
 
 t_bool		valid_argv(int argc, char	*argv[]);
 
-void		*creat_table(t_table *table, char *argv[]);
-void		creat_philos(t_table *table, int size, char *argv[]);
-int			*creat_philo(char *argv[], t_table *table, int index);
+void		create_table(t_table *table, char *argv[]);
+void		create_philos(t_table *table, int size, char *argv[]);
+int			*create_philo(char *argv[], t_table *table, int index);
 
 
 void		init_threads(t_table *table, int size);
@@ -83,5 +83,8 @@ void		destroy_table(t_table *table, int size);
 
 
 void		restore_static(void);
+
+void		handle_one_philo(t_table *table, int size);
+void		 print_protect(t_philo *philo, char *msg);
 
 #endif

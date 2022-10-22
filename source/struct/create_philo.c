@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   creat_philo.c                                      :+:      :+:    :+:   */
+/*   create_philo.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 16:32:44 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 18:02:17 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 10:41:59 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-int	*creat_philo(char *argv[], t_table *table, int index)
+int	*create_philo(char *argv[], t_table *table, int index)
 {
 	t_philo			new_philo;
 	int static		position = 0;
@@ -33,7 +33,7 @@ int	*creat_philo(char *argv[], t_table *table, int index)
 	return (&position);
 }
 
-void	creat_last_philo(char *argv[], t_table *table, int position)
+void	create_last_philo(char *argv[], t_table *table, int position)
 {
 	t_philo		new_philo;
 
@@ -47,15 +47,15 @@ void	creat_last_philo(char *argv[], t_table *table, int position)
 	table->philos[position] = new_philo;
 }
 
-void	creat_philos(t_table *table, int size, char *argv[])
+void	create_philos(t_table *table, int size, char *argv[])
 {
 	int		index;
 
 	table->philos = (t_philo *)ft_calloc(sizeof(t_philo), size);
 	index = -1;
 	while (++index < size - 1)
-		creat_philo(argv, table, index);
-	creat_last_philo(argv, table, index);
+		create_philo(argv, table, index);
+	create_last_philo(argv, table, index);
 	table->philos[index].fork1 = &table->forks[index];
 	table->philos[index].fork2 = &table->forks[0];
 }

@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/20 13:34:46 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/22 10:38:52 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,8 +19,9 @@ MAIN		=	./source/main.c
 
 INCLUDE	=	-I./include
 
-SOURCE	=	valid_argv.c creat_table.c creat_philo.c control_time.c            \
-			init_thread.c routine.c eating.c guardian.c destroy_table.c                 \
+SOURCE	=	valid_argv.c create_table.c create_philo.c control_time.c            \
+			init_thread.c routine.c eating.c guardian.c destroy_table.c        \
+			one_philo.c
 
 
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
