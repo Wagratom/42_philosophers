@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:55:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 23:01:47 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:46:23 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	print_protect_guardian(t_guardian *guardian, int index)
 {
 	pthread_mutex_lock(guardian->print_protection);
 	printf("%d %d died\n", get_time(), index);
+	*guardian->die_table = TRUE;
 	pthread_mutex_unlock(guardian->print_protection);
 }
 
@@ -30,7 +31,6 @@ static void	verify_die(t_guardian *guardian)
 		if (get_time() > *guardian->die_philos[index])
 		{
 			print_protect_guardian(guardian, (index + 1));
-			*guardian->die_table = TRUE;
 			pthread_mutex_unlock(guardian->die_protection);
 			return ;
 		}

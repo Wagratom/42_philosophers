@@ -6,13 +6,9 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 21:45:07 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 21:53:22 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 14:12:59 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-t_bool verify_death()
-{
-	
-}

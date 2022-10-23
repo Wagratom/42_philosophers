@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 23:06:22 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 13:39:04 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	*routine(void *argument)
 	t_philo	*philo;
 
 	philo = (t_philo *)argument;
-	while (*philo->die_table == FALSE)
+	while (1)
 	{
 		if (!print_protect(philo, "is thinking"))
 			return (NULL);
