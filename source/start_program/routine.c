@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 13:39:04 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 16:35:00 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*routine(void *argument)
 	{
 		if (!print_protect(philo, "is thinking"))
 			return (NULL);
-		if (philo_eating_or_die(philo) == FALSE)
+		if (eating_status(philo) == FALSE)
 			return (NULL);
 		set_new_time(philo);
 		if (--philo->times == 0)

@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 22:06:03 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 16:35:00 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		handle_one_philo(t_table *table, int size);
 void		init_threads(t_table *table, int size);
 
 void		*routine(void *argument);
-t_bool		philo_eating_or_die(t_philo *philo);
+t_bool		eating_status(t_philo *philo);
 
 void		*guardian(void *argument);
 
