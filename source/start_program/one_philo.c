@@ -6,13 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:27:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 10:53:49 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 15:12:22 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-static void wait_death(t_philo philo)
+static void	wait_death(t_philo philo)
 {
 	int		rest_life;
 

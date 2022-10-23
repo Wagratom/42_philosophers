@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 15:04:34 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 21:01:04 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ t_bool	philo_eating_or_die(t_philo *philo)
 		return (FALSE);
 	if (!check_is_drop_fork(philo))
 		return (FALSE);
+	pthread_mutex_lock(philo->die_protection);
 	philo->die = get_time() + philo->die;
+	pthread_mutex_unlock(philo->die_protection);
 	return (TRUE);
 }

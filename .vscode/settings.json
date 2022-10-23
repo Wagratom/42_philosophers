@@ -10,6 +10,7 @@
 		"string_view": "c",
 		"initializer_list": "c",
 		"utility": "c",
-		"atomic": "c"
+		"atomic": "c",
+		"struct.h": "c"
 	}
 }
