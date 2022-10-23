@@ -6,17 +6,23 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/21 00:00:54 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 23:06:22 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
+void	set_new_time(t_philo *philo)
+{
+	pthread_mutex_lock(philo->die_protection);
+	philo->die = get_time() + philo->die;
+	pthread_mutex_unlock(philo->die_protection);
+}
+
 t_bool	sleeping_or_die(t_philo *philo)
 {
-	if (*philo->die_table)
+	if (!print_protect(philo, "is sleeping"))
 		return (FALSE);
-	print_protect(philo, "is sleeping");
 	usleep((philo->sleep * 1000));
 	return (TRUE);
 }
@@ -28,11 +34,13 @@ void	*routine(void *argument)
 	philo = (t_philo *)argument;
 	while (*philo->die_table == FALSE)
 	{
-		print_protect(philo, "is thinking");
+		if (!print_protect(philo, "is thinking"))
+			return (NULL);
 		if (philo_eating_or_die(philo) == FALSE)
 			return (NULL);
+		set_new_time(philo);
 		if (--philo->times == 0)
-			break ;
+			return (NULL);
 		if (sleeping_or_die(philo) == FALSE)
 			return (NULL);
 	}

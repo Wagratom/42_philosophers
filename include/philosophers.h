@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 21:28:51 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/22 22:06:03 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_bool		philo_eating_or_die(t_philo *philo);
 
 void		*guardian(void *argument);
 
-void		print_protect(t_philo *philo, char *msg);
+t_bool		print_protect(t_philo *philo, char *msg);
 
 /******************************************************************************/
 /*								CONTROL										  */

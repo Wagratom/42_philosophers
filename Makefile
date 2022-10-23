@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/22 21:42:51 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/22 22:58:06 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,8 +26,7 @@ SOURCE	=	valid_argv.c create_table.c create_philo.c control_time.c            \
 OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
 
-CC 		=	gcc -g3
-#-fsanitize=thread
+CC 		=	gcc -g3 -fsanitize=thread
 CFLAGS	=	#-Wall -Wextra -Werror
 
 RM		=	rm -rf
