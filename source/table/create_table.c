@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:57:29 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 14:24:17 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:35:11 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ void	create_table(t_table *table, char *argv[])
 	if (argv[5] == NULL)
 		argv[5] = "-1";
 	table->nbr_philo = ft_atoi(argv[1]);
-	table->die = FALSE;
 	create_mutex(table, table->nbr_philo);
 	create_threads(table, table->nbr_philo);
 	create_philos(table, table->nbr_philo, argv);
 	create_guardion(table, table->nbr_philo);
 	set_time_init(time_start());
+	table->die = FALSE;
 }

@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:39:42 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 14:39:11 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:25:44 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_bool	valid_argv(int argc, char	*argv[])
 {
 	if (argc < 5 || argc > 6)
 		ft_puterr("Invalid number of arguments\n");
-	if (ft_str_eq(argv[1], "0"))
+	if (ft_str_eq(argv[1], "0") || ft_str_eq(argv[5], "0"))
 		exit(0);
 	if (argv == NULL || *argv == NULL)
 		ft_puterr("NULL argument list\n");

@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 16:49:39 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:24:26 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_bool	status_protect(t_philo *philo)
 {
-	t_bool status;
+	t_bool	status;
 
 	pthread_mutex_lock(philo->die_protection);
 	status = *philo->die_table == FALSE;

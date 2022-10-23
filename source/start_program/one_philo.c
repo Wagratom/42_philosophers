@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:27:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 15:12:22 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:41:16 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,8 @@ static void	get_fork(t_philo philo)
 
 void	handle_one_philo(t_table *table, int size)
 {
-	t_philo	philo;
-	int		rest_life;
+	t_philo		philo;
+	int			rest_life;
 
 	if (size != 1)
 		return ;

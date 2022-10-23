@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 14:29:07 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:44:22 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ MU_TEST(print_protect_tst)
 	int		index = -1;
 
 	create_table(&table, (char *[]){"a.out", "5", "3", "1", "2", NULL});
-	mu_check(&table.print_protection == table.philos[0].print_protection);
+	mu_check(&table.print_protection == table.philos[0].protection);
 	restore_static();
 	destroy_table(&table, table.nbr_philo);
 }

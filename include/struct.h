@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 18:09:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 18:27:29 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:44:22 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ typedef struct s_philo
 	pthread_mutex_t		*fork1;
 	pthread_mutex_t		*fork2;
 
-	pthread_mutex_t		*print_protection;
+	pthread_mutex_t		*protection;
 	pthread_mutex_t		*die_protection;
 
 	t_bool				*die_table;

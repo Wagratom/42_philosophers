@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 11:00:07 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 14:59:18 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 17:44:22 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	*create_philo(char *argv[], t_table *table, int index)
 	new_philo.fork1 = &table->forks[index];
 	new_philo.fork2 = &table->forks[index + 1];
 	new_philo.die_table = &table->die;
-	new_philo.print_protection = &table->print_protection;
+	new_philo.protection = &table->print_protection;
 	new_philo.die_protection = &table->die_protection;
 	table->philos[index] = new_philo;
 	return (&position);
@@ -44,7 +44,7 @@ void	create_last_philo(char *argv[], t_table *table, int position)
 	new_philo.times = ft_atoi(argv[5]);
 	new_philo.position = position + 1;
 	new_philo.die_table = &table->die;
-	new_philo.print_protection = &table->print_protection;
+	new_philo.protection = &table->print_protection;
 	new_philo.die_protection = &table->die_protection;
 	table->philos[position] = new_philo;
 }
