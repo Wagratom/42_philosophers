@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/24 11:52:34 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/24 12:41:32 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ re: fclean all
 
 TST_PATH		=	./test
 
-AUXILIARES		=	$(wildcard ./test/ults/*.c)
+INCLUDE_AUX		=	-I./test/ults
 
 FILE_TST		=	$(TST_PATH)/$(t).c
 OJBS_TST		=	$(patsubst %.c, %.out, $(FILE_TST))
@@ -75,7 +75,7 @@ FILE_TSTS		=	$(wildcard $(TST_PATH)/**/*.c);
 OJBS_TSTS		=	$(patsubst %.c, %.out, $(FILE_TSTS))
 
 %.out:	%.c
-		@$(CC) $< $(AUXILIARES) $(LIB_FILO) -o $@ $(INCLUDE)
+		@$(CC) $< $(LIB_FILO) -o $@ $(INCLUDE)  $(INCLUDE_AUX)
 		@./$@
 		@$(RM) $@
 
@@ -96,7 +96,7 @@ VG_FILE_TSTS		=	$(wildcard $(TST_PATH)/**/*.c)
 VG_OJBS_TSTS		=	$(patsubst %.c, %.vg.out, $(VG_FILE_TSTS))
 
 %.vg.out:	%.c
-		@$(CC) $< $(AUXILIARES) $(LIB_FILO) -o $@
+		@$(CC) $< $(LIB_FILO) -o $@ $(INCLUDE)  $(INCLUDE_AUX)
 		valgrind --leak-check=full ./$@
 		@$(RM) $@
 
