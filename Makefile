@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/24 12:41:32 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/24 17:11:39 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,13 +50,16 @@ $(OBJECTS_DIR):
 				mkdir -p $@
 
 clean:
-				$(MAKE) -C ./libft clean
 				$(RM) $(OBJECTS_DIR)
 
 fclean:		clean
 				$(RM) $(NAME)
 				$(RM) $(LIB_FILO)
-				$(MAKE) -C ./libft fclean
+
+norm:
+	@echo "\n			INCLUDES\n" && norminette source
+	@echo "\n			SOURCES\n" && norminette source
+
 
 re: fclean all
 

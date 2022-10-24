@@ -12,6 +12,7 @@
 		"utility": "c",
 		"atomic": "c",
 		"struct.h": "c",
-		"functional": "c"
+		"functional": "c",
+		"stdatomic.h": "c"
 	}
 }

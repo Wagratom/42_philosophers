@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 16:17:19 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 22:55:43 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 17:10:49 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_alloc_or_die(size_t itens, size_t size)
 
 	ptr = malloc(itens * size);
 	if (ptr != NULL)
-		return(ptr);
+		return (ptr);
 	write(2, "Erro em alocar memória\n", 23);
 	exit(EXIT_FAILURE);
 }
