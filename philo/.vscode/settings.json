@@ -1,0 +1,18 @@
+{
+	"files.associations": {
+		"philosophers.h": "c",
+		"minunit.h": "c",
+		"libft.h": "c",
+		"time.h": "c",
+		"system_error": "c",
+		"numbers": "c",
+		"array": "c",
+		"string_view": "c",
+		"initializer_list": "c",
+		"utility": "c",
+		"atomic": "c",
+		"struct.h": "c",
+		"functional": "c",
+		"stdatomic.h": "c"
+	}
+}
