@@ -6,18 +6,11 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:39:42 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 17:25:44 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:48:32 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
-
-void	ft_puterr(char	*messege)
-{
-	ft_putstr_fd("Error: ", 2);
-	ft_putstr_fd(messege, 2);
-	exit(EXIT_FAILURE);
-}
 
 t_bool	is_negative(char *argv[])
 {
@@ -33,14 +26,14 @@ t_bool	is_negative(char *argv[])
 t_bool	valid_argv(int argc, char	*argv[])
 {
 	if (argc < 5 || argc > 6)
-		ft_puterr("Invalid number of arguments\n");
+		ft_putstr_err("Invalid number of arguments\n");
 	if (ft_str_eq(argv[1], "0") || ft_str_eq(argv[5], "0"))
 		exit(0);
 	if (argv == NULL || *argv == NULL)
-		ft_puterr("NULL argument list\n");
+		ft_putstr_err("NULL argument list\n");
 	if (ft_is_array_int(argv + 1) == FALSE)
-		ft_puterr("Non-integer argument list\n");
+		ft_putstr_err("Non-integer argument list\n");
 	if (is_negative(argv))
-		ft_puterr("Argument list possui numeros negativos\n");
+		ft_putstr_err("Argument list possui numeros negativos\n");
 	return (TRUE);
 }

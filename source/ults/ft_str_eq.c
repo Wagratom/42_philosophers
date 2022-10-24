@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_table.c                                    :+:      :+:    :+:   */
+/*   ft_str_eq.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 16:07:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 11:53:26 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/09/17 18:25:23 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/23 22:52:10 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-void	destroy_forks(t_table *table, int size)
+t_bool	ft_str_eq(char *str1, char *str2)
 {
-	int	index;
-
-	index = -1;
-	while (++index < size)
-		pthread_mutex_destroy(&table->forks[index]);
-	pthread_mutex_destroy(&table->print_protection);
-	pthread_mutex_destroy(&table->die_protection);
-}
-
-void	destroy_table(t_table *table, int size)
-{
-	destroy_forks(table, size);
-	free(table->forks);
-	free(table->threads);
-	free(table->philos);
-	free(table->guardian.die_philos);
+	if (str1 == NULL && str2 == NULL)
+		return (TRUE);
+	if (str1 == NULL || str2 == NULL)
+		return (FALSE);
+	while (*str1 || *str2)
+	{
+		if (*str1++ != *str2++)
+			return (FALSE);
+	}
+	return (TRUE);
 }

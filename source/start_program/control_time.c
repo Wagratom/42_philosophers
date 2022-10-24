@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 12:37:42 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/17 09:14:23 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:53:00 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ int	*control_time(void)
 
 void	set_time_init(int time)
 {
-	int		*tmp;
-
 	*control_time() = time;
 }
 

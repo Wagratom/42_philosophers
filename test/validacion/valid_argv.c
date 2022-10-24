@@ -6,13 +6,33 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 11:18:47 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/20 13:34:24 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:14:58 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "minunit.h"
-# include "../include/philosophers.h"
+# include "../minunit.h"
+# include "../../include/philosophers.h"
 
+/******************************************************************************/
+/*						adapt a validate_argv function						   *
+/******************************************************************************/
+
+/*
+t_bool	valid_argv(int argc, char	*argv[])
+{
+	if (argc < 5 || argc > 6)
+		return (FALSE);
+	if (argv == NULL || *argv == NULL)
+		return (FALSE);
+	if (ft_str_eq(argv[1], "0"))
+		return (FALSE);
+	if (ft_is_array_int(argv + 1) == FALSE)
+		return (FALSE);
+	if (is_negative(argv))
+		return (FALSE);
+	return (TRUE);
+}
+*/
 void	test_setup(void)
 {
 }
@@ -40,7 +60,7 @@ MU_TEST(invalid_argv)
 	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){NULL}));
 	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){"-10", "20", NULL}));
 	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){"20", "-10", NULL}));
-	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){"10", "20", "@", NULL}));
+	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){"10", "20", "@", "40", "50", NULL}));
 	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){"10", "20", "!", NULL}));
 	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){"10", "20", ";", NULL}));
 	mu_assert_int_eq(FALSE, valid_argv(6, (char *[]){"10", "20", "/", NULL}));
@@ -56,6 +76,9 @@ MU_TEST(invalid_argv)
 MU_TEST(true_argv)
 {
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"10", "20", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"2", "300", "150", "100", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"2147483647", "10", NULL}));
+	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"10", "20", NULL}));
 	mu_assert_int_eq(TRUE, valid_argv(6, (char *[]){"2147483647", "10", NULL}));
 }
 
@@ -64,8 +87,8 @@ MU_TEST_SUITE(valid_argv_suite)
 	MU_SUITE_CONFIGURE(&test_setup, &test_teardown);
 
 	MU_RUN_TEST(invalid_argc);
-	MU_RUN_TEST(invalid_argv);
-	MU_RUN_TEST(true_argv);
+	//MU_RUN_TEST(invalid_argv);
+	//MU_RUN_TEST(true_argv);
 }
 
 MU_MAIN

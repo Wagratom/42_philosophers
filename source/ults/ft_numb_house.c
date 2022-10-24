@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_table.c                                    :+:      :+:    :+:   */
+/*   ft_numb_house.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 16:07:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 11:53:26 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/07/25 18:37:39 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/24 10:43:20 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-void	destroy_forks(t_table *table, int size)
+int	ft_numb_house(unsigned long int nbr, int base)
 {
-	int	index;
-
-	index = -1;
-	while (++index < size)
-		pthread_mutex_destroy(&table->forks[index]);
-	pthread_mutex_destroy(&table->print_protection);
-	pthread_mutex_destroy(&table->die_protection);
-}
-
-void	destroy_table(t_table *table, int size)
-{
-	destroy_forks(table, size);
-	free(table->forks);
-	free(table->threads);
-	free(table->philos);
-	free(table->guardian.die_philos);
+	if (nbr < (unsigned long int)base)
+		return (1);
+	return (ft_numb_house(nbr / base, base) + 1);
 }

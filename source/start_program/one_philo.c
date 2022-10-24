@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:27:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 17:41:16 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:55:49 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,18 @@ static void	wait_death(t_philo philo)
 
 	rest_life = (philo.die - get_time()) * 1000;
 	usleep(rest_life);
-	printf("%d %d died\n", get_time(), philo.position);
 }
 
 static void	get_fork(t_philo philo)
 {
 	pthread_mutex_lock(philo.fork1);
 	print_protect(&philo, " has taken a fork");
+	pthread_mutex_unlock(philo.fork1);
 }
 
 void	handle_one_philo(t_table *table, int size)
 {
 	t_philo		philo;
-	int			rest_life;
 
 	if (size != 1)
 		return ;
@@ -38,6 +37,7 @@ void	handle_one_philo(t_table *table, int size)
 	print_protect(&philo, "is thinking");
 	get_fork(philo);
 	wait_death(philo);
+	print_protect(&philo, "died");
 	destroy_table(table, size);
 	exit(0);
 }

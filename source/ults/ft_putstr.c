@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   destroy_table.c                                    :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/01 16:07:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 11:53:26 by wwallas-         ###   ########.fr       */
+/*   Created: 2022/10/23 23:06:37 by wwallas-          #+#    #+#             */
+/*   Updated: 2022/10/23 23:06:40 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philosophers.h>
 
-void	destroy_forks(t_table *table, int size)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int	index;
-
-	index = -1;
-	while (++index < size)
-		pthread_mutex_destroy(&table->forks[index]);
-	pthread_mutex_destroy(&table->print_protection);
-	pthread_mutex_destroy(&table->die_protection);
+	write(fd, s, ft_strlen(s));
 }
 
-void	destroy_table(t_table *table, int size)
+void	ft_putstr_err(char	*messege)
 {
-	destroy_forks(table, size);
-	free(table->forks);
-	free(table->threads);
-	free(table->philos);
-	free(table->guardian.die_philos);
+	ft_putstr_fd("Error: ", 2);
+	ft_putstr_fd(messege, 2);
+	exit(EXIT_FAILURE);
 }

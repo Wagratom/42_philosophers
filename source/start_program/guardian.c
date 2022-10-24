@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:55:35 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 17:10:23 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:53:15 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,9 @@ static void	verify_die(t_guardian *guardian)
 void	*guardian(void *argument)
 {
 	t_guardian	*guardian;
-	int			index;
 
 	guardian = (t_guardian *)argument;
 	while (*guardian->die_table == FALSE)
-	{
 		verify_die(guardian);
-	}
 	return (NULL);
 }

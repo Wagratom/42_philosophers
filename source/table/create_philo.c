@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 11:00:07 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 17:44:22 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/24 11:52:51 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	*create_philo(char *argv[], t_table *table, int index)
 {
 	t_philo			new_philo;
-	int static		position = 0;
+	static int		position = 0;
 
 	if (index == -1)
 		return (&position);

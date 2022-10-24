@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/22 15:00:37 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/23 18:17:04 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ MU_TEST(table_tst)
 	mu_check(NULL != table.forks);
 	mu_check(NULL != table.philos);
 	mu_check(NULL != table.threads);
+	restore_static();
 	destroy_table(&table, table.nbr_philo);
 }
 
