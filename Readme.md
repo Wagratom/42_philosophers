@@ -33,7 +33,7 @@ all input times and passes in milliseconds
 
 `./philo 5 300 100 150 (times opcional)`
 
-if the `times` were not passed the program will run until one philosophers die
+if the `times` were not passed the program will run until one philosophers die 💀
 
 ## ⚙️ Installing
 ```
