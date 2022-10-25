@@ -24,7 +24,7 @@ Once awake, they start thinking again. The simulation stops when a philosopher d
 
 * No need to say that philosophers should avoid dying!
 
-## ⚙️ Installing
+## ⚙️Installing
 ```
 $ git clone git@github.com:Wagratom/philosophers.git`
 $ cd philo
