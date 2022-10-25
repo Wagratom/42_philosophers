@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 16:24:37 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:26:29 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,37 @@
 void	init_th(pthread_t *thread, t_start func, void *argument)
 {
 	if (pthread_create(thread, NULL, func, argument) != 0)
-		printf("Error creating thread\n");
+		ft_putstr_err("Error creating thread\n");
 }
 
-void	start_routine(t_table *table, int nbr_philo)
+void	start_routine(t_table *table, int n_thread)
 {
 	int		index;
 
 	index = -1;
-	while (++index < nbr_philo)
+	while (++index < n_thread)
 		init_th(&table->threads[index], &routine, &table->philos[index]);
 	init_th(&table->threads[index], &guardian, &table->guardian);
 }
 
-void	wait_routine(t_table *table, int size)
+int	wait_routine(t_table *table, int n_thread)
 {
 	int		index;
+	int		status;
 
+	status = 0;
 	index = -1;
-	while (++index < size)
+	while (++index < n_thread)
 		pthread_join(table->threads[index], NULL);
+	if (table->die == TRUE)
+		status = 1;
 	table->die = TRUE;
 	pthread_join(table->threads[index], NULL);
+	return (status);
 }
 
-void	init_threads(t_table *table, int size)
+void	init_threads(t_table *table, int n_thread)
 {
-	start_routine(table, size);
-	wait_routine(table, size);
+	start_routine(table, n_thread);
+	wait_routine(table, n_thread);
 }

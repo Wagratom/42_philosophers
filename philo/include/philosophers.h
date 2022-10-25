@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 17:34:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 11:45:36 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:17:54 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,12 @@ int			*create_philo(char *argv[], t_table *table, int index);
 void		handle_one_philo(t_table *table, int size);
 
 /******************************************************************************/
-/*							ROUTINE THREADS									  */
+/*							THREADS, ROUTINE								  */
 /******************************************************************************/
 
-void		init_threads(t_table *table, int size);
+void		init_threads(t_table *table, int n_thread);
+void		start_routine(t_table *table, int n_thread);
+int			wait_routine(t_table *table, int n_thread);
 
 void		*routine(void *argument);
 t_bool		eating_status(t_philo *philo);
