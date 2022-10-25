@@ -15,4 +15,33 @@ a philosopher dies of starvation.
 • Philosophers don’t know if another philosopher is about to die.
 • No need to say that philosophers should avoid dying!
 
-`git clone git@github.com:Wagratom/philosophers.git`
+## Installing 🧐🖥️
+
+```
+$ git clone git@github.com:Wagratom/philosophers.git`
+$ cd philo
+```
+
+## Makefile
+
+to run all tests use
+
+```
+make tests
+```
+
+to run individual tests use
+```
+make test t= path_file/name
+```
+to run the tests using valgrind use vg before the name
+
+## Examples
+```
+make test t=struct/creat
+make vgtest t=strct/creat
+
+make tests
+make vgtests
+```
+
