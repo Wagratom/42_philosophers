@@ -24,7 +24,18 @@ Once awake, they start thinking again. The simulation stops when a philosopher d
 
 * No need to say that philosophers should avoid dying!
 
-## ⚙️Installing
+## program
+the program receives as a parameter the number of philosophers, the time it can go without eating, the time it will take to eat, the time it will take to sleep, (optional) number of times to eat
+
+all input times and passes in milliseconds
+
+<h3>example</h3>
+
+`./philo 5 300 100 150 (times opcional)`
+
+if the `times` were not passed the program will run until one philosophers die
+
+## ⚙️ Installing
 ```
 $ git clone git@github.com:Wagratom/philosophers.git`
 $ cd philo
