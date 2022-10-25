@@ -62,7 +62,9 @@ make test t= path_file/name
 to run the tests using valgrind use vg before the name
 
 ## Examples
+![Logo do Markdown](creat_table.png)
 ```
+
 make test t=struct/creat
 make vgtest t=strct/creat
 
