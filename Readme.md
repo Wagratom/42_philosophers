@@ -15,8 +15,4 @@ a philosopher dies of starvation.
 • Philosophers don’t know if another philosopher is about to die.
 • No need to say that philosophers should avoid dying!
 
-git clone git@github.com:Wagratom/philosophers.git
-`teste`
-```teste
-dsa```
-
+`git clone git@github.com:Wagratom/philosophers.git`
