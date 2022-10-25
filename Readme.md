@@ -1,3 +1,4 @@
+## Philosophers 🍝
 * One or more philosophers sit at a round table.
 There is a large bowl of spaghetti in the middle of the table.
 
