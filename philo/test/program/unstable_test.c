@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/26 11:16:58 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:36:38 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -381,9 +381,9 @@ MU_TEST_SUITE(test_1ms_suite)
 MU_MAIN
 {
 	MU_DIVIDER;
-	//MU_RUN_SUITE(test_5ms_suite);
-	// MU_RUN_SUITE(test_3ms_suite);
-	// MU_RUN_SUITE(test_2ms_suite);
+	MU_RUN_SUITE(test_5ms_suite);
+	MU_RUN_SUITE(test_3ms_suite);
+	MU_RUN_SUITE(test_2ms_suite);
 	MU_RUN_SUITE(test_1ms_suite);
 	MU_REPORT();
 	return (MU_EXIT_CODE);
