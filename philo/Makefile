@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/25 14:07:40 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/26 11:10:16 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,6 @@ $(OBJECTS_DIR):
 
 clean:
 				$(RM) $(OBJECTS_DIR)
-				$(RM) log
 
 fclean:		clean
 				$(RM) $(NAME)

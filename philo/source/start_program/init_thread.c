@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 12:46:38 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/25 10:26:29 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:30:49 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ void	start_routine(t_table *table, int n_thread)
 	int		index;
 
 	index = -1;
+	init_th(&table->threads[n_thread], &guardian, &table->guardian);
 	while (++index < n_thread)
 		init_th(&table->threads[index], &routine, &table->philos[index]);
-	init_th(&table->threads[index], &guardian, &table->guardian);
 }
 
 int	wait_routine(t_table *table, int n_thread)
@@ -39,7 +39,9 @@ int	wait_routine(t_table *table, int n_thread)
 		pthread_join(table->threads[index], NULL);
 	if (table->die == TRUE)
 		status = 1;
+	pthread_mutex_lock(&table->die_protection);
 	table->die = TRUE;
+	pthread_mutex_unlock(&table->die_protection);
 	pthread_join(table->threads[index], NULL);
 	return (status);
 }

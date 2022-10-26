@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 16:07:50 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 11:53:26 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/26 10:54:28 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	destroy_forks(t_table *table, int size)
 	index = -1;
 	while (++index < size)
 		pthread_mutex_destroy(&table->forks[index]);
-	pthread_mutex_destroy(&table->print_protection);
 	pthread_mutex_destroy(&table->die_protection);
+	pthread_mutex_destroy(&table->print_protection);
 }
 
 void	destroy_table(t_table *table, int size)

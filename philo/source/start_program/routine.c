@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 17:19:45 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/26 11:12:03 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ void	*routine(void *argument)
 	t_philo	*philo;
 
 	philo = (t_philo *)argument;
-	if (philo->position % 2 == 0)
-		usleep(100);
 	while (1)
 	{
 		if (!print_protect(philo, "is thinking"))
