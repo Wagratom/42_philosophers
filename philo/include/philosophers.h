@@ -84,5 +84,4 @@ size_t		ft_strlen(const char *s);
 
 t_bool		ft_is_array_int(char	**array);
 
-
 #endif

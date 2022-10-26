@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/26 14:01:45 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/26 14:03:22 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ fclean:		clean
 				$(RM) $(LIB_FILO)
 
 norm:
-	@echo "\n			INCLUDES\n" && norminette source
+	@echo "\n			INCLUDES\n" && norminette include
 	@echo "\n			SOURCES\n" && norminette source
 
 
