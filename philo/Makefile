@@ -58,7 +58,7 @@ fclean:		clean
 				$(RM) $(LIB_FILO)
 
 norm:
-	@echo "\n			INCLUDES\n" && norminette source
+	@echo "\n			INCLUDES\n" && norminette include
 	@echo "\n			SOURCES\n" && norminette source
 
 
