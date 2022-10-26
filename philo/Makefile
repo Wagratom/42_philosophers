@@ -6,7 +6,7 @@
 #    By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 15:47:23 by wwallas-          #+#    #+#              #
-#    Updated: 2022/10/26 11:10:16 by wwallas-         ###   ########.fr        #
+#    Updated: 2022/10/26 11:50:01 by wwallas-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ OBJECTS		=	$(patsubst %.c, $(OBJECTS_DIR)/%.o, $(SOURCE))
 OBJECTS_DIR	=	objects
 
 CC 		=	gcc -g3
-#-fsanitize=thread
+#CC 		=	gcc -g3 -fsanitize=thread use this flg to verify data race
+
 CFLAGS	=	-Wall -Wextra -Werror
 
 RM		=	rm -rf
