@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/26 11:12:03 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/26 15:20:50 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,18 @@ void	*routine(void *argument)
 	t_philo	*philo;
 
 	philo = (t_philo *)argument;
+	if (philo->position % 2 == 0)
+		usleep(10);
 	while (1)
 	{
-		if (!print_protect(philo, "is thinking"))
-			return (NULL);
 		if (eating_status(philo) == FALSE)
 			return (NULL);
 		set_new_time(philo);
 		if (--philo->times == 0)
 			return (NULL);
 		if (sleeping_or_die(philo) == FALSE)
+			return (NULL);
+		if (!print_protect(philo, "is thinking"))
 			return (NULL);
 	}
 	return (NULL);
