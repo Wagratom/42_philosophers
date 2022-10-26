@@ -65,14 +65,14 @@ to run the tests using valgrind use vg before the name
 
 <h4>make test t=struct/creat</h4>
 
-![Logo do Markdown](img/.creat_table.png)
+![Logo do Markdown](.github/img/.creat_table.png)
 
 <h4>make vgtest t=struct/creat</h4>
 
-![Logo do Markdown](img/.vgcreat_table.png)
+![Logo do Markdown](.github/img/.vgcreat_table.png)
 
 <h4>make tests</h4>
 
-![Logo do Markdown](img/.tests.png)
+![Logo do Markdown](.github/img/.tests.png)
 
 ##
