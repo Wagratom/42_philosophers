@@ -33,7 +33,7 @@ all input times and passes in milliseconds
 
 `./philo 5 300 100 150 (times opcional)`
 
-if `times` is not passed the program will run until one philosophers die
+if `times` is not passed the program will run until one philosophers die ☠️
 
 ## ⚙️ Installing
 ```
@@ -75,3 +75,4 @@ to run the tests using valgrind use vg before the name
 
 ![Logo do Markdown](tests.png)
 
+##
