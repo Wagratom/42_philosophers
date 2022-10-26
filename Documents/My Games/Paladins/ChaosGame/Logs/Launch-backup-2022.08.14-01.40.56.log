@@ -1,0 +1,2264 @@
+[0000.87] Log: Async Log file open, 08/14/22 01:32:02
+[0000.87] Init: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[0000.87] Log:  ... running in INSTALLED mode
+[0000.87] DevConfig: GConfig::Find has loaded file:  ..\..\Engine\Config\ConsoleVariables.ini
+[0000.87] Init: Version: 10897
+[0000.87] Init: Epic Internal: 0
+[0000.87] Init: Compiled (64-bit): Jul 12 2022 20:14:38
+[0000.87] Init: Changelist: 1532151
+[0000.87] Init: Command line: -pid=402 -steam -anon  -seekfreeloadingPCConsole -eac_dir "..\\EasyAntiCheat\\"
+[0000.87] Init: Base directory: C:\Program Files (x86)\Steam\steamapps\common\Paladins\Binaries\Win64\
+[0000.87] Init: Computer: DESKTOP-TCQC08A
+[0000.87] Init: User: Bankai
+[0000.87] Init: CPU Page size=4096, Processors=12, Cores=6
+[0000.87] Init: High frequency timer resolution =10.000000 MHz
+[0000.87] Init: Memory total: Physical=15.4GB (15GB approx) Pagefile=16.4GB Virtual=131072.0GB
+[0001.07] DevOnline: Initializing MCTS
+[0001.60] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Aux.GetCaptureDevices.1" />
+[0001.60] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Aux.GetCaptureDevices.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /><CaptureDevices><CaptureDevice><Device>{0.0.1.00000000}.{772d7f19-fe63-4c9f-926c-be30d1da68a2}</Device><DisplayName>Microfone (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></CaptureDevice><CaptureDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></CaptureDevice><CaptureDevice><Device>Default Communication Device</Device><DisplayName>Default Communication Device</DisplayName><Type>DefaultCommunicationDevice</Type></CaptureDevice><CaptureDevice><Device>No Device</Device><DisplayName>No Device</DisplayName><Type>NullDevice</Type></CaptureDevice></CaptureDevices><CurrentCaptureDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></CurrentCaptureDevice><EffectiveCaptureDevice><Device>{0.0.1.00000000}.{772d7f19-fe63-4c9f-926c-be30d1da68a2}</Device><DisplayName>Microfone (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></EffectiveCaptureDevice><DefaultCaptureDevice><Device>{0.0.1.00000000}.{772d7f19-fe63-4c9f-926c-be30d1da68a2}</Device><DisplayName>Microfone (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultCaptureDevice><DefaultCommunicationCaptureDevice><Device>{0.0.1.00000000}.{772d7f19-fe63-4c9f-926c-be30d1da68a2}</Device><DisplayName>Microfone (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultCommunicationCaptureDevice></Results><InputXml><Request requestId="" action="Aux.GetCaptureDevices.1" /></InputXml></Response>
+[0001.60] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Aux.GetRenderDevices.1" />
+[0001.60] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Aux.GetRenderDevices.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /><RenderDevices><RenderDevice><Device>{0.0.0.00000000}.{3f3dfc85-a4ff-437c-b14f-d63de1d45680}</Device><DisplayName>Alto-falantes (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></RenderDevice><RenderDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></RenderDevice><RenderDevice><Device>Default Communication Device</Device><DisplayName>Default Communication Device</DisplayName><Type>DefaultCommunicationDevice</Type></RenderDevice><RenderDevice><Device>No Device</Device><DisplayName>No Device</DisplayName><Type>NullDevice</Type></RenderDevice></RenderDevices><CurrentRenderDevice><Device>Default System Device</Device><DisplayName>Default System Device</DisplayName><Type>DefaultSystemDevice</Type></CurrentRenderDevice><EffectiveRenderDevice><Device>{0.0.0.00000000}.{3f3dfc85-a4ff-437c-b14f-d63de1d45680}</Device><DisplayName>Alto-falantes (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></EffectiveRenderDevice><DefaultRenderDevice><Device>{0.0.0.00000000}.{3f3dfc85-a4ff-437c-b14f-d63de1d45680}</Device><DisplayName>Alto-falantes (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultRenderDevice><DefaultCommunicationRenderDevice><Device>{0.0.0.00000000}.{3f3dfc85-a4ff-437c-b14f-d63de1d45680}</Device><DisplayName>Alto-falantes (Realtek(R) Audio)</DisplayName><Type>SpecificDevice</Type></DefaultCommunicationRenderDevice></Results><InputXml><Request requestId="" action="Aux.GetRenderDevices.1" /></InputXml></Response>
+[0001.60] VoiceChat: Vivox Version: 4.9.0002.31672
+[0001.60] Init: Game is version 5.4.4683.1.
+[0002.14] Log: Initializing Steamworks
+[0002.14] Log: Steam Client API initialized 1
+[0002.14] Log: [OnlineSubsystemSteamworks.OnlineSubsystemSteamworks].GameVersion is not set. Server advertising will fail
+[0002.14] Log: Steam Game Server API initialized 0
+[0002.14] Log: Epic Online Services API Disabled!
+[0002.14] Init: Presizing for 110000 objects not considered by GC, pre-allocating 0 bytes.
+[0002.14] Init: Object subsystem initialized
+[0002.14] Log: Got Steam Language: brazilian which is LangExt POR
+[0002.17] Log: CachePaths() took 0.02 Seconds
+[0002.17] Log: TgAIBehaviorTreeManager :: Loading behavior trees
+[0002.20] Log: TgAIBehaviorTreeManager :: Successfully loaded behavior trees
+[0004.09] Log: Landing Panel http://cds.q6u4m8x5.hwcdn.net/LandingPanel/Paladins/live/
+[0004.11] Log: SystemSettings based on: SystemSettings
+[0004.11] Log: SystemSettings based on: SystemSettings
+[0004.11] Log: SystemSettings based on: SystemSettings
+[0004.12] Log: SystemSettings based on: SystemSettings
+[0004.12] Log: SystemSettings based on: SystemSettings
+[0004.12] Log: SystemSettings based on: SystemSettings
+[0004.12] Log: SystemSettings based on: SystemSettings
+[0004.12] Log: SystemSettings based on: SystemSettings
+[0004.12] Log: SystemSettings based on: SystemSettings
+[0004.12] Log: SystemSettings based on: SystemSettings
+[0004.51] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL-33332-1280x720 FLVL-33332-1280x720
+[0004.93] Log: Found D3D11 adapter 0: AMD Radeon(TM) Graphics
+[0004.93] Log: Adapter has 495MB of dedicated video memory, 0MB of dedicated system memory, and 7870MB of shared system memory
+[0004.94] Log: Shader platform (RHI): PC-D3D-SM5
+[0005.04] Log: PhysX GPU Support: DISABLED
+[0005.17] Log: RENDERTHREADDEBUG - Calling Start Rendering Thread
+[0005.27] Log: FEACClient being initialized
+[0005.61] Log: Assembly load started
+[0013.22] Log: Assembly Loaded Version: DBExport: 07/13/2022 12:24:01,  Src=devsql.server.hirezcorp.com:paladins_live_build_5_4, LangSrc=devsql.server.hirezcorp.com:paladins_translations,
+[0013.22] Log: Assembly load completed in 7.61 seconds
+[0014.08] Log: FMaterialUniformExpressionTexture had invalid TextureIndex! (2/2)
+[0014.08] Log: TFC Version check: Low=5.4.4683.0 High=5.4.4683.0, Result=TRUE
+[0014.11] Log: Skipping adding Package OnlineSubsystemSteamworks to NetPackages
+[0014.12] Log: Skipping adding Package OnlineSubsystemPC to NetPackages
+[0019.67] Log: 136913 objects as part of root set at end of initial load.
+[0019.67] Log: 0 out of 0 bytes used by permanent object pool.
+[0019.67] Warning: StaticLoadObject for SwfMovie GFXFonts fonts_en couldn't find object in memory!
+[0019.67] Warning: Warning, Failed to load 'SwfMovie GFXFonts.fonts_en': Failed to find object 'SwfMovie GFXFonts.fonts_en'
+[0020.07] Log: Initializing Engine...
+[0020.20] Log: Discord Game SDK initialized 1
+[0020.30] Log: [FSocketWin::Bind] Binding to 0.0.0.0:7778
+[0020.30] DevNet: PComNetDriver_0(PEER) TcpNetDriver listening on port 7778
+[0020.58] Log: Couldn't find Master sound class! This class is required for the audio sound mode system to function!
+[0020.58] Log: Wwise(R) SDK Version 2016.2.3 Build 6077. Copyright (c) 2006-2012 Audiokinetic Inc. / All Rights Reserved.
+[0020.58] Log: Start loading WWise Package Lookup Tables
+[0027.83] Log: Finished loading Wwise Packages.
+[0027.91] Log: FViewport::UpdateViewportRHI(FALSE,1280,720,TRUE)
+[0027.91] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread for suspension
+[0027.91] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread
+[0027.93] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread for suspension
+[0027.93] Log: LogGPUDriverInfo: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[0027.93] Log: D3D11 Driver Details:
+[0027.93] Log: Adapter Name: AMD Radeon(TM) Graphics
+[0027.93] Log: Driver Version Unknown (internal: Unknown)
+[0027.93] Log: Driver Date Unknown
+[0028.27] Log: CreateSwapChain with DXGI_SWAP_EFFECT_FLIP_DISCARD
+[0028.27] Log: RENDERTHREADDEBUG - Starting render thread after a suspend
+[0028.27] Log: RENDERTHREADDEBUG - Calling Start Rendering Thread
+[0028.30] Log: Logged in as 'wagratom'
+[0028.30] ScriptWarning: Script call stack:
+	Function TgClient.TgGameViewportClient:Init
+	Function PlatformCommon.PComGameViewportClient:Init
+	Function Engine.GameViewportClient:Init
+
+	TgGameViewportClient Transient.TgGameEngine_0:TgGameViewportClient_0
+	Function Engine.GameViewportClient:Init:0025
+[0028.30] ScriptWarning: Assertion failed, line 703
+	TgGameViewportClient Transient.TgGameEngine_0:TgGameViewportClient_0
+	Function Engine.GameViewportClient:Init:0025
+[0028.31] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0028.31] Warning: Warning, Failed to find object 'Class None.'
+[0028.31] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0028.31] Warning: Warning, Failed to find object 'Class None.'
+[0028.31] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0028.31] Warning: Warning, Failed to find object 'Class None.'
+[0028.31] Warning: Warning, Failed to load 'Class None.': Failed to find object 'Class None.'
+[0028.31] Warning: Warning, Failed to find object 'Class None.'
+[0028.31] DevNet: Browse: LobbyMapV4_P?Name=Player?Team=255?DefaultCharacter=TgGame.TgCharacter
+[0028.31] Log: FEACClient::Send preload map event
+[0028.31] Log: FEACClient OnGameServerDisconnect
+[0028.31] Log: LoadMap: LobbyMapV4_P?Name=Player?Team=255?DefaultCharacter=TgGame.TgCharacter
+[0028.35] Log: Map Game ID = 0
+[0028.35] Log: Map Instance ID = 350451550
+[0028.35] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0028.36] Log: Performance:  appCycles 19 nsec
+[0028.36] Log: Performance:  memCopy per KB 32 nsec
+[0028.37] Log: Performance:  memZero per KB 31 nsec
+[0028.37] Log: Performance:  appInterlockedIncrement 1 nsec
+[0028.37] Log: Performance:  GetTickCount 1 nsec
+[0028.38] TgSLO: Async Load: LobbyRefs_SF
+[0028.38] TgSLO: Async Load: LobbyUI_SF
+[0028.38] Log: Flushing async loaders. MinPriority=ALP_Immediate
+[0028.43] TgSLO: Finish Load: LobbyRefs_SF
+[0028.67] TgSLO: Finish Load: LobbyUI_SF
+[0028.67] Log: Flushed async loaders.
+[0028.67] Log: Game class is 'TgGameLaunch'
+[0028.68] Log: Match ID: 0
+[0028.83] Log: Primary PhysX scene will be in software.
+[0028.83] Log: Creating Primary PhysX Scene.
+[0028.84] Log: *** WARNING - PATHS MAY NOT BE VALID ***
+[0028.84] Log: Bringing World LobbyMapV4_P.TheWorld up for play (0) at 2022.08.14-01.32.30
+[0028.84] Log: Skipping initialization of FSMPartPool!
+[0028.85] Log: Bringing up level for play took: 0.164078
+[0028.85] Error: (Function Engine.GameInfo:ChoosePlayerStart:0102) Cannot use AllNavigationPoints() here - NavigationPointList not set up yet
+[0028.85] Log: Initializing custom image creator...
+[0028.87] Log: UTgGfxScene Initialize: UIMenuManager
+[0028.87] Log: Requested local load of 'patchnotes' JSON
+[0028.88] Log: JSON file exists at requested location. Triggering load...
+[0028.88] Log: Successfully loaded patchnotes JSON data. Attempting to parse...
+[0028.88] Log: Parsing successful. Loading patchnotes entries...
+[0028.88] Log: Successfully loaded 0 patchnotes entries in 0 patchnotes groups
+[0028.88] Log: TgClientHUD Begin Loading All Scenes
+[0028.88] Log: TgClientHUD Load Scene: UIBackground
+[0028.88] Log: TgClientHUD Load Scene: UIStoreDetail
+[0028.88] Log: TgClientHUD Load Scene: UIHome
+[0028.88] Log: TgClientHUD Load Scene: UIStore
+[0028.88] Log: TgClientHUD Load Scene: UIPlay
+[0028.88] Log: TgClientHUD Load Scene: UIMatchLobby
+[0028.88] Log: TgClientHUD Load Scene: UIProfile
+[0028.88] Log: TgClientHUD Load Scene: UILeaderboard
+[0028.88] Log: TgClientHUD Load Scene: UISocial
+[0028.88] Log: TgClientHUD Load Scene: UIEndOfMatchLobby
+[0028.88] Log: TgClientHUD Load Scene: UIQuests
+[0028.88] Log: TgClientHUD Load Scene: UICompetitive
+[0028.88] Log: TgClientHUD Load Scene: UIChampion
+[0028.88] Log: TgClientHUD Load Scene: UIChampionSelect
+[0028.88] Log: TgClientHUD Load Scene: UIChampionMastery
+[0028.88] Log: TgClientHUD Load Scene: UILogin
+[0028.88] Log: TgClientHUD Load Scene: UISettings
+[0028.88] Log: TgClientHUD Load Scene: UIEditLoadouts
+[0028.88] Log: TgClientHUD Load Scene: UIBattlePass
+[0028.88] Log: TgClientHUD Load Scene: UIChallengeSystem
+[0028.88] Log: TgClientHUD Load Scene: UIRadialMenuEquip
+[0028.88] Log: TgClientHUD Load Scene: UIAccessories
+[0028.88] Log: TgClientHUD Load Scene: UISendGift
+[0028.88] Log: TgClientHUD Load Scene: UICredits
+[0028.88] Log: TgClientHUD Load Scene: UIHeader
+[0028.88] Log: TgClientHUD Load Scene: UIFooter
+[0028.88] Log: TgClientHUD Load Scene: UILobbyChat
+[0028.88] Log: TgClientHUD Load Scene: UIProfileMini
+[0028.88] Log: TgClientHUD Load Scene: UINotificationCenter
+[0028.88] Log: TgClientHUD Load Scene: UIAccountLinkPopup
+[0028.88] Log: TgClientHUD Load Scene: UIDailyReward
+[0028.88] Log: TgClientHUD Load Scene: UIDiscardQuestPopup
+[0028.88] Log: TgClientHUD Load Scene: UIPopup
+[0028.88] Log: TgClientHUD Load Scene: UIPopupRealMoneyPurchase
+[0028.88] Log: TgClientHUD Load Scene: UIInputPopup
+[0028.88] Log: TgClientHUD Load Scene: UICompetitivePopupWelcome
+[0028.88] Log: TgClientHUD Load Scene: UICompetitiveRankedDecay
+[0028.88] Log: TgClientHUD Load Scene: UICompetitiveRankChange
+[0028.88] Log: TgClientHUD Load Scene: UIWebBrowser
+[0028.88] Log: TgClientHUD Load Scene: UIMatchInvite
+[0028.88] Log: TgClientHUD Load Scene: UILobbyBoosterSelect
+[0028.88] Log: TgClientHUD Load Scene: UILobbyBoosterActivation
+[0028.88] Log: TgClientHUD Load Scene: UIAcquisition
+[0028.88] Log: TgClientHUD Load Scene: UICouponAcquisition
+[0028.88] Log: TgClientHUD Load Scene: UIPurchase
+[0028.88] Log: TgClientHUD Load Scene: UIPopupPartyManager
+[0028.88] Log: TgClientHUD Load Scene: UITeamInvite
+[0028.88] Log: TgClientHUD Load Scene: UISkills
+[0028.88] Log: TgClientHUD Load Scene: UITalents
+[0028.88] Log: TgClientHUD Load Scene: UIPurchaseGems
+[0028.88] Log: TgClientHUD Load Scene: UIEOMLAcquisition
+[0028.88] Log: TgClientHUD Load Scene: UIPatchNotesPopup
+[0028.88] Log: TgClientHUD Load Scene: UIReferredRewardsPopup
+[0028.88] Log: TgClientHUD Load Scene: UIKeybindPopup
+[0028.88] Log: TgClientHUD Load Scene: UIGameMenu
+[0028.88] Log: TgClientHUD Load Scene: UIFacebookLivePopup
+[0028.88] Log: TgClientHUD Load Scene: UIPopupChampionLevelUp
+[0028.88] Log: TgClientHUD Load Scene: UIPlaySettings
+[0028.88] Log: TgClientHUD Load Scene: UIStoreFilterPopup
+[0028.88] Log: TgClientHUD Load Scene: UIStoreRentSprayPopup
+[0028.88] Log: TgClientHUD Load Scene: UIPopupDeal
+[0028.88] Log: TgClientHUD Load Scene: UIBattlePassXPPurchase
+[0028.88] Log: TgClientHUD Load Scene: UIFullScreen
+[0028.88] Log: TgClientHUD Load Scene: UIMatchLobbyTradePopup
+[0028.88] Log: TgClientHUD Load Scene: UIFullScreenBattlePass
+[0028.88] Log: TgClientHUD Load Scene: UICommendationRewards
+[0028.88] Log: TgClientHUD Load Scene: UIBattlePassLevelUp
+[0028.88] Log: TgClientHUD Load Scene: UIBattlePassPurchase
+[0028.88] Log: TgClientHUD Load Scene: UISimulMedia
+[0028.88] Log: TgClientHUD Load Scene: UIAchievementPopups
+[0028.88] Log: TgClientHUD Load Scene: UINotificationPopup
+[0028.88] Log: TgClientHUD Load Scene: UISafeFrame
+[0028.88] Log: TgClientHUD Load Scene: UIFooterGamepad
+[0028.88] Log: TgClientHUD Load Scene: UIFade
+[0028.88] Log: TgClientHUD Load Scene: UIFacebookLiveIndicator
+[0028.88] Log: TgClientHUD Finished Loading All Scenes
+[0028.88] Log: [LobbyStateLog] Changing lobby state from 0 to 1.
+[0028.88] Exit: PComNetDriver_0(PEER) shut down
+[0028.88] Log: [FSocketWin::Bind] Binding to 0.0.0.0:7778
+[0028.88] DevNet: PComNetDriver_1(PEER) TcpNetDriver listening on port 7778
+[0028.89] Log: ########### Finished loading level: 0.571432 seconds
+[0028.90] Log: Flushing async loaders. MinPriority=ALP_None
+[0029.18] Log: Flushed async loaders.
+[0029.18] Log: Starting RedrawViewports for texture streaming..
+[0029.18] Log: RedrawViewports took: 0.004894 seconds
+[0029.18] Log: Starting Level load StreamAllResources..
+[0029.28] Log: Level load StreamAllResources took: 0.093205 seconds
+[0029.28] Log: Initializing Engine Completed
+[0029.28] Log: >>>>>>>>>>>>>> Initial startup: 29.28s <<<<<<<<<<<<<<<
+[0029.28] Log: Browser user data directory is C:\Users\Bankai\AppData\Local\Temp\BrowserCache\Chaos
+[0029.99] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.SetLocalSpeakerVolume.1"><ConnectorHandle /><Value>60</Value></Request>
+[0029.99] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.SetLocalMicVolume.1"><ConnectorHandle /><Value>60</Value></Request>
+[0029.99] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>true</Value></Request>
+[0029.99] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.SetLocalSpeakerVolume.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.SetLocalSpeakerVolume.1"><ConnectorHandle /><Value>60</Value></Request></InputXml></Response>
+[0029.99] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.SetLocalMicVolume.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.SetLocalMicVolume.1"><ConnectorHandle /><Value>60</Value></Request></InputXml></Response>
+[0029.99] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.MuteLocalMic.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>true</Value></Request></InputXml></Response>
+[0030.00] Log: [Party] APComPlayerController::UpdateMCTSSession( 109775242865372200, 1 )
+[0030.03] Log: UTgGfxScene Initialize: UIBackground
+[0030.05] Log: UTgGfxScene Initialize: UIStoreDetail
+[0030.08] Log: UTgGfxScene Initialize: UIHome
+[0030.12] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.12] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.12] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.12] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.24] Log: UTgGfxScene Initialize: UIStore
+[0030.33] Log: UTgGfxScene Initialize: UIPlay
+[0030.42] Log: UTgGfxScene Initialize: UIMatchLobby
+[0030.55] Log: UTgGfxScene Initialize: UIProfile
+[0030.62] Log: UTgGfxScene Initialize: UILeaderboard
+[0030.64] Log: UTgGfxScene Initialize: UISocial
+[0030.73] Log: UTgGfxScene Initialize: UIEndOfMatchLobby
+[0030.80] Log: UTgGfxScene Initialize: UIQuests
+[0030.82] Log: UTgGfxScene Initialize: UICompetitive
+[0030.83] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.83] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.83] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.83] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0030.86] Log: UTgGfxScene Initialize: UIChampion
+[0030.89] Log: UTgGfxScene Initialize: UIChampionSelect
+[0030.92] Log: UTgGfxScene Initialize: UIChampionMastery
+[0030.93] Log: UTgGfxScene Initialize: UILogin
+[0030.94] Warning: Warning, Encounted an invalid HTML tag when validating string to send to flash: <https://www.hirezstudios.com/legal/>
+[0031.00] Log: UTgGfxScene Initialize: UISettings
+[0031.04] Log: UTgGfxScene Initialize: UIEditLoadouts
+[0031.09] Log: UTgGfxScene Initialize: UIBattlePass
+[0031.12] Log: UTgGfxScene Initialize: UIChallengeSystem
+[0031.13] Log: UTgGfxScene Initialize: UIRadialMenuEquip
+[0031.16] Log: UTgGfxScene Initialize: UIAccessories
+[0031.18] Log: UTgGfxScene Initialize: UISendGift
+[0031.19] Log: UTgGfxScene Initialize: UICredits
+[0031.19] Log: UTgGfxScene Initialize: UIHeader
+[0031.20] Log: UTgGfxScene Initialize: UIFooter
+[0031.20] Log: UTgGfxScene Initialize: UILobbyChat
+[0031.22] Log: UTgGfxScene Initialize: UIProfileMini
+[0031.25] Log: UTgGfxScene Initialize: UINotificationCenter
+[0031.26] Log: UTgGfxScene Initialize: UIAccountLinkPopup
+[0031.27] Log: UTgGfxScene Initialize: UIDailyReward
+[0031.28] Log: UTgGfxScene Initialize: UIDiscardQuestPopup
+[0031.28] Log: UTgGfxScene Initialize: UIPopup
+[0031.28] Log: UTgGfxScene Initialize: UIPopupRealMoneyPurchase
+[0031.28] Log: UTgGfxScene Initialize: UIInputPopup
+[0031.29] Log: UTgGfxScene Initialize: UICompetitivePopupWelcome
+[0031.30] Log: UTgGfxScene Initialize: UICompetitiveRankDecay
+[0031.30] Log: UTgGfxScene Initialize: UICompetitiveRankChange
+[0031.30] Log: UTgGfxScene Initialize: UIWebBrowser
+[0031.30] Log: UTgGfxScene Initialize: UIMatchInvite
+[0031.31] Log: UTgGfxScene Initialize: UILobbyBoosterSelect
+[0031.31] Log: UTgGfxScene Initialize: UILobbyBoosterActivation
+[0031.33] Log: UTgGfxScene Initialize: UIAcquisition
+[0031.34] Log: UTgGfxScene Initialize: UICouponAcquisition
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.35] Warning: Warning, Failed to load 'Font None.Montserrat SemiBold': Failed to find object 'Font None.Montserrat SemiBold'
+[0031.37] Log: UTgGfxScene Initialize: UIPurchase
+[0031.38] Log: UTgGfxScene Initialize: UIPopupPartyManager
+[0031.38] Log: UTgGfxScene Initialize: TgGfxTeamInvite
+[0031.39] Log: UTgGfxScene Initialize: UISkills
+[0031.39] Log: UTgGfxScene Initialize: UITalents
+[0031.40] Log: UTgGfxScene Initialize: UIPurchaseGems
+[0031.41] Log: UTgGfxScene Initialize: UIEOMLAcquisition
+[0031.42] Log: UTgGfxScene Initialize: UIPatchNotesPopup
+[0031.42] Log: UTgGfxScene Initialize: UIReferredRewardsPopup
+[0031.42] Log: UTgGfxScene Initialize: UIKeybindPopup
+[0031.43] Log: UTgGfxScene Initialize: UIGameMenu
+[0031.43] Log: UTgGfxScene Initialize: UIFacebookLivePopup
+[0031.43] Log: UTgGfxScene Initialize: UIPopupChampionLevelUp
+[0031.44] Log: UTgGfxScene Initialize: UIPopupPlaySettings
+[0031.44] Log: UTgGfxScene Initialize: UIStoreFilterPopup
+[0031.45] Log: UTgGfxScene Initialize: UIStoreRentSprayPopup
+[0031.46] Log: UTgGfxScene Initialize: UIPopupDeal
+[0031.47] Log: UTgGfxScene Initialize: UIBattlePassXPPurchase
+[0031.48] Log: UTgGfxScene Initialize: UIFullScreen
+[0031.48] Log: UTgGfxScene Initialize: UIMatchLobbyTradePopup
+[0031.48] Log: UTgGfxScene Initialize: UIFullScreenBattlePass
+[0031.49] Log: UTgGfxScene Initialize: UICommendationRewards
+[0031.54] Log: UTgGfxScene Initialize: UIBattlePassLevelUp
+[0031.54] Log: UTgGfxScene Initialize: UIBattlePassPurchase
+[0031.55] Log: UTgGfxScene Initialize: UISimulMedia
+[0031.55] Log: UTgGfxScene Initialize: UIAchievementPopups
+[0031.56] Log: UTgGfxScene Initialize: UINotificationPopup
+[0031.57] Log: UTgGfxScene Initialize: UISafeFrame
+[0031.57] Log: UTgGfxScene Initialize: UIFooterGamepad
+[0031.57] Log: UTgGfxScene Initialize: UIFade
+[0031.57] Log: UTgGfxScene Initialize: UIFacebookLiveIndicator
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.57] Warning: StaticLoadObject for SwfMovie MenuManager undefined couldn't find object in memory!
+[0031.57] Warning: Warning, Failed to load 'SwfMovie MenuManager.undefined': Failed to find object 'SwfMovie MenuManager.undefined'
+[0031.57] Log: GFx attempted to load missing object [MenuManager.undefined]
+[0031.70] Warning: TgLobbyCamera_15 has unsupported physics mode 8
+[0032.31] Log: UUILogin::LoginReady: 0
+[0044.74] Log: Command not recognized: FlashReleaseMouse
+[0046.87] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010536091650-7945639480-0x0
+[0049.24] Log: Map Game ID = 0
+[0049.24] Log: Map Instance ID = 350451550
+[0049.25] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0049.25] Log: Performance:  appCycles 19 nsec
+[0049.26] Log: Performance:  memCopy per KB 23 nsec
+[0049.26] Log: Performance:  memZero per KB 36 nsec
+[0049.26] Log: Performance:  appInterlockedIncrement 1 nsec
+[0049.27] Log: Performance:  GetTickCount 1 nsec
+[0091.72] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010021277540-7945639480-0x0
+[0094.08] Log: Map Game ID = 0
+[0094.08] Log: Map Instance ID = 350451550
+[0094.08] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0094.08] Log: Performance:  appCycles 19 nsec
+[0094.09] Log: Performance:  memCopy per KB 25 nsec
+[0094.09] Log: Performance:  memZero per KB 33 nsec
+[0094.10] Log: Performance:  appInterlockedIncrement 1 nsec
+[0094.10] Log: Performance:  GetTickCount 1 nsec
+[0104.46] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010021277540-7945639480-0x0
+[0106.99] Log: Map Game ID = 0
+[0106.99] Log: Map Instance ID = 350451550
+[0106.99] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0106.99] Log: Performance:  appCycles 19 nsec
+[0107.00] Log: Performance:  memCopy per KB 22 nsec
+[0107.00] Log: Performance:  memZero per KB 30 nsec
+[0107.00] Log: Performance:  appInterlockedIncrement 1 nsec
+[0107.01] Log: Performance:  GetTickCount 1 nsec
+[0139.27] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>false</Value></Request>
+[0139.27] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.MuteLocalMic.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>false</Value></Request></InputXml></Response>
+[0139.60] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>true</Value></Request>
+[0139.60] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.MuteLocalMic.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>true</Value></Request></InputXml></Response>
+[0143.76] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>false</Value></Request>
+[0143.76] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.MuteLocalMic.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>false</Value></Request></InputXml></Response>
+[0144.18] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>true</Value></Request>
+[0144.18] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.MuteLocalMic.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.MuteLocalMic.1"><ConnectorHandle /><Value>true</Value></Request></InputXml></Response>
+[0156.26] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010021275390-7945639480-0x0
+[0158.57] Log: Map Game ID = 0
+[0158.57] Log: Map Instance ID = 350451550
+[0158.58] Log: Performance: Critical section Lock/Unlock 4 nsec
+[0158.58] Log: Performance:  appCycles 19 nsec
+[0158.58] Log: Performance:  memCopy per KB 21 nsec
+[0158.59] Log: Performance:  memZero per KB 31 nsec
+[0158.59] Log: Performance:  appInterlockedIncrement 1 nsec
+[0158.59] Log: Performance:  GetTickCount 1 nsec
+[0180.00] Log: Time is 2022.08.14-01.35.01
+[0183.73] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010021277540-7945639480-0x0
+[0186.07] Log: Map Game ID = 0
+[0186.07] Log: Map Instance ID = 350451550
+[0186.07] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0186.07] Log: Performance:  appCycles 24 nsec
+[0186.08] Log: Performance:  memCopy per KB 27 nsec
+[0186.08] Log: Performance:  memZero per KB 24 nsec
+[0186.08] Log: Performance:  appInterlockedIncrement 1 nsec
+[0186.09] Log: Performance:  GetTickCount 1 nsec
+[0231.83] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010021277540-7945639480-0x0
+[0234.13] Log: Map Game ID = 0
+[0234.13] Log: Map Instance ID = 350451550
+[0234.14] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0234.14] Log: Performance:  appCycles 19 nsec
+[0234.14] Log: Performance:  memCopy per KB 26 nsec
+[0234.15] Log: Performance:  memZero per KB 36 nsec
+[0234.15] Log: Performance:  appInterlockedIncrement 1 nsec
+[0234.15] Log: Performance:  GetTickCount 1 nsec
+[0286.78] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010536091650-7945639480-0x0
+[0289.10] Log: Map Game ID = 0
+[0289.10] Log: Map Instance ID = 350451550
+[0289.11] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0289.11] Log: Performance:  appCycles 19 nsec
+[0289.11] Log: Performance:  memCopy per KB 21 nsec
+[0289.12] Log: Performance:  memZero per KB 37 nsec
+[0289.12] Log: Performance:  appInterlockedIncrement 1 nsec
+[0289.12] Log: Performance:  GetTickCount 1 nsec
+[0355.27] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010021279690-7945639480-0x0
+[0357.54] Log: Map Game ID = 0
+[0357.54] Log: Map Instance ID = 350451550
+[0357.54] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0357.54] Log: Performance:  appCycles 19 nsec
+[0357.55] Log: Performance:  memCopy per KB 24 nsec
+[0357.55] Log: Performance:  memZero per KB 33 nsec
+[0357.56] Log: Performance:  appInterlockedIncrement 1 nsec
+[0357.56] Log: Performance:  GetTickCount 1 nsec
+[0360.01] Log: Time is 2022.08.14-01.38.01
+[0386.51] Log: Automatically detetecting settings: VID-0x1002 DID-0x1638 SLVL- FLVL-010021277540-7945639480-0x0
+[0389.70] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="C0" action="Connector.Create.1"><ClientName /><AttemptStun>AttemptStunUnspecified</AttemptStun><Mode>Normal</Mode><AccountManagementServer>https://hrpp.www.vivox.com/api2/</AccountManagementServer><MinimumPort>0</MinimumPort><MaximumPort>0</MaximumPort><Logging><Folder /><FileNamePrefix /><FileNameSuffix /><LogLevel>2</LogLevel></Logging><SessionHandleType>Unique</SessionHandleType><Application>Chaos</Application><MaxCalls>6</MaxCalls><AllowCrossDomainLogins>true</AllowCrossDomainLogins><DefaultCodec>1</DefaultCodec><UserAgentId /><MediaProbeServer /><HttpProxyServer /><HttpProxyServerPort>0</HttpProxyServerPort><EnableDuplicateParticipantUris>0</EnableDuplicateParticipantUris><ConnectorHandle>C0</ConnectorHandle><ConfiguredCodecs>39</ConfiguredCodecs></Request>
+[0389.70] Log: [Party] APComPlayerController::UpdateMCTSSession( 109775242865372200, 1 )
+[0389.92] Log: UPComJsonHandler::RequestNewJson called with url: http://cds.q6u4m8x5.hwcdn.net/LandingPanel/Paladins/live//landingpanel.json
+[0390.49] VoiceChat: Warn  VivoxAmSip::AmProvider::Initialize(351) - am_network_start() trying retval=0,port + offset=44484,port=44454
+[0390.49] VoiceChat: Warn  VivoxAmSip::AmProvider::Initialize(353) - am_network_start() returned retval=1,port + offset=44484,port=44454
+[0390.49] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="C0" action="Connector.Create.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /><VersionID>4.9.0002.31672</VersionID><ConnectorHandle>C0</ConnectorHandle></Results><InputXml><Request requestId="C0" action="Connector.Create.1"><ClientName /><AttemptStun>AttemptStunUnspecified</AttemptStun><Mode>Normal</Mode><AccountManagementServer>https://hrpp.www.vivox.com/api2/</AccountManagementServer><MinimumPort>0</MinimumPort><MaximumPort>0</MaximumPort><Logging><Folder /><FileNamePrefix /><FileNameSuffix /><LogLevel>2</LogLevel></Logging><SessionHandleType>Unique</SessionHandleType><Application>Chaos</Application><MaxCalls>6</MaxCalls><AllowCrossDomainLogins>true</AllowCrossDomainLogins><DefaultCodec>1</DefaultCodec><UserAgentId /><MediaProbeServer /><HttpProxyServer /><HttpProxyServerPort>0</HttpProxyServerPort><EnableDuplicateParticipantUris>0</EnableDuplicateParticipantUris><ConnectorHandle>C0</ConnectorHandle><ConfiguredCodecs>39</ConfiguredCodecs></Request></InputXml></Response>
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\landingpanel.json' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeRuby0629.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeYang0629.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeBlake0629.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeWeiss0629.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeRWBY0629.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeRWBYUpdate0628.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeRoF0805.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomePrime0707.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeLTMSupport0811.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\Home2xEPXP0811.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\HomeDKOAlpha0802.jpg' error ()
+[0390.49] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\Welcome.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\RaF.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\SocialLinking.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\GameModes.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\DeckBuilding.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\Talents.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\Roles.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\ItemShop.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\TrialsTut.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\BountyTut.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\LTMtut.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\DailyDeal.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\SP114.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\GP114.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\NP11419.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\FP11419.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\SkyWhale.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\FanForgenocopy.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\PopRWBYLastChance0809.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\Pop2xEPXP0811.jpg' error ()
+[0390.50] Error: Failed to read file '..\..\ChaosGame\Downloaded\landingpanel\POR\PopLTMSupport0811.jpg' error ()
+[0390.50] Log: UPComJsonHandler::RequestNewJson called with url: http://cds.q6u4m8x5.hwcdn.net/LandingPanel/Paladins/live//seasonticket.json
+[0390.79] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\seasonticket.json' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\SPLFR81417.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\SCLFR824.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\PathtoHRX8617.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\Fnatic.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\EnvyUs.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\Ninjas.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\G2.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\Virtus.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\Natus_Vincere.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\Renegades.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\Splyce.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\Mousesports.jpg' error ()
+[0390.80] Error: Failed to read file '..\..\ChaosGame\Downloaded\seasonticket\POR\SKGaming.jpg' error ()
+[0390.80] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0390.80] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0390.80] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0390.81] TgSLO: Async Load: ANNOUNCERPACKASSETS_SF (ItemReferencer18647)
+[0390.81] Log: Map Game ID = 0
+[0390.81] Log: Map Instance ID = 350451550
+[0390.81] Log: Performance: Critical section Lock/Unlock 3 nsec
+[0390.82] Log: Performance:  appCycles 19 nsec
+[0390.82] Log: Performance:  memCopy per KB 25 nsec
+[0390.83] Log: Performance:  memZero per KB 31 nsec
+[0390.83] Log: Performance:  appInterlockedIncrement 1 nsec
+[0390.83] Log: Performance:  GetTickCount 1 nsec
+[0390.84] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0390.84] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0390.84] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0390.84] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0390.84] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0390.84] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0390.84] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0390.84] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0390.84] VoiceChat: UpdateVivox: Logging in as .2b8ce10c., token e30.eyJpc3MiOiJwYWxhZGlucy1nc2MiLCJleHAiOjE2NjA0NTIwOTUsInZ4YSI6ImxvZ2luIiwidnhpIjoxNTM4MDA3LCJmIjoic2lwOi4yYjhjZTEwYy5AaHJwcC52aXZveC5jb20ifQ.z8M_JnZ0LJSZXwy8BhE7atEHcHY_Ga_F2wIjFZ_MdUM
+[0390.84] Log: [MATCH LOBBY LOG]: RecievedMatchStatus, QueueId: 0, MatchId: 0
+[0390.84] Log: [MATCH LOBBY LOG]: RecievedMatchStatus MCTS, LaunchTime: 0, MatchLobbyState: 0, QueueState: 0, PlayerLobbyState: 0, MatchId 0, QueueId 0
+[0390.84] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0390.84] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0390.84] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0390.84] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0390.84] Log: RequestingChannelMembers ch[4]
+[0390.84] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0390.84] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0390.84] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0390.84] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0390.84] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0390.84] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0390.84] Log: UOnlineSubsystemSteamworks::ProcessPlayerProfileUpdate: Exiting due to missing activities
+[0390.84] Log: UpdatePlatformActivities: Exiting due to missing activities
+[0390.85] Log: [Chat Privileges] Posting message
+[0390.85] Log: Chat[9]: Bem-vindos ao Paladins!
+[0390.85] Log: UTgGfxScene Initialize: UIChatTab
+[0390.85] VoiceChat: CVoiceInterfaceVivox::onConnectCompleted (https://hrpp.www.vivox.com/api2/)
+[0390.87] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="A1" action="Account.AnonymousLogin.1"><ConnectorHandle>C0</ConnectorHandle><DisplayName>.2b8ce10c.</DisplayName><ParticipantPropertyFrequency>100</ParticipantPropertyFrequency><EnableBuddiesAndPresence>false</EnableBuddiesAndPresence><BuddyManagementMode>AutoAccept</BuddyManagementMode><AutopostCrashDumps>true</AutopostCrashDumps><AccountManagementServer /><AppToken /><ApplicationOverride /><EnablePresencePersistence>false</EnablePresencePersistence><AccountHandle>A1</AccountHandle><AcctName>.2b8ce10c.</AcctName><AccessToken>e30.eyJpc3MiOiJwYWxhZGlucy1nc2MiLCJleHAiOjE2NjA0NTIwOTUsInZ4YSI6ImxvZ2luIiwidnhpIjoxNTM4MDA3LCJmIjoic2lwOi4yYjhjZTEwYy5AaHJwcC52aXZveC5jb20ifQ.z8M_JnZ0LJSZXwy8BhE7atEHcHY_Ga_F2wIjFZ_MdUM</AccessToken></Request>
+[0390.87] VoiceChat: Info  VivoxApi::CommandHandler::PostEvent(829) - this=0x25a0e8cf230,ToXml(p, true)=<Event type="AccountLoginStateChangeEvent"><AccountHandle>A1</AccountHandle><StatusCode>0</StatusCode><StatusString /><State>2</State><RequestId>A1</RequestId></Event>
+[0390.88] TgSLO: Finish Load: ANNOUNCERPACKASSETS_SF
+[0391.15] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0391.15] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0391.36] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0391.36] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0391.41] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0391.41] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0391.50] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0391.50] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0391.53] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0391.53] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0391.53] VoiceChat: Info  VivoxAmSip::AmProvider::DispatchEvent(682) - this=0x25a2731d450,VivoxAmSip::ToString(evt)= {  type=EXOSIP_REGISTRATION_SUCCESS external_reference=0x7ff81b6bbc48 request= { REGISTER sip:hrpp.disp.vivox.com:6250 SIP/2.0\r\nVia: SIP/2.0/UDP 192.168.1.2:44484;rport;branch=z9hG4bK2940133889\r\nFrom: <sip:.2b8ce10c.@hrpp.vivox.com>;tag=4124310276\r\nTo: <sip:.2b8ce10c.@hrpp.vivox.com>\r\nCall-ID: 1867851768\r\nCSeq: 1 REGISTER\r\nContact: <sip:.2b8ce10c.@192.168.1.2:44484;line=2ff76e3b21200b1>;q=1\r\nMax-Forwards: 70\r\nUser-Agent: Vivox-SDK-4.9.0002.31672W\r\nExpires: 1200\r\nVxApplication: Chaos\r\nContent-Length: 0\r\n\r\n }  response= { SIP/2.0 200 OK\r\nVia: SIP/2.0/UDP 192.168.1.2:44484;rport=44484;branch=z9hG4bK2940133889;received=138.99.189.127\r\nFrom: <sip:.2b8ce10c.@hrpp.vivox.com>;tag=4124310276\r\nTo: <sip:.2b8ce10c.@hrpp.vivox.com>;tag=48438906dbb45ee3141f2fa0f36a97f9.19ea\r\nCall-ID: 1867851768\r\nCSeq: 1 REGISTER\r\nContact: <sip:.2b8ce10c.@192.168.1.2:44484;line=2ff76e3b21200b1>;q=1;expires=1200;received="sip:138.99.189.127:44484;dstip=74.201.107.148;dstport=6250"\r\nDate: Sun, 14 Aug 2022 04:38:38 GMT\r\nContent-Length: 0\r\n\r\n }  ack= { (null) }  tid=0 did=0 rid=1 cid=0 sid=0 nid=0 ss_status=0 ss_reason=0 } 
+[0391.53] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="A1" action="Account.AnonymousLogin.1"><ReturnCode>0</ReturnCode><Results><StatusCode>200</StatusCode><StatusString /><AccountHandle>A1</AccountHandle><DisplayName>.2b8ce10c.</DisplayName><AccountID>0</AccountID><Uri>sip:.2b8ce10c.@hrpp.vivox.com</Uri><EncodedUriWithTag>sip:.2b8ce10c.@hrpp.vivox.com</EncodedUriWithTag></Results><InputXml><Request requestId="A1" action="Account.AnonymousLogin.1"><ConnectorHandle>C0</ConnectorHandle><DisplayName>.2b8ce10c.</DisplayName><ParticipantPropertyFrequency>100</ParticipantPropertyFrequency><EnableBuddiesAndPresence>false</EnableBuddiesAndPresence><BuddyManagementMode>AutoAccept</BuddyManagementMode><AutopostCrashDumps>true</AutopostCrashDumps><AccountManagementServer /><AppToken /><ApplicationOverride /><EnablePresencePersistence>false</EnablePresencePersistence><AccountHandle>A1</AccountHandle><AcctName>.2b8ce10c.</AcctName><AccessToken>e30.eyJpc3MiOiJwYWxhZGlucy1nc2MiLCJleHAiOjE2NjA0NTIwOTUsInZ4YSI6ImxvZ2luIiwidnhpIjoxNTM4MDA3LCJmIjoic2lwOi4yYjhjZTEwYy5AaHJwcC52aXZveC5jb20ifQ.z8M_JnZ0LJSZXwy8BhE7atEHcHY_Ga_F2wIjFZ_MdUM</AccessToken></Request></InputXml></Response>
+[0391.53] VoiceChat: CVoiceInterfaceVivox::onLoginCompleted (.2b8ce10c.)
+[0391.54] VoiceChat: Info  VivoxApi::CommandHandler::PostEvent(829) - this=0x25a0e8cf230,ToXml(p, true)=<Event type="AccountLoginStateChangeEvent"><AccountHandle>A1</AccountHandle><StatusCode>200</StatusCode><StatusString>OK</StatusString><State>1</State><RequestId>A1</RequestId></Event>
+[0391.54] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="G2" action="SessionGroup.Create.1"><AccountHandle>A1</AccountHandle><Type>Normal</Type><LoopModeDurationSeconds>0</LoopModeDurationSeconds><CaptureDeviceSpecifier /><RenderDeviceSpecifier /><AliasUserName /><SessionGroupHandle>G2</SessionGroupHandle></Request>
+[0391.56] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0391.56] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0391.59] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0391.59] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0391.59] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="G2" action="SessionGroup.Create.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /><SessionGroupHandle>G2</SessionGroupHandle></Results><InputXml><Request requestId="G2" action="SessionGroup.Create.1"><AccountHandle>A1</AccountHandle><Type>Normal</Type><LoopModeDurationSeconds>0</LoopModeDurationSeconds><CaptureDeviceSpecifier /><RenderDeviceSpecifier /><AliasUserName /><SessionGroupHandle>G2</SessionGroupHandle></Request></InputXml></Response>
+[0391.59] VoiceChat: Info  VivoxApi::CommandHandler::PostEvent(829) - this=0x25a0e8cf230,ToXml(p, true)=<Event type="SessionGroupAddedEvent"><AccountHandle>A1</AccountHandle><SessionGroupHandle>G2</SessionGroupHandle><Type>Normal</Type><AliasUserName /></Event>
+[0391.59] VoiceChat: Info  VivoxApi::CommandHandler::PostEvent(829) - this=0x25a0e8cf230,ToXml(p, true)=<Event type="SessionGroupUpdatedEvent"><SessionGroupHandle>G2</SessionGroupHandle><InDelayedPlayback>0</InDelayedPlayback><CurrentPlaybackSpeed>0</CurrentPlaybackSpeed><CurrentPlaybackMode>Normal</CurrentPlaybackMode><PlaybackPaused>0</PlaybackPaused><LoopBufferCapacity>0</LoopBufferCapacity><FirstLoopFrame>0</FirstLoopFrame><TotalLoopFramesCaptured>0</TotalLoopFramesCaptured><LastLoopFramePlayed>0</LastLoopFramePlayed><CurrentRecordingFilename /><TotalRecordedFrames>0</TotalRecordedFrames><FirstFrameTimestamp>0</FirstFrameTimestamp></Event>
+[0391.62] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0391.62] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0391.66] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0391.66] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.06] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.06] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.14] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.14] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.14] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.14] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.15] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.16] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.18] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0392.18] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.20] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0392.20] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.30] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.30] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.30] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0392.30] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.65] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.65] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.65] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.65] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.66] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.66] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.74] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.74] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0392.86] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0392.86] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.06] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0393.06] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.13] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0393.13] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.27] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0393.27] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.38] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0393.38] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.38] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0393.38] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.56] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0393.56] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.61] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0393.61] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0393.67] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0393.67] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0394.00] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0394.00] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0394.18] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0394.18] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0394.23] Log: [LobbyStateLog] Changing lobby state from 1 to 2.
+[0394.23] Exit: PComNetDriver_1(PEER) shut down
+[0394.23] Log: [FSocketWin::Bind] Binding to 0.0.0.0:7778
+[0394.23] DevNet: PComNetDriver_2(PEER) TcpNetDriver listening on port 7778
+[0394.24] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0394.24] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0394.26] TgSLO: Async Load: CORVUS_ASSETS_SF (SkinReferencer30959)
+[0394.26] TgSLO: Async Load: CORVUS_LOBBY_ASSETS_SF (SkinReferencer30959)
+[0394.26] TgSLO: Async Load: CORVUS_UI_ASSETS_SF (SkinReferencer30959)
+[0394.26] TgSLO: Async Load: DEVICE25317_ASSETS_SF (SkinReferencer30960)
+[0394.26] TgSLO: Async Load: DEVICE25317_LOBBY_ASSETS_SF (SkinReferencer30960)
+[0394.26] TgSLO: Async Load: DEVICE25317_UI_ASSETS_SF (SkinReferencer30960)
+[0394.43] TgSLO: Finish Load: CORVUS_ASSETS_SF
+[0394.48] TgSLO: Finish Load: CORVUS_LOBBY_ASSETS_SF
+[0394.55] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0394.55] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0394.56] TgSLO: Finish Load: CORVUS_UI_ASSETS_SF
+[0394.72] TgSLO: Finish Load: DEVICE25317_ASSETS_SF
+[0394.76] TgSLO: Finish Load: DEVICE25317_LOBBY_ASSETS_SF
+[0394.77] TgSLO: Finish Load: DEVICE25317_UI_ASSETS_SF
+[0395.42] Log: >eChannel = 4
+[0395.42] Log: >>channel player 
+[0396.52] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 4100
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 1400
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 2200
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 6900
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 9600
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 13800
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 27500
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 4990
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 11200
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 1600
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 1600
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 1600
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 2600
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 1865
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 2200
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 7466
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 11200
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 932
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 1492
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 3732
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 1865
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 2799
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 2799
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 11300
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 2800
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 8300
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 19400
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 4100
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 4100
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 9600
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 16500
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 4100
+[0396.52] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0396.52] Log:                               ProductSKU = 
+[0396.52] Log:                               ConsoleDescription = 
+[0396.52] Log:                               ProductImage = 
+[0396.52] Log:                               Price = 6900
+[0396.52] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0396.52] TgSLO: Async Load: GlobalUI_SF
+[0396.65] TgSLO: Finish Load: GlobalUI_SF
+[0396.80] Log: InGame Ads url: https://creative.simulmedia-apis.com/9fe9c2ac-14d3-45da-a533-761e775ec949.mp4
+[0396.97] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 4100
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 1400
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 2200
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 6900
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 9600
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 13800
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 27500
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 4990
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 11200
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 1600
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 1600
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 1600
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 2600
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 1865
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = 
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 2200
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 7466
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 11200
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 932
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 1492
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 3732
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 1865
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 2799
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 2799
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 11300
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 2800
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 8300
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 19400
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 4100
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 4100
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 9600
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 16500
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 4100
+[0396.97] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0396.97] Log:                               ProductSKU = 
+[0396.97] Log:                               ConsoleDescription = 
+[0396.97] Log:                               ProductImage = 
+[0396.97] Log:                               Price = 6900
+[0396.97] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0400.20] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 4100
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 1400
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 2200
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 6900
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 9600
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 13800
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 27500
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 4990
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 11200
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 1600
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 1600
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 1600
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 2600
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 1865
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 2200
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 7466
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 11200
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 932
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 1492
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 3732
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 1865
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 2799
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 2799
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 11300
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 2800
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 8300
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 19400
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 4100
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 4100
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 9600
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 16500
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 4100
+[0400.20] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0400.20] Log:                               ProductSKU = 
+[0400.20] Log:                               ConsoleDescription = 
+[0400.20] Log:                               ProductImage = 
+[0400.20] Log:                               Price = 6900
+[0400.20] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0400.21] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 4100
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 1400
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 2200
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 6900
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 9600
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 13800
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 27500
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 4990
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 11200
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 1600
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 1600
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 1600
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 2600
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 1865
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 2200
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 7466
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 11200
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 932
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 1492
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 3732
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 1865
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 2799
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 2799
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 11300
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 2800
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 8300
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 19400
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 4100
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 4100
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 9600
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 16500
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 4100
+[0400.21] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0400.21] Log:                               ProductSKU = 
+[0400.21] Log:                               ConsoleDescription = 
+[0400.21] Log:                               ProductImage = 
+[0400.21] Log:                               Price = 6900
+[0400.21] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0400.31] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 4100
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 1400
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 2200
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 6900
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 9600
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 13800
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 27500
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 4990
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 11200
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 1600
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 1600
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 1600
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 2600
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 1865
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = 
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 2200
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 7466
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 11200
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 932
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 1492
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 3732
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 1865
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 2799
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 2799
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 11300
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 2800
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 8300
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 19400
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 4100
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 4100
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 9600
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 16500
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 4100
+[0400.31] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0400.31] Log:                               ProductSKU = 
+[0400.31] Log:                               ConsoleDescription = 
+[0400.31] Log:                               ProductImage = 
+[0400.31] Log:                               Price = 6900
+[0400.31] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0402.38] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1400
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 6900
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 9600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 13800
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 27500
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4990
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 11200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1865
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 7466
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 11200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 932
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1492
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 3732
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1865
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2799
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2799
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 11300
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2800
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 8300
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 19400
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 9600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 16500
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 6900
+[0402.38] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0402.38] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1400
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 6900
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 9600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 13800
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 27500
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4990
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 11200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1865
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = 
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 7466
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 11200
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 932
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1492
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 3732
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 1865
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2799
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2799
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 11300
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 2800
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 8300
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 19400
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 9600
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 16500
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 4100
+[0402.38] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0402.38] Log:                               ProductSKU = 
+[0402.38] Log:                               ConsoleDescription = 
+[0402.38] Log:                               ProductImage = 
+[0402.38] Log:                               Price = 6900
+[0402.38] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0417.77] Warning: TgIconManager: Unable to load 'LoadingSpinner' element when creating IconDetails. Loading spinner will not display during the package loading process.
+[0435.36] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0435.36] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0435.37] TgSLO: Async Load: SERIS_ASSETS_SF (SkinReferencer30958)
+[0435.37] TgSLO: Async Load: SERIS_LOBBY_ASSETS_SF (SkinReferencer30958)
+[0435.37] TgSLO: Async Load: SERIS_UI_ASSETS_SF (SkinReferencer30958)
+[0435.37] TgSLO: Async Load: DEVICE16505_ASSETS_SF (SkinReferencer30957)
+[0435.37] TgSLO: Async Load: DEVICE16505_LOBBY_ASSETS_SF (SkinReferencer30957)
+[0435.37] TgSLO: Async Load: DEVICE16505_UI_ASSETS_SF (SkinReferencer30957)
+[0435.64] Log: Missing cached shader map for material MAT_Oracle_SpiritWalk, quality 2, compiling.
+[0435.64] Log: Can't compile MAT_Oracle_SpiritWalk with seekfree loading path on console, will attempt to use default material instead
+[0435.64] Warning: Warning, Failed to compile Material FX_Oracle.Materials.MAT_Oracle_SpiritWalk for platform PC-D3D-SM5, Default Material will be used in game.
+[0435.73] TgSLO: Finish Load: SERIS_ASSETS_SF
+[0435.80] TgSLO: Finish Load: SERIS_LOBBY_ASSETS_SF
+[0435.83] TgSLO: Finish Load: SERIS_UI_ASSETS_SF
+[0436.14] TgSLO: Finish Load: DEVICE16505_ASSETS_SF
+[0436.21] TgSLO: Finish Load: DEVICE16505_LOBBY_ASSETS_SF
+[0436.22] TgSLO: Finish Load: DEVICE16505_UI_ASSETS_SF
+[0443.54] TgSLO: Async Load: SERIS_ASSETS_SF (SkinReferencer16584)
+[0443.54] TgSLO: Async Load: SERIS_LOBBY_ASSETS_SF (SkinReferencer16584)
+[0443.54] TgSLO: Async Load: SERIS_UI_ASSETS_SF (SkinReferencer16584)
+[0443.54] TgSLO: Async Load: SERIS_ASSETS_SF (SkinReferencer16586)
+[0443.54] TgSLO: Async Load: SERIS_LOBBY_ASSETS_SF (SkinReferencer16586)
+[0443.54] TgSLO: Async Load: SERIS_UI_ASSETS_SF (SkinReferencer16586)
+[0443.54] TgSLO: Async Load: DEVICE16505_ASSETS_SF
+[0443.54] TgSLO: Async Load: DEVICE16505_LOBBY_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: SERIS_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: SERIS_LOBBY_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: SERIS_UI_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: SERIS_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: SERIS_LOBBY_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: SERIS_UI_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: DEVICE16505_ASSETS_SF
+[0443.79] TgSLO: Cancel Load: DEVICE16505_LOBBY_ASSETS_SF
+[0445.89] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 450
+[0445.89] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0445.90] TgSLO: Async Load: FURIA_ASSETS_SF (SkinReferencer30923)
+[0445.90] TgSLO: Async Load: FURIA_LOBBY_ASSETS_SF (SkinReferencer30923)
+[0445.91] TgSLO: Async Load: FURIA_UI_ASSETS_SF (SkinReferencer30923)
+[0445.91] TgSLO: Async Load: DEVICE23302_ASSETS_SF (SkinReferencer30924)
+[0445.91] TgSLO: Async Load: DEVICE23302_LOBBY_ASSETS_SF (SkinReferencer30924)
+[0445.91] TgSLO: Async Load: DEVICE23302_UI_ASSETS_SF (SkinReferencer30924)
+[0446.04] Log: Missing cached shader map for material fx_m_weissice, quality 0, compiling.
+[0446.04] Log: Can't compile fx_m_weissice with seekfree loading path on console, will attempt to use default material instead
+[0446.04] Warning: Warning, Failed to compile Material FX_Furia_RWBY.Materials.fx_m_weissice for platform PC-D3D-SM5, Default Material will be used in game.
+[0446.08] TgSLO: Finish Load: FURIA_ASSETS_SF
+[0446.15] TgSLO: Finish Load: FURIA_LOBBY_ASSETS_SF
+[0446.17] TgSLO: Finish Load: FURIA_UI_ASSETS_SF
+[0446.36] TgSLO: Finish Load: DEVICE23302_ASSETS_SF
+[0446.44] TgSLO: Finish Load: DEVICE23302_LOBBY_ASSETS_SF
+[0446.45] TgSLO: Finish Load: DEVICE23302_UI_ASSETS_SF
+[0446.60] Warning: StaticLoadObject for AkBaseSoundObject AUD_PC_Shared A_CUE_Step_Boot_Dirt couldn't find object in memory!
+[0446.60] Warning: Warning, Failed to load 'AkBaseSoundObject AUD_PC_Shared.A_CUE_Step_Boot_Dirt': Failed to find object 'AkBaseSoundObject AUD_PC_Shared.A_CUE_Step_Boot_Dirt'
+[0453.13] Warning: StaticLoadObject for AkEvent AUD_VOX_Shaman A_CUE_NV_GruntHit couldn't find object in memory!
+[0453.13] Warning: Warning, Failed to load 'AkEvent AUD_VOX_Shaman.A_CUE_NV_GruntHit': Failed to find object 'AkEvent AUD_VOX_Shaman.A_CUE_NV_GruntHit'
+[0453.13] TgSLO: Async Load: FURIA_UI_ASSETS_SF
+[0453.15] TgSLO: Finish Load: FURIA_UI_ASSETS_SF
+[0453.28] Warning: StaticLoadObject for AkBaseSoundObject AUD_PC_Shared A_CUE_Step_Boot_Dirt couldn't find object in memory!
+[0453.28] Warning: Warning, Failed to load 'AkBaseSoundObject AUD_PC_Shared.A_CUE_Step_Boot_Dirt': Failed to find object 'AkBaseSoundObject AUD_PC_Shared.A_CUE_Step_Boot_Dirt'
+[0460.80] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 500
+[0460.80] Log: UILandingPanelManager_0 ParseSection ended array construction with a non zero probability 1
+[0460.81] TgSLO: Async Load: IMANI_ASSETS_SF (SkinReferencer30916)
+[0460.81] TgSLO: Async Load: IMANI_LOBBY_ASSETS_SF (SkinReferencer30916)
+[0460.81] TgSLO: Async Load: IMANI_UI_ASSETS_SF (SkinReferencer30916)
+[0460.82] TgSLO: Async Load: DEVICE23860_ASSETS_SF (SkinReferencer30915)
+[0460.82] TgSLO: Async Load: DEVICE23860_LOBBY_ASSETS_SF (SkinReferencer30915)
+[0460.82] TgSLO: Async Load: DEVICE23860_UI_ASSETS_SF (SkinReferencer30915)
+[0461.03] TgSLO: Finish Load: IMANI_ASSETS_SF
+[0461.10] TgSLO: Finish Load: IMANI_LOBBY_ASSETS_SF
+[0461.12] TgSLO: Finish Load: IMANI_UI_ASSETS_SF
+[0461.38] TgSLO: Finish Load: DEVICE23860_ASSETS_SF
+[0461.42] TgSLO: Finish Load: DEVICE23860_LOBBY_ASSETS_SF
+[0461.44] TgSLO: Finish Load: DEVICE23860_UI_ASSETS_SF
+[0466.96] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1400
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 6900
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 9600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 13800
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 27500
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4990
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 11200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1865
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 7466
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 11200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 932
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1492
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 3732
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1865
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2799
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2799
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 11300
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2800
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 8300
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 19400
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 9600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 16500
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 6900
+[0466.96] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0466.96] Log: [UIDataShop] Started Storing DLC/Marketplace Item Data...
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1400
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 6900
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 9600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 13800
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 27500
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote do Campeão
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4990
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição Digital de Luxo
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 11200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Congelado
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote das Estrelas
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Deusa
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Pesadelo
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Entrega de Presentes
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1865
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = 
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Passe Temporada 2019/20
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 7466
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Digital Deluxe Edition 2019+2020
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 11200
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Agente Secreto
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 932
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Legionário
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1492
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Futuro Perdido
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 3732
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Lobo Sagrado
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 1865
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2799
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Criador de Dragões
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2799
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2021
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 11300
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Iniciante
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 2800
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Ouro
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 8300
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 19400
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Baleia Voadora
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote dos Campeões da Temporada 4
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Passe de Temporada 2022
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 9600
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição de Luxo 2022
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 16500
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Pacote Predador Plumoso
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 4100
+[0466.96] Log: [UIDataShop] Real Money Item: ProductName = Edição Completa Paladins RWBY
+[0466.96] Log:                               ProductSKU = 
+[0466.96] Log:                               ConsoleDescription = 
+[0466.96] Log:                               ProductImage = 
+[0466.96] Log:                               Price = 6900
+[0466.96] Log: [UIDataShop] Finished Storing DLC/Marketplace Item Data!
+[0513.80] Log: Closing by request
+[0513.80] Log: appRequestExit(0)(0)
+[0513.80] Log: TgAIBehaviorTreeManager :: De-allocating 198 behavior trees
+[0514.09] Log: TgClientHUD Begin Unloading All Scenes
+[0514.09] Log: TgClientHUD Flush Flash
+[0514.09] Log: TgClientHUD Finished Unloading All Scenes
+[0514.10] Exit: Preparing to exit.
+[0514.41] Log: Encountered a UIComponent (Default__UIComponent_HealthBar) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0514.41] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Overlay) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0514.41] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Overlay_Deployable) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0514.41] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Overlay_Player) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0514.41] Log: Encountered a UIComponent (Default__UIComponent_HealthBar_Player) with no valid owner found (or it has itself set as it's parent)!!!! Returning NULL to prevent recursive calls.
+[0514.49] Exit: Game engine shut down
+[0514.49] Log: FViewport::UpdateViewportRHI(TRUE,0,0,FALSE)
+[0514.49] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread for suspension
+[0514.49] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread
+[0514.51] Log: RENDERTHREADDEBUG - Starting render thread after a suspend
+[0514.51] Log: RENDERTHREADDEBUG - Calling Start Rendering Thread
+[0514.62] Exit: Windows client shut down
+[0514.62] Exit: XAudio2 Device shut down.
+[0514.63] Exit: AK Audio shut down.
+[0514.65] Exit: PComNetDriver_2(PEER) shut down
+[0514.97] Exit: Object subsystem successfully closed.
+[0514.97] VoiceChat: Player Logoff so disconnecting
+[0515.32] VoiceChat: Info  VivoxApi::CommandHandler::ProcessRequest(645) - this=0x25a0e8cf230,ToXml(request, true)=<Request requestId="" action="Connector.InitiateShutdown.1"><ConnectorHandle>C0</ConnectorHandle></Request>
+[0515.32] VoiceChat: Info  VivoxApi::CommandHandler::PassCommand(812) - this=0x25a0e8cf230,ToXml(&command->GetResp().base, true)=<Response requestId="" action="Connector.InitiateShutdown.1"><ReturnCode>0</ReturnCode><Results><StatusCode>0</StatusCode><StatusString /></Results><InputXml><Request requestId="" action="Connector.InitiateShutdown.1"><ConnectorHandle>C0</ConnectorHandle></Request></InputXml></Response>
+[0515.32] Log: RENDERTHREADDEBUG - Calling Stop Rendering Thread
+[0515.37] Exit: Exiting.

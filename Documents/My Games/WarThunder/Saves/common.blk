@@ -1,0 +1,8 @@
+content{
+  timesIntroVideoPlayed:i=0
+  languageId:i=13
+  uniqueId:t="63390B6E04B154EC"
+  runCount:i=1
+  autologin:b=no
+  useSteamLoginAuto:b=yes
+}

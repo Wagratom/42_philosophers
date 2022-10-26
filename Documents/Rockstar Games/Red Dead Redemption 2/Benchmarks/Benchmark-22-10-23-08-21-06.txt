@@ -1,0 +1,40 @@
+Frames Per Second (Higher is better) Min, Max, Avg
+Pass 0, 24.066519, 27.509256, 26.051361
+
+Time in milliseconds(ms). (Lower is better). Min, Max, Avg
+Test 0, 36.351402, 41.551502, 38.385712
+
+Frames under 16ms (for 60fps): 
+Test 0: 0/457 frames (0.00%)
+
+Frames under 33ms (for 30fps): 
+Test 0: 0/457 frames (0.00%)
+
+Percentiles in ms for pass 0
+50%,	38.00
+75%,	39.00
+80%,	39.00
+85%,	39.00
+90%,	39.00
+91%,	39.00
+92%,	40.00
+93%,	40.00
+94%,	40.00
+95%,	40.00
+96%,	40.00
+97%,	40.00
+98%,	40.00
+99%,	40.00
+
+=== SYSTEM ===
+CPU: AMD Ryzen 5 5600G with Radeon Graphics         
+	Physical Cores: 6
+	Logical Cores: 12
+
+GPU: AMD AMD Radeon(TM) Graphics	API: VULKAN	VRAM: 7614 MB
+
+System RAM: 15741 MB
+
+
+=== SETTINGS ===
+
