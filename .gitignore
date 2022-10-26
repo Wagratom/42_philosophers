@@ -57,8 +57,4 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-# imagens
-*.png
-*.jpg
-
 # End of https://www.toptal.com/developers/gitignore/api/c
