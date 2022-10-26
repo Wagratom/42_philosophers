@@ -33,11 +33,11 @@ all input times and passes in milliseconds
 
 `./philo 5 300 100 150 (times opcional)`
 
-if the `times` were not passed the program will run until one philosophers die 💀
+if `times` is not passed the program will run until one philosophers die
 
 ## ⚙️ Installing
 ```
-$ git clone git@github.com:Wagratom/philosophers.git`
+$ git clone git@github.com:Wagratom/philosophers.git
 $ cd philo
 ```
 
@@ -62,13 +62,16 @@ make test t= path_file/name
 to run the tests using valgrind use vg before the name
 
 ## Examples
+
+<h4>make test t=struct/creat</h4>
+
 ![Logo do Markdown](creat_table.png)
-```
 
-make test t=struct/creat
-make vgtest t=strct/creat
+<h4>make test t=struct/creat</h4>
 
-make tests
-make vgtests
-```
+![Logo do Markdown](vgcreat_table.png)
+
+<h4>make tests</h4>
+
+![Logo do Markdown](tests.png)
 

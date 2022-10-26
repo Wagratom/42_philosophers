@@ -6,38 +6,13 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 08:25:51 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/25 13:11:22 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/25 23:27:02 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "../minunit.h"
 # include "../include/philosophers.h"
 # include <fcntl.h>
-
-
-/******************************************************************************/
-/*						adapt a validate_argv function						   *
-/******************************************************************************/
-/*
-
-int	wait_routine(t_table *table, int size)
-{
-	int		index;
-	int		status;
-
-	status = 0;
-	index = -1;
-	while (++index < size)
-		pthread_join(table->threads[index], NULL);
-	if (table->die == TRUE)
-		status = 1;
-	table->die = TRUE;
-	pthread_join(table->threads[index], NULL);
-	printf("status %d\n", status);
-	return (status);
-}
-
-*/
 
 void	test_setup(void)
 {

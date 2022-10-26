@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 10:17:43 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/25 13:10:58 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/10/25 22:41:18 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ void restore_static(void)
 
 void	suppress_output(void)
 {
-	int	fd;
+	int	dev_null;
 
-	fd = open("log", O_CREAT | O_WRONLY);
-	if (fd == -1)
-		printf("erro file\n");
-	dup2(fd, STDOUT_FILENO);
-	close (fd);
+	dev_null = open("/dev/null", O_RDWR);
+	if (dev_null  == -1)
+		ft_putstr_err("erro file\n");
+	dup2(dev_null , STDOUT_FILENO);
+	close (dev_null );
 }
 
 void	restore_stdout(int outfile)
