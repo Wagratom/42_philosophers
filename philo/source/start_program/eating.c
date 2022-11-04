@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 10:06:08 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/23 17:24:26 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/11/04 12:48:07 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,8 @@ t_bool	unlock_forks(t_philo *philo)
 t_bool	get_forks(t_philo *philo)
 {
 	pthread_mutex_lock(philo->fork1);
-	if (!print_protect(philo, "has taken a fork"))
-		return (pthread_mutex_unlock(philo->fork1), FALSE);
 	pthread_mutex_lock(philo->fork2);
+	print_protect(philo, "has taken a fork");
 	if (!print_protect(philo, "has taken a fork"))
 		return (unlock_forks(philo));
 	return (TRUE);
