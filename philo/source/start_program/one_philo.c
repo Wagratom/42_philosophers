@@ -6,7 +6,7 @@
 /*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/22 10:27:22 by wwallas-          #+#    #+#             */
-/*   Updated: 2022/10/24 11:55:49 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/11/04 13:12:42 by wwallas-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	handle_one_philo(t_table *table, int size)
 	if (size != 1)
 		return ;
 	philo = table->philos[0];
-	print_protect(&philo, "is thinking");
 	get_fork(philo);
 	wait_death(philo);
 	print_protect(&philo, "died");
